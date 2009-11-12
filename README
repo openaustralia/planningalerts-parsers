@@ -1,0 +1,22 @@
+This will contain the beginnings of parsers for the Planning Alerts project.
+
+Let's start with some interesting and useful websites:
+
+From http://www.australia.gov.au/topics/government-and-parliament/local-government:
+
+Directories of local councils:
+Tasmania: http://www.lgat.tas.gov.au/site/page.cfm?u=221
+WA: http://www.walga.asn.au/about_lg/council_websites
+SA: http://www.lga.sa.gov.au/site/page.cfm?u=210
+NT: http://www.nt.gov.au/ntg4/Subject?documenttitle=*&myLevel=3&myRefPoint=cn=A-Z%20Government%20Listing,cn=Local%20Government
+NSW: http://www.dlg.nsw.gov.au/dlg/dlghome/dlg_LocalGovDirectory.asp?index=1
+QLD: http://www.dip.qld.gov.au/local-government-directory/index.php
+Victoria: http://www.localgovernment.vic.gov.au/
+Norfolk Island: http://www.norfolk.gov.nf/
+
+We want to build an ordered list of local government by populations so that we start working on the big ones first. This way we can maximise the number of people that are covered by PlanningAlerts while having to do the least work in building parsers.
+
+We have a list we built earlier that is currently only stored as a Google Spreadsheet "Local Government Development Application Websites".
+
+TODO:
+Add a license to this repository
