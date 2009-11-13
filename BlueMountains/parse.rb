@@ -16,7 +16,7 @@ agent = WWW::Mechanize.new
 
 page = agent.get(url)
 
-results = PlanningAuthorityResults.new
+results = PlanningAuthorityResults.new(:name => "Blue Mountains City Council", :short_name => "Blue Mountains")
 
 page.search('table > tr').each do |row|
   values = row.search('td').map {|t| t.inner_text.strip.delete("\n")}
@@ -24,6 +24,4 @@ page.search('table > tr').each do |row|
     :on_notice_from => values[3], :on_notice_to => values[4]) unless values.empty?
 end
 
-results.applications.each do |da|
-  puts "application_id: #{da.application_id}, location: #{da.address}, description: #{da.description}, from: #{da.on_notice_from}, to: #{da.on_notice_to}"  
-end
+puts results.to_xml
