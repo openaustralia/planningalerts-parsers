@@ -15,7 +15,7 @@ describe DevelopmentApplication do
     da.to.should be_nil
   end
   
-  #it "should barf when trying to use an unknown key in the initializer" do
-  #  DevelopmentApplication.new(:foo => "bar").should raise_error
-  #end
+  it "should barf when trying to use an unknown key in the initializer" do
+    lambda{DevelopmentApplication.new(:foo => "bar")}.should raise_error(RuntimeError, "Unexpected keys foo used")
+  end
 end
