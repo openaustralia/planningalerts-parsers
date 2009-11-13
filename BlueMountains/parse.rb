@@ -20,7 +20,10 @@ page.search('table > tr').each do |row|
     description = values[2]
     from = values[3]
     to = values[4]
-    puts "application_id: #{application_id}, location: #{location}, description: #{description}, from: #{from}, to: #{to}"
+    # Parse the text fields into real dates
+    from_date = Date.parse(from)
+    to_date = Date.parse(to)
+    puts "application_id: #{application_id}, location: #{location}, description: #{description}, from: #{from_date}, to: #{to_date}"
   end
 end
 
