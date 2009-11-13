@@ -1,3 +1,5 @@
+require 'development_application'
+
 class PlanningAuthorityResults
   attr_reader :applications
   

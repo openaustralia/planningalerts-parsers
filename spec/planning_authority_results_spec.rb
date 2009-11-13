@@ -1,7 +1,6 @@
 require 'spec'
 
 require 'planning_authority_results'
-require 'development_application'
 
 describe PlanningAuthorityResults do
   it "should hold multiple development applications" do
