@@ -18,4 +18,12 @@ describe DevelopmentApplication do
   it "should barf when trying to use an unknown key in the initializer" do
     lambda{DevelopmentApplication.new(:foo => "bar")}.should raise_error(RuntimeError, "Unexpected keys foo used")
   end
+  
+  it "should handle some standard keys" do
+    da = DevelopmentApplication.new(:application_id => "1234", :address => "12a Smith Street",
+      :description => "Lawn extension")
+    da.application_id.should == "1234"
+    da.address.should == "12a Smith Street"
+    da.description.should == "Lawn extension"
+  end
 end
