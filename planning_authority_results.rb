@@ -1,9 +1,11 @@
 require 'development_application'
 
 class PlanningAuthorityResults
-  attr_reader :applications
+  attr_reader :applications, :name, :short_name
   
-  def initialize
+  def initialize(options = {})
+    @name = options.delete(:name)
+    @short_name = options.delete(:short_name)
     @applications = []
   end
   

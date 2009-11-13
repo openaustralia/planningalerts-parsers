@@ -11,4 +11,10 @@ describe PlanningAuthorityResults do
     r << da2
     r.applications.should == [da1, da2]
   end
+  
+  it "should have a short name and a regular name" do
+    r = PlanningAuthorityResults.new(:name => "Blue Mountains City Council", :short_name => "Blue Mountains")
+    r.name.should == "Blue Mountains City Council"
+    r.short_name.should == "Blue Mountains"
+  end
 end
