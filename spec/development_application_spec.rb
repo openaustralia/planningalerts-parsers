@@ -26,4 +26,18 @@ describe DevelopmentApplication do
     da.address.should == "12a Smith Street"
     da.description.should == "Lawn extension"
   end
+  
+  it "should be able to output as XML" do
+    da = DevelopmentApplication.new(:application_id => "1234", :address => "12a Smith Street",
+      :description => "Lawn extension", :on_notice_from => "10 April 2009", :on_notice_to => "24 April 2009")
+    # For the time being do not output any of the "on notice" information because I'm not sure how it relates
+    # to the "date received" information used by planningalerts.com
+    da.to_xml.should == <<-EOF
+<application>
+  <council_reference>1234</council_reference>
+  <address>12a Smith Street</address>
+  <description>Lawn extension</description>
+</application>
+    EOF
+  end
 end
