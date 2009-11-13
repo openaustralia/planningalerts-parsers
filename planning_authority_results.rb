@@ -13,4 +13,17 @@ class PlanningAuthorityResults
   def <<(da)
     @applications << da
   end
+  
+  def to_xml(options = {})
+    options[:indent] ||= 2
+    xml = options[:builder] ||= Builder::XmlMarkup.new(:indent => options[:indent])
+    xml.instruct! unless options[:skip_instruct]
+    xml.planning do
+      xml.authority_name name
+      xml.authority_short_name short_name
+      xml.applications do
+        applications.each {|application| xml << application.to_xml}
+      end
+    end
+  end
 end

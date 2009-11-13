@@ -21,4 +21,26 @@ describe PlanningAuthorityResults do
   it "should not accept a bad option in the initializer" do
     lambda{PlanningAuthorityResults.new(:foo => "bar")}.should raise_error(RuntimeError, "Unexpected keys foo used")
   end
+
+  it "should be serialisable to xml" do
+    r = PlanningAuthorityResults.new(:name => "Blue Mountains City Council", :short_name => "Blue Mountains")
+    da1 = mock("DevelopmentApplication")
+    da2 = mock("DevelopmentApplication")
+    da1.should_receive(:to_xml).and_return("    Some XML\n")
+    da2.should_receive(:to_xml).and_return("    Some more XML\n")    
+    r << da1
+    r << da2
+    r.to_xml.should == <<-EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<planning>
+  <authority_name>Blue Mountains City Council</authority_name>
+  <authority_short_name>Blue Mountains</authority_short_name>
+  <applications>
+    Some XML
+    Some more XML
+  </applications>
+</planning>
+    EOF
+  end
 end
+
