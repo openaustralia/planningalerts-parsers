@@ -22,7 +22,9 @@ class PlanningAuthorityResults
       xml.authority_name name
       xml.authority_short_name short_name
       xml.applications do
-        applications.each {|application| xml << application.to_xml}
+        applications.each do |application|
+          xml << application.to_xml(:builder => Builder::XmlMarkup.new(:indent => options[:indent], :margin => 2))
+        end
       end
     end
   end
