@@ -20,9 +20,9 @@ referrer = WWW::Mechanize::Page.new(URI.parse('http://www.openaustralia.org'),{ 
 
 unique_hosts = {}
 
-# Get 20 results
+# Step through all the pages of results
 start = 0
-while (start < 20)
+while start
   puts "Collecting search results starting at: #{start}"
   page = agent.get("http://ajax.googleapis.com/ajax/services/search/web?v=1.0&rsz=large&q=%22Powered+by+Infomaster%22&start=#{start}",
     referrer)
@@ -31,15 +31,20 @@ while (start < 20)
   result['responseData']['results'].each do |r|
     uri = URI.parse(r['url'])
     if unique_hosts.has_key?(uri.host)
-      #puts "Already found this host: #{uri.host}"
       # Append the url to the list
       unique_hosts[uri.host] << uri
     else
-      #puts "NEW host: #{uri.host} with URL: #{uri}"
       unique_hosts[uri.host] = [uri]
     end
   end
-  start += result['responseData']['results'].size
+  current_page = result['responseData']['cursor']['currentPageIndex']
+  # Set start of next page
+  next_page = result['responseData']['cursor']['pages'].find{|p| p['label'] == current_page + 2}
+  if next_page
+    start = next_page["start"].to_i
+  else
+    start = nil
+  end
 end
 
 # Now display the results. For easy reading split into .gov.au, numeric IP addresses and others
