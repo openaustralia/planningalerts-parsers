@@ -11,6 +11,9 @@ require 'mechanize'
 require 'json'
 require 'logger'
 
+#search_term = "%22Include+active+properties+in+the+search%22+OR+%22Powered+by+InfoMaster%22"
+search_term = "%22Powered+by+InfoMaster%22"
+
 agent = WWW::Mechanize.new
 #logger = Logger.new $stdout 
 #agent.log = logger
@@ -24,7 +27,7 @@ unique_hosts = {}
 start = 0
 while start
   puts "Collecting search results starting at: #{start}"
-  page = agent.get("http://ajax.googleapis.com/ajax/services/search/web?v=1.0&rsz=large&q=%22Powered+by+Infomaster%22&start=#{start}",
+  page = agent.get("http://ajax.googleapis.com/ajax/services/search/web?v=1.0&rsz=large&q=#{search_term}&start=#{start}",
     referrer)
 
   result = JSON.parse(page.body)
