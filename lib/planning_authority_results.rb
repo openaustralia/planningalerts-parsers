@@ -1,13 +1,12 @@
 require 'development_application'
+require 'simple_struct'
 
-class PlanningAuthorityResults
-  attr_reader :applications, :name, :short_name
+class PlanningAuthorityResults < SimpleStruct :name, :short_name
+  attr_reader :applications
   
   def initialize(options = {})
-    @name = options.delete(:name)
-    @short_name = options.delete(:short_name)
-    raise "Unexpected keys #{options.keys.join(', ')} used" unless options.empty?
     @applications = []
+    super options
   end
   
   def <<(da)

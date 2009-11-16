@@ -19,10 +19,6 @@ describe PlanningAuthorityResults do
     r.short_name.should == "Blue Mountains"
   end
   
-  it "should not accept a bad option in the initializer" do
-    lambda{PlanningAuthorityResults.new(:foo => "bar")}.should raise_error(RuntimeError, "Unexpected keys foo used")
-  end
-
   it "should be serialisable to xml" do
     r = PlanningAuthorityResults.new(:name => "Blue Mountains City Council", :short_name => "Blue Mountains")
     da1 = mock("DevelopmentApplication")

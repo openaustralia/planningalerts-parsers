@@ -21,10 +21,6 @@ describe DevelopmentApplication do
     da.on_notice_to.should be_nil
   end
   
-  it "should barf when trying to use an unknown key in the initializer" do
-    lambda{DevelopmentApplication.new(:foo => "bar")}.should raise_error(RuntimeError, "Unexpected keys foo used")
-  end
-  
   it "should handle some standard keys" do
     @da.application_id.should == "1234"
     @da.address.should == "12a Smith Street"
