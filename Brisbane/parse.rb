@@ -31,4 +31,24 @@ search_form.set_fields( "_ctl2:drDates:txtDay1" => "12", "_ctl2:drDates:txtMonth
 
 table = search_form.submit(search_form.button_with(:name => "_ctl2:btnSearch")).search('span#_ctl2_lblData > table')
 
-p table
+# TODO: Need to handle what happens when the results span multiple pages. Can this happen?
+
+# Extract in the most dumb way possible all the data from the table
+
+#p table.search('tr').map {|row| row.search('td').map{|v| v.ch}}
+
+# Skip first two rows of the table
+table.search('tr')[2..-1].each do |row|
+  first_column_text = row.search('td')[1].inner_html
+  # The text in the first column is of the form "<application id> - <description>"
+  application_id, description = first_column_text.split(" - ")
+  # TODO: Sometimes the address has what I'm assuming is a lot number in brackets after the address. Handle this properly.
+  address = row.search('td')[2].inner_html.strip
+  # The third column has the date that this application was submitted which should always be the date that we've searched for
+  # TODO: Double check this
+  results << DevelopmentApplication.new(:application_id => application_id, :address => address, :description => description)
+end
+
+# TODO: Include link to the development application itself on the website
+# TODO: Include link to where you should respond to the application
+puts results.to_xml
