@@ -1,7 +1,11 @@
 class SimpleStruct
   def initialize(options)
     options.each do |attribute, value|
-      instance_variable_set("@" + attribute.to_s, value)
+      if respond_to? attribute
+        instance_variable_set("@" + attribute.to_s, value)
+      else
+        raise "Unexpected attribute #{attribute} used"
+      end
     end
   end
 end
