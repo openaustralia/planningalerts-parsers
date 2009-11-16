@@ -6,9 +6,10 @@ require 'development_application'
 describe DevelopmentApplication do
   before(:each) do
     @da = DevelopmentApplication.new(:application_id => "1234", :address => "12a Smith Street",
-      :description => "Lawn extension", :on_notice_from => "12 Nov 2009", :on_notice_to => "1 January 2010")    
+      :description => "Lawn extension", :on_notice_from => "12 Nov 2009", :on_notice_to => "1 January 2010",
+      :info_url => "http://foo.nsw.gov.au/aplications/1234")    
   end
-  
+
   it "should automatically parse a text date" do
     @da.on_notice_from.should == Date.new(2009, 11, 12)
     @da.on_notice_to.should == Date.new(2010, 1, 1)
@@ -28,6 +29,7 @@ describe DevelopmentApplication do
     @da.application_id.should == "1234"
     @da.address.should == "12a Smith Street"
     @da.description.should == "Lawn extension"
+    @da.info_url.should == "http://foo.nsw.gov.au/aplications/1234"
   end
   
   it "should be able to output as XML" do
@@ -38,6 +40,7 @@ describe DevelopmentApplication do
   <council_reference>1234</council_reference>
   <address>12a Smith Street</address>
   <description>Lawn extension</description>
+  <info_url>http://foo.nsw.gov.au/aplications/1234</info_url>
 </application>
     EOF
   end
