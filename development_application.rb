@@ -2,7 +2,7 @@ require 'rubygems'
 require 'builder'
 
 class DevelopmentApplication
-  attr_reader :application_id, :description, :address, :on_notice_from, :on_notice_to, :info_url, :comment_url
+  attr_accessor :application_id, :description, :address, :on_notice_from, :on_notice_to, :info_url, :comment_url
 
   def initialize(options = {})
     @on_notice_from = options.delete(:on_notice_from)
