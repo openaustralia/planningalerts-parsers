@@ -2,6 +2,7 @@
 #
 # Beginnings of prototype parser for downloading development application information from Blue Mountains Council website
 
+$:.unshift "#{File.dirname(__FILE__)}/lib"
 require 'rubygems'
 require 'mechanize'
 
