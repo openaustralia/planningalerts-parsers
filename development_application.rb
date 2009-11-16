@@ -2,7 +2,7 @@ require 'rubygems'
 require 'builder'
 
 class DevelopmentApplication
-  attr_reader :application_id, :description, :address, :on_notice_from, :on_notice_to, :info_url
+  attr_reader :application_id, :description, :address, :on_notice_from, :on_notice_to, :info_url, :comment_url
 
   def initialize(params = {})
     @on_notice_from = params.delete(:on_notice_from)
@@ -11,6 +11,7 @@ class DevelopmentApplication
     @description = params.delete(:description)
     @address = params.delete(:address)
     @info_url = params.delete(:info_url)
+    @comment_url = params.delete(:comment_url)
     raise "Unexpected keys #{params.keys.join(', ')} used" unless params.empty?
 
     # Parse date fields
@@ -26,6 +27,7 @@ class DevelopmentApplication
       xml.address address
       xml.description description
       xml.info_url info_url
+      xml.comment_url comment_url
     end
   end
 end
