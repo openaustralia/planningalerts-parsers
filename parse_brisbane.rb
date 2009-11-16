@@ -2,8 +2,6 @@
 #
 # Parser for Brisbane City
 
-$:.unshift "#{File.dirname(__FILE__)}/../"
-
 require 'rubygems'
 require 'mechanize'
 
