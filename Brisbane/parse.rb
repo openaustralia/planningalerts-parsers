@@ -36,17 +36,15 @@ table = search_form.submit(search_form.button_with(:name => "_ctl2:btnSearch")).
 # Skip first two rows of the table
 table.search('tr')[2..-1].each do |row|
   values = row.search('td')
-  first_column_text = values[1].inner_html
-  # The text in the first column is of the form "<application id> - <description>"
-  application_id, description = first_column_text.split(" - ")
-  # TODO: Sometimes the address has what I'm assuming is a lot number in brackets after the address. Handle this properly.
-  address = values[2].inner_html.strip
+  results << DevelopmentApplication.new(
+    # The text in the first column is of the form "<application id> - <description>"
+    :application_id => values[1].inner_html.split(" - ")[0],
+    :description => values[1].inner_html.split(" - ")[1],
+    # TODO: Sometimes the address has what I'm assuming is a lot number in brackets after the address. Handle this properly.
+    :address => values[2].inner_html.strip,
+    :info_url => page.uri + URI.parse(values[0].at('a').attributes['href']))
   # The third column has the date that this application was submitted which should always be the date that we've searched for
   # TODO: Double check this
-  # Link to full information about this application
-  info_url = page.uri + URI.parse(values[0].at('a').attributes['href'])
-  results << DevelopmentApplication.new(:application_id => application_id, :address => address, :description => description,
-    :info_url => info_url)
 end
 
 # TODO: Include link to where you should respond to the application
