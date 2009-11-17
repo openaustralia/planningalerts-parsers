@@ -1,4 +1,6 @@
 require 'rake'
 require 'spec/rake/spectask'
 
-Spec::Rake::SpecTask.new('default')
+task :default => :spec
+
+Spec::Rake::SpecTask.new
