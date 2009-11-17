@@ -9,7 +9,7 @@ require 'planning_authority_results'
 require 'parser'
 
 class BrisbaneParser < Parser
-  def applications
+  def applications(date)
     # This is the page that we're parsing
     url = "http://pdonline.brisbane.qld.gov.au/MasterView/modules/applicationmaster/default.aspx?page=search"
     planning_authority_name = "Brisbane City Council"
@@ -26,8 +26,13 @@ class BrisbaneParser < Parser
     page = agent.get(url)
 
     search_form = page.forms.first
-    search_form.set_fields( "_ctl2:drDates:txtDay1" => "12", "_ctl2:drDates:txtMonth1" => "11", "_ctl2:drDates:txtYear1" => "2009",
-      "_ctl2:drDates:txtDay2" => "12", "_ctl2:drDates:txtMonth2" => "11", "_ctl2:drDates:txtYear2" => "2009")
+    search_form.set_fields(
+      "_ctl2:drDates:txtDay1" => date.day,
+      "_ctl2:drDates:txtMonth1" => date.month,
+      "_ctl2:drDates:txtYear1" => date.year,
+      "_ctl2:drDates:txtDay2" => date.day,
+      "_ctl2:drDates:txtMonth2" => date.month,
+      "_ctl2:drDates:txtYear2" => date.year)
 
     table = search_form.submit(search_form.button_with(:name => "_ctl2:btnSearch")).search('span#_ctl2_lblData > table')
 
@@ -54,5 +59,5 @@ class BrisbaneParser < Parser
 end
 
 p = BrisbaneParser.new
-results = p.applications
+results = p.applications(Date.new(2009,11,12))
 puts results.to_xml
