@@ -68,6 +68,9 @@ puts "\nWA Government sites:\n#{wa_gov_hosts.join("\n")}"
 puts "\nNSW Government sites:\n#{nsw_gov_hosts.join("\n")}"
 puts "\nQLD Government sites:\n#{qld_gov_hosts.join("\n")}"
 puts "\nOther Government sites:\n#{other_gov_hosts.join("\n")}" unless other_gov_hosts.empty?
-puts "\nSites with IP addresses:\n#{numeric_hosts.join("\n")}"
+puts "\nSites with IP addresses:"
+numeric_hosts.each do |h|
+  puts "#{h} (#{unique_hosts[h].first})"
+end
 puts "\nOther sites:\n#{hosts.join("\n")}" unless hosts.empty?
 
