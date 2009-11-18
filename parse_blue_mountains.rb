@@ -25,7 +25,3 @@ class BlueMountainsParser < Parser
   end
 end
 
-p = BlueMountainsParser.new
-results = p.applications
-puts results.to_xml
-

@@ -57,7 +57,3 @@ class BrisbaneParser < Parser
     results
   end
 end
-
-p = BrisbaneParser.new
-results = p.applications(Date.new(2009,11,12))
-puts results.to_xml
