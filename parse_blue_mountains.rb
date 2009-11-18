@@ -8,16 +8,22 @@ require 'planning_authority_results'
 require 'parser'
 
 class BlueMountainsParser < Parser
+  attr_reader :planning_authority_name, :planning_authority_short_name
+  
+  def initialize
+    super
+    @planning_authority_name = "Blue Mountains City Council"
+    @planning_authority_short_name = "Blue Mountains"
+  end
+  
   def applications(date)
     # TODO: We're currently ignoring the date. Need to figure out what to do here
     
     # This is the page that we're parsing
     url = "http://www.bmcc.nsw.gov.au/files/daily_planning_notifications.htm"
-    planning_authority_name = "Blue Mountains City Council"
-    planning_authority_short_name = "Blue Mountains"
 
     page = agent.get(url)
-    results = PlanningAuthorityResults.new(:name => planning_authority_name, :short_name => planning_authority_short_name)
+    results = PlanningAuthorityResults.new(:name => @planning_authority_name, :short_name => @planning_authority_short_name)
     page.search('table > tr').each do |row|
       values = row.search('td').map {|t| t.inner_text.strip.delete("\n")}
       results << DevelopmentApplication.new(:application_id => values[0], :address => values[1], :description => values[2],

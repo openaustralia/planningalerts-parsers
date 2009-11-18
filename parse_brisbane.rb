@@ -9,14 +9,20 @@ require 'planning_authority_results'
 require 'parser'
 
 class BrisbaneParser < Parser
+  attr_reader :planning_authority_name, :planning_authority_short_name
+  
+  def initialize
+    super
+    @planning_authority_name = "Brisbane City Council"
+    @planning_authority_short_name = "Brisbane"
+  end
+  
   def applications(date)
     # This is the page that we're parsing
     url = "http://pdonline.brisbane.qld.gov.au/MasterView/modules/applicationmaster/default.aspx?page=search"
-    planning_authority_name = "Brisbane City Council"
-    planning_authority_short_name = "Brisbane"
 
     page = agent.get(url)
-    results = PlanningAuthorityResults.new(:name => planning_authority_name, :short_name => planning_authority_short_name)
+    results = PlanningAuthorityResults.new(:name => @planning_authority_name, :short_name => @planning_authority_short_name)
 
     # Click the first button on the form
     form = page.forms.first

@@ -13,7 +13,7 @@ describe "Server for parser XML" do
 
   it "should retrieve the Blue Mountains data" do
     r = mock("PlanningAuthorityResults")
-    p = mock("Parser")
+    p = BlueMountainsParser.new
     r.should_receive(:to_xml).and_return("foo")
     p.should_receive(:applications).with(Date.new(2009,11,12)).and_return(r)
     BlueMountainsParser.stub!(:new).and_return(p)
@@ -23,7 +23,7 @@ describe "Server for parser XML" do
 
   it "should retrieve the Brisbane data" do
     r = mock("PlanningAuthorityResults")
-    p = mock("Parser")
+    p = BrisbaneParser.new
     r.should_receive(:to_xml).and_return("foo")
     p.should_receive(:applications).with(Date.new(2009,11,12)).and_return(r)
     BrisbaneParser.stub!(:new).and_return(p)
