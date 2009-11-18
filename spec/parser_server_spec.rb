@@ -13,11 +13,21 @@ describe "Server for parser XML" do
 
   it "should retrieve the Blue Mountains data" do
     r = mock("PlanningAuthorityResults")
-    r.stub!(:to_xml).and_return("foo")
-    p = mock("BlueMountainsParser")
-    p.stub!(:applications).and_return(r)
+    p = mock("Parser")
+    r.should_receive(:to_xml).and_return("foo")
+    p.should_receive(:applications).with(no_args()).and_return(r)
     BlueMountainsParser.stub!(:new).and_return(p)
     get "/blue_mountains"
+    last_response.body.should == "foo"
+  end
+
+  it "should retrieve the Brisbane data" do
+    r = mock("PlanningAuthorityResults")
+    p = mock("Parser")
+    r.should_receive(:to_xml).and_return("foo")
+    p.should_receive(:applications).with(Date.new(2009,11,12)).and_return(r)
+    BrisbaneParser.stub!(:new).and_return(p)
+    get "/brisbane"
     last_response.body.should == "foo"
   end
 end
