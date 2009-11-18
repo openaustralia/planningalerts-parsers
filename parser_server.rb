@@ -10,10 +10,12 @@ require 'parse_brisbane'
 
 get '/blue_mountains' do
   content_type 'application/xml', :charset => 'utf-8'
-  BlueMountainsParser.new.applications.to_xml
+  date = Date.new(params[:year].to_i, params[:month].to_i, params[:day].to_i)
+  BlueMountainsParser.new.applications(date).to_xml
 end
 
 get '/brisbane' do
   content_type 'application/xml', :charset => 'utf-8'
-  BrisbaneParser.new.applications(Date.new(2009,11,12)).to_xml
+  date = Date.new(params[:year].to_i, params[:month].to_i, params[:day].to_i)
+  BrisbaneParser.new.applications(date).to_xml
 end

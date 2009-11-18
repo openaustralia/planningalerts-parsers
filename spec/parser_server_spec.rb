@@ -15,9 +15,9 @@ describe "Server for parser XML" do
     r = mock("PlanningAuthorityResults")
     p = mock("Parser")
     r.should_receive(:to_xml).and_return("foo")
-    p.should_receive(:applications).with(no_args()).and_return(r)
+    p.should_receive(:applications).with(Date.new(2009,11,12)).and_return(r)
     BlueMountainsParser.stub!(:new).and_return(p)
-    get "/blue_mountains"
+    get "/blue_mountains?year=2009&month=11&day=12"
     last_response.body.should == "foo"
   end
 
@@ -27,7 +27,7 @@ describe "Server for parser XML" do
     r.should_receive(:to_xml).and_return("foo")
     p.should_receive(:applications).with(Date.new(2009,11,12)).and_return(r)
     BrisbaneParser.stub!(:new).and_return(p)
-    get "/brisbane"
+    get "/brisbane?year=2009&month=11&day=12"
     last_response.body.should == "foo"
   end
 end

@@ -8,7 +8,9 @@ require 'planning_authority_results'
 require 'parser'
 
 class BlueMountainsParser < Parser
-  def applications
+  def applications(date)
+    # TODO: We're currently ignoring the date. Need to figure out what to do here
+    
     # This is the page that we're parsing
     url = "http://www.bmcc.nsw.gov.au/files/daily_planning_notifications.htm"
     planning_authority_name = "Blue Mountains City Council"
