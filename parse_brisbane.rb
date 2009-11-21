@@ -55,7 +55,7 @@ class BrisbaneParser < Parser
         # TODO: Sometimes the address has what I'm assuming is a lot number in brackets after the address. Handle this properly.
         :address => values[2].inner_html.strip,
         :info_url => page.uri + URI.parse(values[0].at('a').attributes['href']))
-      da.comment_url = "https://obonline.ourbrisbane.com/services/startDASubmission.do?direct=true&daNumber=#{da.application_id}&sdeprop=#{da.address}"
+      da.comment_url = "https://obonline.ourbrisbane.com/services/startDASubmission.do?direct=true&daNumber=#{URI.escape(da.application_id)}&sdeprop=#{URI.escape(da.address)}"
       results << da
       # The third column has the date that this application was submitted which should always be the date that we've searched for
       # TODO: Double check this
