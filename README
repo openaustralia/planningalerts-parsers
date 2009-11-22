@@ -1,4 +1,4 @@
-Parsers/scrapers for the Australian Planning Alerts project.
+Scrapers for the Australian Planning Alerts project.
 Copyright (C) 2009 OpenAustralia Foundation Pty Ltd
 
 This program is free software; you can redistribute it and/or modify
@@ -29,6 +29,6 @@ QLD: http://www.dip.qld.gov.au/local-government-directory/index.php
 Victoria: http://www.localgovernment.vic.gov.au/
 Norfolk Island: http://www.norfolk.gov.nf/
 
-We want to build an ordered list of local government by populations so that we start working on the big ones first. This way we can maximise the number of people that are covered by PlanningAlerts while having to do the least work in building parsers.
+We want to build an ordered list of local government by populations so that we start working on the big ones first. This way we can maximise the number of people that are covered by PlanningAlerts while having to do the least work in building scrapers.
 
 We have a list we built earlier that is currently only stored as a Google Spreadsheet "Local Government Development Application Websites".

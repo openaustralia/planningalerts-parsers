@@ -1,9 +1,9 @@
 $:.unshift "#{File.dirname(__FILE__)}/../lib"
-require 'parser'
+require 'scraper'
 require 'planning_authority_results'
 
-class GoldCoastParser < Parser
-  # TODO: Extract this into Parser
+class GoldCoastScraper < Scraper
+  # TODO: Extract this into Scraper
   attr_reader :planning_authority_name, :planning_authority_short_name
   
   def initialize

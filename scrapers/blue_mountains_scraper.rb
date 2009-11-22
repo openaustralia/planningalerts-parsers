@@ -1,13 +1,9 @@
-#!/usr/bin/env ruby
-#
-# Beginnings of prototype parser for downloading development application information from Blue Mountains Council website
-
 $:.unshift "#{File.dirname(__FILE__)}/../lib"
 
 require 'planning_authority_results'
-require 'parser'
+require 'scraper'
 
-class BlueMountainsParser < Parser
+class BlueMountainsScraper < Scraper
   attr_reader :planning_authority_name, :planning_authority_short_name
   
   def initialize

@@ -2,12 +2,12 @@ $:.unshift "#{File.dirname(__FILE__)}/../lib"
 $:.unshift "#{File.dirname(__FILE__)}/../scrapers"
 
 require 'spec'
-require 'parse_gold_coast'
+require 'gold_coast_scraper'
 
-describe GoldCoastParser do
+describe GoldCoastScraper do
   it "should return a particular expected planning application for a particular day" do
     date = Date.new(2009, 11, 12)
-    GoldCoastParser.new.applications(date).applications.should include(DevelopmentApplication.new(
+    GoldCoastScraper.new.applications(date).applications.should include(DevelopmentApplication.new(
       :application_id => "MCU2900747",
       :description => "Description: APARTMENT BUILDING\r\n      Class: IMPACT\r\n      Work Type:",
       :date_received => date,

@@ -1,16 +1,13 @@
-# Simple regression test for Brisbane parser
-
 $:.unshift "#{File.dirname(__FILE__)}/../lib"
 $:.unshift "#{File.dirname(__FILE__)}/../scrapers"
 
 require 'spec'
+require 'brisbane_scraper'
 
-require 'parse_brisbane'
-
-describe BrisbaneParser do
+describe BrisbaneScraper do
   it "should return a particular expected planning application for a particular day" do
     date = Date.new(2009, 11, 12)
-    BrisbaneParser.new.applications(date).applications.should include(DevelopmentApplication.new(
+    BrisbaneScraper.new.applications(date).applications.should include(DevelopmentApplication.new(
       :application_id => "A002473914",
       :description => "House in DCP (Demolition/Extension), House in DCP (Demolition/Extension)",
       :address => "108 ORIEL RD CLAYFIELD QLD 4011",

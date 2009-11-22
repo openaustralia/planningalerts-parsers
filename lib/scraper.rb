@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'mechanize'
 
-class Parser
+class Scraper
   attr_reader :agent
 
   def initialize

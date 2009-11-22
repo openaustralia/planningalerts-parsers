@@ -1,14 +1,10 @@
-#!/usr/bin/env ruby
-#
-# Parser for Brisbane City
-
 $:.unshift "#{File.dirname(__FILE__)}/../lib"
 require 'rubygems'
 
 require 'planning_authority_results'
-require 'parser'
+require 'scraper'
 
-class BrisbaneParser < Parser
+class BrisbaneScraper < Scraper
   attr_reader :planning_authority_name, :planning_authority_short_name
   
   def initialize
