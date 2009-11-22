@@ -3,7 +3,7 @@ require 'builder'
 require 'simple_struct'
 require 'uri'
 
-class DevelopmentApplication < SimpleStruct :application_id, :description, :address, :on_notice_from, :on_notice_to, :info_url, :comment_url
+class DevelopmentApplication < SimpleStruct :application_id, :description, :address, :on_notice_from, :on_notice_to, :info_url, :comment_url, :date_received
   def info_url=(url)
     @info_url = parse_url(url)
   end
@@ -20,6 +20,10 @@ class DevelopmentApplication < SimpleStruct :application_id, :description, :addr
     @on_notice_to = parse_date(date)
   end
   
+  def date_received=(date)
+    @date_received = parse_date(date)
+  end
+  
   def to_xml(options = {})
     options[:indent] ||= 2
     xml = options[:builder] ||= Builder::XmlMarkup.new(:indent => options[:indent])
@@ -29,6 +33,7 @@ class DevelopmentApplication < SimpleStruct :application_id, :description, :addr
       xml.description description
       xml.info_url info_url
       xml.comment_url comment_url
+      xml.date_received date_received
     end
   end
   

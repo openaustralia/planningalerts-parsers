@@ -9,9 +9,6 @@ require 'parse_brisbane'
 
 describe BrisbaneParser do
   it "should return a particular expected planning application for a particular day" do
-    # TODO: Would be good if we made DevelopmentApplication automatically interpret the url's as URL objects and
-    # throw an error if there is a problem with the URL
-    
     BrisbaneParser.new.applications(Date.new(2009, 11, 12)).applications.should include(DevelopmentApplication.new(
       :application_id => "A002473914",
       :description => "House in DCP (Demolition/Extension), House in DCP (Demolition/Extension)",

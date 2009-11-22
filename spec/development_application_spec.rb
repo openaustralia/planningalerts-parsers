@@ -7,12 +7,14 @@ describe DevelopmentApplication do
   before(:each) do
     @da = DevelopmentApplication.new(:application_id => "1234", :address => "12a Smith Street",
       :description => "Lawn extension", :on_notice_from => "12 Nov 2009", :on_notice_to => "1 January 2010",
-      :info_url => "http://foo.nsw.gov.au/aplications/1234", :comment_url => "http://foo.nsw.gov.au/comment/1234")    
+      :info_url => "http://foo.nsw.gov.au/aplications/1234", :comment_url => "http://foo.nsw.gov.au/comment/1234",
+      :date_received => "1 Feb 2009")    
   end
 
   it "should automatically parse a text date" do
     @da.on_notice_from.should == Date.new(2009, 11, 12)
     @da.on_notice_to.should == Date.new(2010, 1, 1)
+    @da.date_received.should == Date.new(2009, 2, 1)
   end
   
   it "should automatically parse the url parameters" do
@@ -46,6 +48,7 @@ describe DevelopmentApplication do
   <description>Lawn extension</description>
   <info_url>http://foo.nsw.gov.au/aplications/1234</info_url>
   <comment_url>http://foo.nsw.gov.au/comment/1234</comment_url>
+  <date_received>2009-02-01</date_received>
 </application>
     EOF
   end
