@@ -36,4 +36,10 @@ describe SimpleStruct do
   it "should not be equal to an object of another type" do
     @c.new(:foo => "fiddle", :bar => "sticks").should_not == "a random string for instance"
   end
+  
+  it "should handle nothing being set" do
+    a = @c.new
+    a.foo.should be_nil
+    a.bar.should be_nil
+  end
 end

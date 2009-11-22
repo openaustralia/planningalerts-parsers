@@ -25,12 +25,6 @@ describe DevelopmentApplication do
     @da.info_url.should == URI.parse("http://blah.com")
   end
   
-  it "should handle the dates not being set" do
-    da = DevelopmentApplication.new
-    da.on_notice_from.should be_nil
-    da.on_notice_to.should be_nil
-  end
-  
   it "should handle some other standard keys" do
     @da.application_id.should == "1234"
     @da.address.should == "12a Smith Street"

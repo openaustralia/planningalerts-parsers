@@ -1,5 +1,5 @@
 class SimpleStruct
-  def initialize(options)
+  def initialize(options = {})
     attributes_set(options)
   end
   

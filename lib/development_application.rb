@@ -4,10 +4,6 @@ require 'simple_struct'
 require 'uri'
 
 class DevelopmentApplication < SimpleStruct :application_id, :description, :address, :on_notice_from, :on_notice_to, :info_url, :comment_url
-  def initialize(options = {})
-    super options
-  end
-  
   def info_url=(url)
     @info_url = parse_url(url)
   end
