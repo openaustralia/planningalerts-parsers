@@ -36,6 +36,7 @@ class SimpleStruct
   end
   
   def==(other)
+    return false unless other.kind_of?(SimpleStruct)
     attributes_get == other.attributes_get
   end
 end

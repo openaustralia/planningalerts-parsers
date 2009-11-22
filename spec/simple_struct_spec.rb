@@ -32,4 +32,8 @@ describe SimpleStruct do
     d = SimpleStruct :foo, :bar
     @c.new(:foo => "fiddle", :bar => "sticks").should == d.new(:foo => "fiddle", :bar => "sticks")
   end
+  
+  it "should not be equal to an object of another type" do
+    @c.new(:foo => "fiddle", :bar => "sticks").should_not == "a random string for instance"
+  end
 end
