@@ -2,7 +2,7 @@
 #
 # Beginnings of prototype parser for downloading development application information from Blue Mountains Council website
 
-$:.unshift "#{File.dirname(__FILE__)}/lib"
+$:.unshift "#{File.dirname(__FILE__)}/../lib"
 
 require 'planning_authority_results'
 require 'parser'

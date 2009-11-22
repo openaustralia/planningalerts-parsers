@@ -1,3 +1,5 @@
+$:.unshift "#{File.dirname(__FILE__)}/scrapers"
+
 require 'parse_blue_mountains'
 require 'parse_brisbane'
 require 'parse_gold_coast'

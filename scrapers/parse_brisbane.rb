@@ -2,7 +2,7 @@
 #
 # Parser for Brisbane City
 
-$:.unshift "#{File.dirname(__FILE__)}/lib"
+$:.unshift "#{File.dirname(__FILE__)}/../lib"
 require 'rubygems'
 
 require 'planning_authority_results'
