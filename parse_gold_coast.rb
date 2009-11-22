@@ -67,7 +67,3 @@ Your query regarding this Application:
     results
   end
 end
-
-p = GoldCoastParser.new
-results = p.applications(Date.new(2009, 11, 12))
-puts results.to_xml
