@@ -6,13 +6,6 @@ require 'uri'
 class DevelopmentApplication < SimpleStruct :application_id, :description, :address, :on_notice_from, :on_notice_to, :info_url, :comment_url
   def initialize(options = {})
     super options
-
-    # TODO: Make this less ugly
-    # Parse attributes
-    self.on_notice_from = @on_notice_from
-    self.on_notice_to = @on_notice_to
-    self.info_url = @info_url
-    self.comment_url = @comment_url
   end
   
   def info_url=(url)

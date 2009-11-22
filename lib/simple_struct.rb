@@ -10,13 +10,13 @@ class SimpleStruct
   
   def attribute_set(attribute, value)
     check_attribute!(attribute)
-    instance_variable_set("@" + attribute.to_s, value)
+    send(attribute.to_s + "=", value)
   end
   
   # Returns the value of an attribute
   def attribute_get(attribute)
     check_attribute!(attribute)
-    instance_variable_get("@" + attribute.to_s)
+    send(attribute.to_s)
   end
   
   def attributes_set(options)
