@@ -7,7 +7,11 @@ require 'brisbane_scraper'
 describe BrisbaneScraper do
   it "should return a particular expected planning application for a particular day" do
     date = Date.new(2009, 11, 12)
-    BrisbaneScraper.new.applications(date).applications.should include(DevelopmentApplication.new(
+    results = BrisbaneScraper.new.applications(date)
+    results.name.should == "Brisbane City Council"
+    results.short_name.should == "Brisbane"
+    
+    results.applications.should include(DevelopmentApplication.new(
       :application_id => "A002473914",
       :description => "House in DCP (Demolition/Extension), House in DCP (Demolition/Extension)",
       :address => "108 ORIEL RD CLAYFIELD QLD 4011",

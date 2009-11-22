@@ -4,12 +4,11 @@ require 'planning_authority_results'
 require 'scraper'
 
 class BlueMountainsScraper < Scraper
-  attr_reader :planning_authority_name, :planning_authority_short_name
+  @planning_authority_name = "Blue Mountains City Council"
+  @planning_authority_short_name = "Blue Mountains"
   
-  def initialize
-    super
-    @planning_authority_name = "Blue Mountains City Council"
-    @planning_authority_short_name = "Blue Mountains"
+  class << self
+    attr_reader :planning_authority_name, :planning_authority_short_name
   end
   
   def applications(date)
@@ -19,7 +18,7 @@ class BlueMountainsScraper < Scraper
     url = "http://www.bmcc.nsw.gov.au/files/daily_planning_notifications.htm"
 
     page = agent.get(url)
-    results = PlanningAuthorityResults.new(:name => @planning_authority_name, :short_name => @planning_authority_short_name)
+    results = PlanningAuthorityResults.new(:name => self.class.planning_authority_name, :short_name => self.class.planning_authority_short_name)
     page.search('table > tr').each do |row|
       values = row.search('td').map {|t| t.inner_text.strip.delete("\n")}
       results << DevelopmentApplication.new(:application_id => values[0], :address => values[1], :description => values[2],

@@ -5,12 +5,11 @@ require 'planning_authority_results'
 require 'scraper'
 
 class BrisbaneScraper < Scraper
-  attr_reader :planning_authority_name, :planning_authority_short_name
-  
-  def initialize
-    super
-    @planning_authority_name = "Brisbane City Council"
-    @planning_authority_short_name = "Brisbane"
+  @planning_authority_name = "Brisbane City Council"
+  @planning_authority_short_name = "Brisbane"
+
+  class << self
+    attr_reader :planning_authority_name, :planning_authority_short_name
   end
   
   def applications(date)
@@ -18,7 +17,7 @@ class BrisbaneScraper < Scraper
     url = "http://pdonline.brisbane.qld.gov.au/MasterView/modules/applicationmaster/default.aspx?page=search"
 
     page = agent.get(url)
-    results = PlanningAuthorityResults.new(:name => @planning_authority_name, :short_name => @planning_authority_short_name)
+    results = PlanningAuthorityResults.new(:name => self.class.planning_authority_name, :short_name => self.class.planning_authority_short_name)
 
     # Click the first button on the form
     form = page.forms.first
