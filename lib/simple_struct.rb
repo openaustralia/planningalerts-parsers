@@ -3,21 +3,20 @@ class SimpleStruct
     attributes_set(options)
   end
   
+  # Throws an exception if attribute is not known. Otherwise does nothing.
+  def check_attribute!(attribute)
+    raise "Unexpected attribute #{attribute} used" unless attributes.include?(attribute)
+  end
+  
   def attribute_set(attribute, value)
-    if attributes.include?(attribute)
-      instance_variable_set("@" + attribute.to_s, value)
-    else
-      raise "Unexpected attribute #{attribute} used"
-    end
+    check_attribute!(attribute)
+    instance_variable_set("@" + attribute.to_s, value)
   end
   
   # Returns the value of an attribute
   def attribute_get(attribute)
-    if attributes.include?(attribute)
-      instance_variable_get("@" + attribute.to_s)
-    else
-      raise "Unexpected attribute #{attribute} used"
-    end     
+    check_attribute!(attribute)
+    instance_variable_get("@" + attribute.to_s)
   end
   
   def attributes_set(options)
