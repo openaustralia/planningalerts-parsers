@@ -25,6 +25,11 @@ describe DevelopmentApplication do
     @da.info_url.should == URI.parse("http://blah.com")
   end
   
+  it "should be able to cope with a URI object being used to set the url as well" do
+    @da.info_url = URI.parse("http://blah.com")
+    @da.info_url.should == URI.parse("http://blah.com")    
+  end
+  
   it "should handle some other standard keys" do
     @da.application_id.should == "1234"
     @da.address.should == "12a Smith Street"

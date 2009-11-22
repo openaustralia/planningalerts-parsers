@@ -12,10 +12,6 @@ class DevelopmentApplication < SimpleStruct :application_id, :description, :addr
     @comment_url = parse_url(url)
   end
   
-  def parse_date(date)
-    Date.parse(date) if date
-  end
-  
   def on_notice_from=(date)
     @on_notice_from = parse_date(date)
   end
@@ -38,8 +34,20 @@ class DevelopmentApplication < SimpleStruct :application_id, :description, :addr
   
   private
   
+  def parse_date(date)
+    if date && !date.kind_of?(Date)
+      Date.parse(date)
+    else
+      date
+    end
+  end
+  
   def parse_url(url)
-    URI.parse(url) if url
+    if url && !url.kind_of?(URI)
+      URI.parse(url)
+    else
+      url
+    end
   end
 end
 
