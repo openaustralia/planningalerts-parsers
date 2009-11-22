@@ -1,16 +1,42 @@
 class SimpleStruct
   def initialize(options)
-    options.each do |attribute, value|
-      set_attribute(attribute, value)
-    end
+    attributes_set(options)
   end
   
-  def set_attribute(attribute, value)
+  def attribute_set(attribute, value)
     if attributes.include?(attribute)
       instance_variable_set("@" + attribute.to_s, value)
     else
       raise "Unexpected attribute #{attribute} used"
     end
+  end
+  
+  # Returns the value of an attribute
+  def attribute_get(attribute)
+    if attributes.include?(attribute)
+      instance_variable_get("@" + attribute.to_s)
+    else
+      raise "Unexpected attribute #{attribute} used"
+    end     
+  end
+  
+  def attributes_set(options)
+    options.each do |attribute, value|
+      attribute_set(attribute, value)
+    end
+  end
+  
+  # Returns a hash of attribute names and values
+  def attributes_get
+    h = {}
+    attributes.each do |a|
+      h[a] = attribute_get(a)
+    end
+    h
+  end
+  
+  def==(other)
+    attributes_get == other.attributes_get
   end
 end
 
