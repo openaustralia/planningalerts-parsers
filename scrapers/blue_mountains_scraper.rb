@@ -7,10 +7,6 @@ class BlueMountainsScraper < Scraper
   @planning_authority_name = "Blue Mountains City Council"
   @planning_authority_short_name = "Blue Mountains"
   
-  class << self
-    attr_reader :planning_authority_name, :planning_authority_short_name
-  end
-  
   def applications(date)
     # TODO: We're currently ignoring the date. Need to figure out what to do here
     

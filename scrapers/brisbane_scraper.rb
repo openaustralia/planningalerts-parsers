@@ -8,10 +8,6 @@ class BrisbaneScraper < Scraper
   @planning_authority_name = "Brisbane City Council"
   @planning_authority_short_name = "Brisbane"
 
-  class << self
-    attr_reader :planning_authority_name, :planning_authority_short_name
-  end
-  
   def applications(date)
     # This is the page that we're parsing
     url = "http://pdonline.brisbane.qld.gov.au/MasterView/modules/applicationmaster/default.aspx?page=search"
