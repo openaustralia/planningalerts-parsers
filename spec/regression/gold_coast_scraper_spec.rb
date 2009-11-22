@@ -1,5 +1,5 @@
-$:.unshift "#{File.dirname(__FILE__)}/../lib"
-$:.unshift "#{File.dirname(__FILE__)}/../scrapers"
+$:.unshift "#{File.dirname(__FILE__)}/../../lib"
+$:.unshift "#{File.dirname(__FILE__)}/../../scrapers"
 
 require 'spec'
 require 'gold_coast_scraper'
