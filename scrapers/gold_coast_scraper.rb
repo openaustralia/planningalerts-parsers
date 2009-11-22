@@ -6,10 +6,9 @@ class GoldCoastScraper < Scraper
   @planning_authority_name = "Gold Coast City Council"
   @planning_authority_short_name = "Gold Coast"
 
-  def applications(date)
-    url = "http://pdonline.goldcoast.qld.gov.au/masterview/modules/applicationmaster/default.aspx?page=search"
+  # Downloads html table and returns it, ready for the data to be extracted from it
+  def raw_table(date, url)
     page = agent.get(url)
-    results = PlanningAuthorityResults.new(:name => self.class.planning_authority_name, :short_name => self.class.planning_authority_short_name)
     
     # Click the Ok button on the form
     form = page.forms.first
@@ -26,10 +25,14 @@ class GoldCoastScraper < Scraper
       "_ctl3:drDates:txtDay2" => date.day,
       "_ctl3:drDates:txtMonth2" => date.month,
       "_ctl3:drDates:txtYear2" => date.year)
-    table = search_form.submit(search_form.button_with(:name => "_ctl3:btnSearch")).search('span#_ctl3_lblData > table')
-    
+    search_form.submit(search_form.button_with(:name => "_ctl3:btnSearch")).search('span#_ctl3_lblData > table')
     # TODO: Need to handle what happens when the results span multiple pages. Can this happen?
-
+  end
+  
+  def applications(date)
+    results = PlanningAuthorityResults.new(:name => self.class.planning_authority_name, :short_name => self.class.planning_authority_short_name)
+    table = raw_table(date, "http://pdonline.goldcoast.qld.gov.au/masterview/modules/applicationmaster/default.aspx?page=search")
+    
     # Skip first row of the table
     table.search('tr')[1..-1].each do |row|
       values = row.search('td')
@@ -38,7 +41,7 @@ class GoldCoastScraper < Scraper
         :application_id => values[1].inner_html.strip,
         :description => values[3].inner_text.split("\n")[3..-1].join("\n").strip,
         :address => values[3].inner_text.split("\n")[1].strip,
-        :info_url => page.uri + URI.parse(values[0].at('a').attributes['href']),
+        :info_url => agent.page.uri + URI.parse(values[0].at('a').attributes['href']),
         :date_received => values[2].inner_html)
       email_body = <<-EOF
 Thank you for your enquiry.
