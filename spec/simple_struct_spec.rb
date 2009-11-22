@@ -23,4 +23,8 @@ describe SimpleStruct do
   it "should barf when trying to use an unknown key in the initializer" do
     lambda{@c.new(:diddle => "bar")}.should raise_error(RuntimeError, "Unexpected attribute diddle used")
   end
+  
+  it "should return a list of attributes" do
+    @c.new(:foo => "fiddle", :bar => "sticks").attributes.should == [:foo, :bar]
+  end
 end
