@@ -58,8 +58,6 @@ class BrisbaneParser < Parser
         :date_received => values[3].inner_html.strip)
       da.comment_url = "https://obonline.ourbrisbane.com/services/startDASubmission.do?direct=true&daNumber=#{URI.escape(da.application_id)}&sdeprop=#{URI.escape(da.address)}"
       results << da
-      # The third column has the date that this application was submitted which should always be the date that we've searched for
-      # TODO: Double check this
     end
     results
   end
