@@ -1,35 +1,11 @@
 $:.unshift "#{File.dirname(__FILE__)}/../lib"
-require 'scraper'
+require 'info_master_scraper'
 require 'planning_authority_results'
 
-class GoldCoastScraper < Scraper
+class GoldCoastScraper < InfoMasterScraper
   @planning_authority_name = "Gold Coast City Council"
   @planning_authority_short_name = "Gold Coast"
 
-  # Downloads html table and returns it, ready for the data to be extracted from it
-  def raw_table(date, url)
-    page = agent.get(url)
-    
-    # Click the Ok button on the form
-    form = page.forms.first
-    form.submit(form.button_with(:name => /btnOk/))
-
-    # Get the page again
-    page = agent.get(url)
-
-    search_form = page.forms.first
-    
-    search_form[search_form.field_with(:name => /drDates:txtDay1/).name] = date.day
-    search_form[search_form.field_with(:name => /drDates:txtMonth1/).name] = date.month
-    search_form[search_form.field_with(:name => /drDates:txtYear1/).name] = date.year
-    search_form[search_form.field_with(:name => /drDates:txtDay2/).name] = date.day
-    search_form[search_form.field_with(:name => /drDates:txtMonth2/).name] = date.month
-    search_form[search_form.field_with(:name => /drDates:txtYear2/).name] = date.year
-
-    search_form.submit(search_form.button_with(:name => /btnSearch/)).search('span#_ctl3_lblData > table')
-    # TODO: Need to handle what happens when the results span multiple pages. Can this happen?
-  end
-  
   def applications(date)
     results = PlanningAuthorityResults.new(:name => self.class.planning_authority_name, :short_name => self.class.planning_authority_short_name)
     table = raw_table(date, "http://pdonline.goldcoast.qld.gov.au/masterview/modules/applicationmaster/default.aspx?page=search")
