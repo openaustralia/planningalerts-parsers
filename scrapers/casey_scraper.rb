@@ -6,15 +6,8 @@ class CaseyScraper < Scraper
   @planning_authority_name = "Casey City Council"
   @planning_authority_short_name = "Casey"
 
-  def applications
-    results = PlanningAuthorityResults.new(:name => self.class.planning_authority_name, :short_name => self.class.planning_authority_short_name)
-    url = "http://www.landexchange.vic.gov.au/spear/publicSearch/Search.do"
-
-    page = agent.get(url)
-    form = page.forms.first
-    # TODO: Is there a more sensible way to pick the item in the drop-down?
-    form.field_with(:name => "councilName").options.find{|o| o.text == "Casey City Council"}.click
-    page = form.submit
+  # Extracts all the data on a single page of results
+  def extract_page_data(page, results)
     # Skip first row (header) and last row (page navigation)
     page.at('div#list table').search('tr')[1..-2].each do |row|
       values = row.search('td')
@@ -33,6 +26,19 @@ class CaseyScraper < Scraper
       # TODO: Need to figure out info_url, comment_url and description
       results << da
     end
+  end
+  
+  def applications
+    results = PlanningAuthorityResults.new(:name => self.class.planning_authority_name, :short_name => self.class.planning_authority_short_name)
+    url = "http://www.landexchange.vic.gov.au/spear/publicSearch/Search.do"
+
+    page = agent.get(url)
+    form = page.forms.first
+    # TODO: Is there a more sensible way to pick the item in the drop-down?
+    form.field_with(:name => "councilName").options.find{|o| o.text == "Casey City Council"}.click
+    page = form.submit
+    
+    extract_page_data(page, results)
     # TODO: Handle results over more multiple pages
     results
   end
