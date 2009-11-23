@@ -38,8 +38,11 @@ class CaseyScraper < Scraper
     form.field_with(:name => "councilName").options.find{|o| o.text == "Casey City Council"}.click
     page = form.submit
     
-    extract_page_data(page, results)
-    # TODO: Handle results over more multiple pages
+    begin
+      extract_page_data(page, results)
+      next_link = page.link_with(:text => /next 50/)
+      page = next_link.click if next_link
+    end until next_link.nil?
     results
   end
 end
