@@ -12,20 +12,21 @@ class GoldCoastScraper < Scraper
     
     # Click the Ok button on the form
     form = page.forms.first
-    form.submit(form.button_with(:name => "_ctl2:btnOk"))
+    form.submit(form.button_with(:name => /btnOk/))
 
     # Get the page again
     page = agent.get(url)
 
     search_form = page.forms.first
-    search_form.set_fields(
-      "_ctl3:drDates:txtDay1" => date.day,
-      "_ctl3:drDates:txtMonth1" => date.month,
-      "_ctl3:drDates:txtYear1" => date.year,
-      "_ctl3:drDates:txtDay2" => date.day,
-      "_ctl3:drDates:txtMonth2" => date.month,
-      "_ctl3:drDates:txtYear2" => date.year)
-    search_form.submit(search_form.button_with(:name => "_ctl3:btnSearch")).search('span#_ctl3_lblData > table')
+    
+    search_form[search_form.field_with(:name => /drDates:txtDay1/).name] = date.day
+    search_form[search_form.field_with(:name => /drDates:txtMonth1/).name] = date.month
+    search_form[search_form.field_with(:name => /drDates:txtYear1/).name] = date.year
+    search_form[search_form.field_with(:name => /drDates:txtDay2/).name] = date.day
+    search_form[search_form.field_with(:name => /drDates:txtMonth2/).name] = date.month
+    search_form[search_form.field_with(:name => /drDates:txtYear2/).name] = date.year
+
+    search_form.submit(search_form.button_with(:name => /btnSearch/)).search('span#_ctl3_lblData > table')
     # TODO: Need to handle what happens when the results span multiple pages. Can this happen?
   end
   
