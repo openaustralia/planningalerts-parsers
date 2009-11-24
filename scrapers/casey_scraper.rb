@@ -2,6 +2,12 @@ $:.unshift "#{File.dirname(__FILE__)}/../lib"
 require 'scraper'
 require 'planning_authority_results'
 
+# A development application in the Victorian SPEAR system (https://www.landexchange.vic.gov.au/spear/)
+# We want to track a little extra information here
+class SPEARDevelopmentApplication < DevelopmentApplication
+  add_attributes :spear_id
+end
+
 class CaseyScraper < Scraper
   @planning_authority_name = "Casey City Council"
   @planning_authority_short_name = "Casey"
@@ -17,12 +23,13 @@ class CaseyScraper < Scraper
       # TODO: Figure out whether we should ignore "Certification of a Plan"
       #type = values[3].inner_html.strip
       #status = values[4].inner_html.strip
-      da = DevelopmentApplication.new(
+      da = SPEARDevelopmentApplication.new(
         # This is the "Council ref". We could alternatively use the SPEAR Ref #. Which is correct?
         :application_id => values[2].inner_html.strip,
         # This column sometimes has a link, sometimes doesn't. Handle both cases
         :address => values[0].at('a') ? values[0].at('a').inner_html.strip : values[0].inner_html.strip,
-        :date_received => values[10].inner_html.strip)
+        :date_received => values[10].inner_html.strip,
+        :spear_id => values[8].inner_html.strip)
       # TODO: Need to figure out info_url, comment_url and description
       results << da
     end
