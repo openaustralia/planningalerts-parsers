@@ -4,7 +4,9 @@ require 'simple_struct'
 require 'uri'
 require 'date_with_non_american_bias'
 
-class DevelopmentApplication < SimpleStruct :application_id, :description, :address, :on_notice_from, :on_notice_to, :info_url, :comment_url, :date_received
+class DevelopmentApplication < SimpleStruct
+  add_attributes :application_id, :description, :address, :on_notice_from, :on_notice_to, :info_url, :comment_url, :date_received
+  
   def info_url=(url)
     @info_url = parse_url(url)
   end

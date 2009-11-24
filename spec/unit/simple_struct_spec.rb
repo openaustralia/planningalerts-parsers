@@ -5,7 +5,8 @@ require 'simple_struct'
 
 describe SimpleStruct do
   before(:each) do
-    @c = SimpleStruct :foo, :bar
+    @c = Class.new(SimpleStruct)
+    @c.add_attributes :foo, :bar
   end
   
   it "should accept attribute values as a hash" do
@@ -29,8 +30,10 @@ describe SimpleStruct do
   end
 
   it "should be equal to another SimpleStruct with the same fields" do
-    d = SimpleStruct :foo, :bar
-    @c.new(:foo => "fiddle", :bar => "sticks").should == d.new(:foo => "fiddle", :bar => "sticks")
+    class D < SimpleStruct
+      add_attributes :foo, :bar
+    end
+    @c.new(:foo => "fiddle", :bar => "sticks").should == D.new(:foo => "fiddle", :bar => "sticks")
   end
   
   it "should not be equal to an object of another type" do

@@ -1,7 +1,8 @@
 require 'development_application'
 require 'simple_struct'
 
-class PlanningAuthorityResults < SimpleStruct :name, :short_name
+class PlanningAuthorityResults < SimpleStruct
+  add_attributes :name, :short_name
   attr_reader :applications
   
   def initialize(options = {})

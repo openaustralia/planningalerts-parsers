@@ -49,9 +49,3 @@ class SimpleStruct
     attributes_get == other.attributes_get
   end
 end
-
-def SimpleStruct(*attributes)
-  c = Class.new(SimpleStruct)
-  c.send(:add_attributes, *attributes)
-  c
-end
