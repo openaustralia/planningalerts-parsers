@@ -1,9 +1,10 @@
 class SimpleStruct
-  def self.set_attributes(*attributes)
+  def self.add_attributes(*attributes)
     attr_accessor *attributes
-    @attributes = attributes
+    @attributes = [] if @attributes.nil?
+    @attributes += attributes
   end
-
+  
   def self.attributes
     @attributes
   end
@@ -51,6 +52,6 @@ end
 
 def SimpleStruct(*attributes)
   c = Class.new(SimpleStruct)
-  c.send(:set_attributes, *attributes)
+  c.send(:add_attributes, *attributes)
   c
 end

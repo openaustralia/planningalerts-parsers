@@ -42,4 +42,11 @@ describe SimpleStruct do
     a.foo.should be_nil
     a.bar.should be_nil
   end
+  
+  it "should be able add new attributes by using add_attributes" do
+    @c.add_attributes(:boo, :bibble)
+    @c.attributes.should == [:foo, :bar, :boo, :bibble]
+    a = @c.new(:boo => "blah")
+    a.boo.should == "blah"
+  end
 end
