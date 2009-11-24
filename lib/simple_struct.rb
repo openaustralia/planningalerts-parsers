@@ -5,8 +5,13 @@ class SimpleStruct
     @attributes += attributes
   end
   
+  # Attributes are inherited from the parents
   def self.attributes
-    @attributes
+    if superclass.instance_variable_get('@attributes')
+      superclass.instance_variable_get('@attributes') + @attributes
+    else
+      @attributes
+    end
   end
   
   def initialize(options = {})

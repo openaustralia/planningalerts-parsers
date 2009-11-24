@@ -54,4 +54,10 @@ describe SimpleStruct do
     a = @c.new(:boo => "blah")
     a.boo.should == "blah"
   end
+  
+  it "should inherit the attributes from its parent" do
+    d = Class.new(@c)
+    d.add_attributes(:biddle)
+    d.attributes.should == [:foo, :bar, :biddle]
+  end
 end
