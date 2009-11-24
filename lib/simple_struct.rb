@@ -15,7 +15,7 @@ class SimpleStruct
   
   # Throws an exception if attribute is not known. Otherwise does nothing.
   def check_attribute!(attribute)
-    raise "Unexpected attribute #{attribute} used" unless self.class.attributes.include?(attribute)
+    raise "Unexpected attribute #{attribute} used" unless self.class.attributes && self.class.attributes.include?(attribute)
   end
   
   def attribute_set(attribute, value)
