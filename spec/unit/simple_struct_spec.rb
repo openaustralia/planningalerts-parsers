@@ -25,7 +25,7 @@ describe SimpleStruct do
   end
   
   it "should return a list of attributes" do
-    @c.new(:foo => "fiddle", :bar => "sticks").attributes.should == [:foo, :bar]
+    @c.attributes.should == [:foo, :bar]
   end
 
   it "should be equal to another SimpleStruct with the same fields" do

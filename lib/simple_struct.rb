@@ -1,11 +1,20 @@
 class SimpleStruct
+  def self.set_attributes(*attributes)
+    attr_accessor *attributes
+    @attributes = attributes
+  end
+
+  def self.attributes
+    @attributes
+  end
+  
   def initialize(options = {})
     attributes_set(options)
   end
   
   # Throws an exception if attribute is not known. Otherwise does nothing.
   def check_attribute!(attribute)
-    raise "Unexpected attribute #{attribute} used" unless attributes.include?(attribute)
+    raise "Unexpected attribute #{attribute} used" unless self.class.attributes.include?(attribute)
   end
   
   def attribute_set(attribute, value)
@@ -28,7 +37,7 @@ class SimpleStruct
   # Returns a hash of attribute names and values
   def attributes_get
     h = {}
-    attributes.each do |a|
+    self.class.attributes.each do |a|
       h[a] = attribute_get(a)
     end
     h
@@ -42,7 +51,6 @@ end
 
 def SimpleStruct(*attributes)
   c = Class.new(SimpleStruct)
-  c.send(:attr_accessor, *attributes)
-  c.send(:define_method, :attributes) { attributes }
+  c.send(:set_attributes, *attributes)
   c
 end
