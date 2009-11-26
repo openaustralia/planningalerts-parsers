@@ -23,15 +23,22 @@ class CaseyScraper < Scraper
       # TODO: Figure out whether we should ignore "Certification of a Plan"
       #type = values[3].inner_html.strip
       #status = values[4].inner_html.strip
-      da = SPEARDevelopmentApplication.new(
-        # This is the "Council ref". We could alternatively use the SPEAR Ref #. Which is correct?
-        :application_id => values[2].inner_html.strip,
-        # This column sometimes has a link, sometimes doesn't. Handle both cases
-        :address => values[0].at('a') ? values[0].at('a').inner_html.strip : values[0].inner_html.strip,
-        :date_received => values[10].inner_html.strip,
-        :spear_id => values[8].inner_html.strip)
-      # TODO: Need to figure out info_url, comment_url and description
-      results << da
+      # I'm going to take a punt here on what the correct thing to do is - I think if there is a link available to
+      # the individual planning application that means that it's something that requires deliberation and so interesting.
+      # I'm going to assume that everything else is purely "procedural" and should not be recorded here
+
+      # If there is a link on the address record this development application
+      if values[0].at('a')
+        da = SPEARDevelopmentApplication.new(
+          # This is the "Council ref". We could alternatively use the SPEAR Ref #. Which is correct?
+          :application_id => values[2].inner_html.strip,
+          :address => values[0].at('a').inner_html.strip,
+          :date_received => values[10].inner_html.strip,
+          :spear_id => values[8].inner_html.strip,
+          :info_url => page.uri + URI.parse(values[0].at('a').attributes['href']))
+        # TODO: Need to figure out comment_url and description
+        results << da
+      end
     end
   end
   
@@ -50,6 +57,8 @@ class CaseyScraper < Scraper
       next_link = page.link_with(:text => /next 50/)
       page = next_link.click if next_link
     end until next_link.nil?
+    # Next we get more detailed information by going to each page of each individual application
+    
     results
   end
 end
