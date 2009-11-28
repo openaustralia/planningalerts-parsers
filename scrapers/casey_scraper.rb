@@ -2,12 +2,6 @@ $:.unshift "#{File.dirname(__FILE__)}/../lib"
 require 'scraper'
 require 'planning_authority_results'
 
-# A development application in the Victorian SPEAR system (https://www.landexchange.vic.gov.au/spear/)
-# We want to track a little extra information here
-class SPEARDevelopmentApplication < DevelopmentApplication
-  add_attributes :spear_id
-end
-
 class CaseyScraper < Scraper
   @planning_authority_name = "Casey City Council"
   @planning_authority_short_name = "Casey"
@@ -29,17 +23,30 @@ class CaseyScraper < Scraper
 
       # If there is a link on the address record this development application
       if values[0].at('a')
-        da = SPEARDevelopmentApplication.new(
-          # This is the "Council ref". We could alternatively use the SPEAR Ref #. Which is correct?
+        da = DevelopmentApplication.new(
+          # This is the "Council ref". We could alternatively use the SPEAR Ref #. Which is "correct"?
           :application_id => values[2].inner_html.strip,
           :address => values[0].at('a').inner_html.strip,
           :date_received => values[10].inner_html.strip,
-          :spear_id => values[8].inner_html.strip,
           :info_url => page.uri + URI.parse(values[0].at('a').attributes['href']))
-        # TODO: Need to figure out comment_url and description
+        # TODO: Setting the comment URL to be the same as the info URL because I don't know what else to
+        # do for the time being
+        da.comment_url = da.info_url
         results << da
       end
     end
+  end
+  
+  
+  # Get a description of the application extracted from the more detailed information page (at info_url)
+  def extract_description(info_url)
+    page = agent.get(info_url)
+    # The horrible thing about this page is they use tables for layout. Well done!
+    # Also I think the "Intended use" bit looks like the most useful. So, we'll use that for the description
+    page.at('div#bodypadding table').search('table')[1].search('tr').find do |row|
+      # <th> tag contains the name of the field, <td> tag contains its value
+      row.at('th').inner_text.strip == "Intended use"
+    end.at('td').inner_text.strip
   end
   
   def applications
@@ -57,7 +64,11 @@ class CaseyScraper < Scraper
       next_link = page.link_with(:text => /next 50/)
       page = next_link.click if next_link
     end until next_link.nil?
+
     # Next we get more detailed information by going to each page of each individual application
+    results.applications.each do |a|
+      a.description = extract_description(a.info_url)
+    end
     
     results
   end
