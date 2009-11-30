@@ -7,7 +7,8 @@ class CaseyScraper < Scraper
   @planning_authority_short_name = "Casey"
 
   # Extracts all the data on a single page of results
-  def extract_page_data(page, results)
+  def extract_page_data(page)
+    apps = []
     # Skip first row (header) and last row (page navigation)
     page.at('div#list table').search('tr')[1..-2].each do |row|
       values = row.search('td')
@@ -32,9 +33,10 @@ class CaseyScraper < Scraper
         # TODO: Setting the comment URL to be the same as the info URL because I don't know what else to
         # do for the time being
         da.comment_url = da.info_url
-        results << da
+        apps << da
       end
     end
+    apps
   end
   
   
@@ -50,8 +52,6 @@ class CaseyScraper < Scraper
   end
   
   def applications(date)
-    # TODO: We're currently ignoring the date. Need to figure out what to do here
-    
     results = PlanningAuthorityResults.new(:name => self.class.planning_authority_name, :short_name => self.class.planning_authority_short_name)
     url = "http://www.landexchange.vic.gov.au/spear/publicSearch/Search.do"
 
@@ -62,7 +62,7 @@ class CaseyScraper < Scraper
     page = form.submit
     
     begin
-      extract_page_data(page, results)
+      results.add_applications(extract_page_data(page).find_all{|r| r.date_received == date})
       next_link = page.link_with(:text => /next 50/)
       page = next_link.click if next_link
     end until next_link.nil?

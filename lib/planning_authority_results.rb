@@ -14,6 +14,10 @@ class PlanningAuthorityResults < SimpleStruct
     @applications << da
   end
   
+  def add_applications(apps)
+    @applications += apps
+  end
+  
   def to_xml(options = {})
     options[:indent] ||= 2
     xml = options[:builder] ||= Builder::XmlMarkup.new(:indent => options[:indent])
