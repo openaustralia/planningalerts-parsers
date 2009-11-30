@@ -1,4 +1,3 @@
-$:.unshift "#{File.dirname(__FILE__)}/../lib"
 require 'scraper'
 require 'planning_authority_results'
 
@@ -81,10 +80,3 @@ class SPEARScraper < Scraper
       :applications => applications)
   end
 end
-
-class CaseyScraper < SPEARScraper
-  def initialize
-    super("Casey City Council", "Casey", "Casey City Council")
-  end
-end
-
