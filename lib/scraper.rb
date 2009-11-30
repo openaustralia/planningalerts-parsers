@@ -11,6 +11,11 @@ class Scraper
   
   def initialize
     @agent = WWW::Mechanize.new    
-  end  
+  end
+  
+  # A version of the short name that is encoded for use in url's
+  def self.planning_authority_short_name_encoded
+    planning_authority_short_name.downcase.gsub(' ', '_')
+  end
 end
 

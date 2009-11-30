@@ -32,4 +32,24 @@ describe "Server for scraper XML" do
     get "/brisbane?year=2009&month=11&day=12"
     last_response.body.should == "foo"
   end
+  
+  it "should retrieve a list of all the scraper urls" do
+    # Restrict parsers to just two
+    Scrapers.stub!(:scrapers).and_return([BlueMountainsScraper, BrisbaneScraper])
+    get "/"
+    last_response.body.should == <<-EOF
+<scrapers>
+  <scraper>
+    <authority_name>Blue Mountains City Council</authority_name>
+    <authority_short_name>Blue Mountains</authority_short_name>
+    <url>http://example.org:80/blue_mountains?year={year}&amp;month={month}&amp;day={day}</url>
+  </scraper>
+  <scraper>
+    <authority_name>Brisbane City Council</authority_name>
+    <authority_short_name>Brisbane</authority_short_name>
+    <url>http://example.org:80/brisbane?year={year}&amp;month={month}&amp;day={day}</url>
+  </scraper>
+</scrapers>
+    EOF
+  end
 end
