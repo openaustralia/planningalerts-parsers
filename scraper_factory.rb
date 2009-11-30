@@ -8,11 +8,11 @@ require 'casey_scraper'
 module Scrapers
   # Central registry of scrapers
   def self.scrapers
-    [BlueMountainsScraper, BrisbaneScraper, GoldCoastScraper, CaseyScraper]
+    [BlueMountainsScraper.new, BrisbaneScraper.new, GoldCoastScraper.new, CaseyScraper.new]
   end
   
   def self.scraper_factory(name)
-    scrapers.find{|p| p.planning_authority_short_name_encoded == name}.new
+    scrapers.find{|p| p.class.planning_authority_short_name_encoded == name}
   end
 end
 

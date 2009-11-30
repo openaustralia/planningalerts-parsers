@@ -35,7 +35,7 @@ describe "Server for scraper XML" do
   
   it "should retrieve a list of all the scraper urls" do
     # Restrict parsers to just two
-    Scrapers.stub!(:scrapers).and_return([BlueMountainsScraper, BrisbaneScraper])
+    Scrapers.stub!(:scrapers).and_return([BlueMountainsScraper.new, BrisbaneScraper.new])
     get "/"
     last_response.body.should == <<-EOF
 <scrapers>
