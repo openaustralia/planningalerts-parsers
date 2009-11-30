@@ -4,17 +4,12 @@ require 'mechanize'
 class Scraper
   attr_reader :agent
 
-  # TODO: Extract this into Scraper
-  class << self
-    attr_reader :planning_authority_name, :planning_authority_short_name
-  end
-  
   def initialize
     @agent = WWW::Mechanize.new    
   end
   
   # A version of the short name that is encoded for use in url's
-  def self.planning_authority_short_name_encoded
+  def planning_authority_short_name_encoded
     planning_authority_short_name.downcase.gsub(' ', '_')
   end
 end

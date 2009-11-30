@@ -12,7 +12,7 @@ module Scrapers
   end
   
   def self.scraper_factory(name)
-    scrapers.find{|p| p.class.planning_authority_short_name_encoded == name}
+    scrapers.find{|p| p.planning_authority_short_name_encoded == name}
   end
 end
 

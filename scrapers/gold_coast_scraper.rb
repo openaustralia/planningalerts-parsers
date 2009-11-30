@@ -3,11 +3,11 @@ require 'info_master_scraper'
 require 'planning_authority_results'
 
 class GoldCoastScraper < InfoMasterScraper
-  @planning_authority_name = "Gold Coast City Council"
-  @planning_authority_short_name = "Gold Coast"
+  def planning_authority_name; "Gold Coast City Council"; end
+  def planning_authority_short_name; "Gold Coast"; end
 
   def applications(date)
-    results = PlanningAuthorityResults.new(:name => self.class.planning_authority_name, :short_name => self.class.planning_authority_short_name)
+    results = PlanningAuthorityResults.new(:name => planning_authority_name, :short_name => planning_authority_short_name)
     table = raw_table(date, "http://pdonline.goldcoast.qld.gov.au/masterview/modules/applicationmaster/default.aspx?page=search")
     
     # Skip first row of the table

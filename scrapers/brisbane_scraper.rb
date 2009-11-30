@@ -5,11 +5,11 @@ require 'planning_authority_results'
 require 'info_master_scraper'
 
 class BrisbaneScraper < InfoMasterScraper
-  @planning_authority_name = "Brisbane City Council"
-  @planning_authority_short_name = "Brisbane"
+  def planning_authority_name; "Brisbane City Council"; end
+  def planning_authority_short_name; "Brisbane"; end
 
   def applications(date)
-    results = PlanningAuthorityResults.new(:name => self.class.planning_authority_name, :short_name => self.class.planning_authority_short_name)
+    results = PlanningAuthorityResults.new(:name => planning_authority_name, :short_name => planning_authority_short_name)
     table = raw_table(date, "http://pdonline.brisbane.qld.gov.au/MasterView/modules/applicationmaster/default.aspx?page=search")
 
     # Skip first two rows of the table

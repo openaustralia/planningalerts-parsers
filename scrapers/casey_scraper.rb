@@ -3,8 +3,8 @@ require 'scraper'
 require 'planning_authority_results'
 
 class CaseyScraper < Scraper
-  @planning_authority_name = "Casey City Council"
-  @planning_authority_short_name = "Casey"
+  def planning_authority_name; "Casey City Council"; end
+  def planning_authority_short_name; "Casey"; end
 
   # Extracts all the data on a single page of results
   def extract_page_data(page)
@@ -72,8 +72,8 @@ class CaseyScraper < Scraper
       a.description = extract_description(a.info_url)
     end
     
-    PlanningAuthorityResults.new(:name => self.class.planning_authority_name,
-      :short_name => self.class.planning_authority_short_name,
+    PlanningAuthorityResults.new(:name => planning_authority_name,
+      :short_name => planning_authority_short_name,
       :applications => applications)
   end
 end
