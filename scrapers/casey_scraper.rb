@@ -52,7 +52,6 @@ class CaseyScraper < Scraper
   end
   
   def applications(date)
-    results = PlanningAuthorityResults.new(:name => self.class.planning_authority_name, :short_name => self.class.planning_authority_short_name)
     url = "http://www.landexchange.vic.gov.au/spear/publicSearch/Search.do"
 
     page = agent.get(url)
@@ -61,17 +60,20 @@ class CaseyScraper < Scraper
     form.field_with(:name => "councilName").options.find{|o| o.text == "Casey City Council"}.click
     page = form.submit
     
+    applications = []
     begin
-      results.add_applications(extract_page_data(page).find_all{|r| r.date_received == date})
+      applications += extract_page_data(page).find_all{|r| r.date_received == date}
       next_link = page.link_with(:text => /next 50/)
       page = next_link.click if next_link
     end until next_link.nil?
 
     # Next we get more detailed information by going to each page of each individual application
-    results.applications.each do |a|
+    applications.each do |a|
       a.description = extract_description(a.info_url)
     end
     
-    results
+    PlanningAuthorityResults.new(:name => self.class.planning_authority_name,
+      :short_name => self.class.planning_authority_short_name,
+      :applications => applications)
   end
 end

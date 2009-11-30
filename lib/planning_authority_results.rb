@@ -2,8 +2,7 @@ require 'development_application'
 require 'simple_struct'
 
 class PlanningAuthorityResults < SimpleStruct
-  add_attributes :name, :short_name
-  attr_reader :applications
+  add_attributes :name, :short_name, :applications
   
   def initialize(options = {})
     @applications = []
@@ -12,10 +11,6 @@ class PlanningAuthorityResults < SimpleStruct
   
   def <<(da)
     @applications << da
-  end
-  
-  def add_applications(apps)
-    @applications += apps
   end
   
   def to_xml(options = {})
