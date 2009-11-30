@@ -2,10 +2,14 @@ $:.unshift "#{File.dirname(__FILE__)}/../lib"
 require 'scraper'
 require 'planning_authority_results'
 
-class CaseyScraper < Scraper
-  def planning_authority_name; "Casey City Council"; end
-  def planning_authority_short_name; "Casey"; end
-
+class SPEARScraper < Scraper
+  attr_reader :planning_authority_name, :planning_authority_short_name
+  
+  def initialize(name, short_name, web_form_name)
+    @planning_authority_name, @planning_authority_short_name, @web_form_name = name, short_name, web_form_name
+    super()
+  end
+  
   # Extracts all the data on a single page of results
   def extract_page_data(page)
     apps = []
@@ -57,7 +61,7 @@ class CaseyScraper < Scraper
     page = agent.get(url)
     form = page.forms.first
     # TODO: Is there a more sensible way to pick the item in the drop-down?
-    form.field_with(:name => "councilName").options.find{|o| o.text == "Casey City Council"}.click
+    form.field_with(:name => "councilName").options.find{|o| o.text == @web_form_name}.click
     page = form.submit
     
     applications = []
@@ -77,3 +81,10 @@ class CaseyScraper < Scraper
       :applications => applications)
   end
 end
+
+class CaseyScraper < SPEARScraper
+  def initialize
+    super("Casey City Council", "Casey", "Casey City Council")
+  end
+end
+
