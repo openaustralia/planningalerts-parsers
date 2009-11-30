@@ -49,7 +49,9 @@ class CaseyScraper < Scraper
     end.at('td').inner_text.strip
   end
   
-  def applications
+  def applications(date)
+    # TODO: We're currently ignoring the date. Need to figure out what to do here
+    
     results = PlanningAuthorityResults.new(:name => self.class.planning_authority_name, :short_name => self.class.planning_authority_short_name)
     url = "http://www.landexchange.vic.gov.au/spear/publicSearch/Search.do"
 
@@ -73,10 +75,3 @@ class CaseyScraper < Scraper
     results
   end
 end
-
-s = CaseyScraper.new
-results = s.applications
-puts results.to_xml
-
-puts "****"
-puts "There were #{results.applications.size} applications"
