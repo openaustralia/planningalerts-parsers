@@ -42,12 +42,12 @@ describe "Server for scraper XML" do
   <scraper>
     <authority_name>Blue Mountains City Council</authority_name>
     <authority_short_name>Blue Mountains</authority_short_name>
-    <url>http://example.org:80/blue_mountains?year={year}&amp;month={month}&amp;day={day}</url>
+    <url>http://example.org/blue_mountains?year={year}&amp;month={month}&amp;day={day}</url>
   </scraper>
   <scraper>
     <authority_name>Brisbane City Council</authority_name>
     <authority_short_name>Brisbane</authority_short_name>
-    <url>http://example.org:80/brisbane?year={year}&amp;month={month}&amp;day={day}</url>
+    <url>http://example.org/brisbane?year={year}&amp;month={month}&amp;day={day}</url>
   </scraper>
 </scrapers>
     EOF

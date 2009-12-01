@@ -16,7 +16,7 @@ get '/' do
       xml.scraper do
         xml.authority_name scraper.planning_authority_name
         xml.authority_short_name scraper.planning_authority_short_name
-        xml.url "#{request.scheme}://#{request.host}:#{request.port}#{request.path_info}#{scraper.planning_authority_short_name_encoded}?year={year}&month={month}&day={day}"
+        xml.url "#{request.url}#{scraper.planning_authority_short_name_encoded}?year={year}&month={month}&day={day}"
       end
     end
   end
