@@ -5,7 +5,7 @@ require 'planning_authority_results'
 require 'info_master_scraper'
 
 class BrisbaneScraper < InfoMasterScraper
-  def planning_authority_name; "Brisbane City Council"; end
+  def planning_authority_name; "Brisbane City Council, QLD"; end
   def planning_authority_short_name; "Brisbane"; end
 
   def applications(date)

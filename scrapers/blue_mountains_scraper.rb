@@ -4,7 +4,7 @@ require 'planning_authority_results'
 require 'scraper'
 
 class BlueMountainsScraper < Scraper
-  def planning_authority_name; "Blue Mountains City Council"; end
+  def planning_authority_name; "Blue Mountains City Council, NSW"; end
   def planning_authority_short_name; "Blue Mountains"; end
   
   def applications(date)

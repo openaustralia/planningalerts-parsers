@@ -3,7 +3,7 @@ require 'info_master_scraper'
 require 'planning_authority_results'
 
 class GoldCoastScraper < InfoMasterScraper
-  def planning_authority_name; "Gold Coast City Council"; end
+  def planning_authority_name; "Gold Coast City Council, QLD"; end
   def planning_authority_short_name; "Gold Coast"; end
 
   def applications(date)
