@@ -9,7 +9,6 @@ class GoldCoastScraper < InfoMasterScraper
         :application_id => values[1].inner_html.strip,
         :description => values[3].inner_text.split("\n")[3..-1].join("\n").strip,
         :address => values[3].inner_text.split("\n")[1].strip,
-        :info_url => agent.page.uri + URI.parse(values[0].at('a').attributes['href']),
         :date_received => values[2].inner_html)
       if da.application_id =~ /([A-Z]+)(\d+)/
         application_type, application_number = $~[1..2]
