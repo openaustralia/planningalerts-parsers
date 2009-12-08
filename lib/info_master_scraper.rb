@@ -38,12 +38,12 @@ class InfoMasterScraper < Scraper
     inner(html)
   end
   
-  def extract_address(html)
-    (split_lines(html)[2..-3] + [state]).join(', ')
+  def extract_address(html, lines = 1..-2)
+    (split_lines(html)[lines] + [state]).join("\n")
   end
   
-  def extract_description(html)
-    split_lines(html).last
+  def extract_description(html, lines = -1..-1)
+    split_lines(html)[lines].join("\n").strip
   end
   
   def inner(html)
@@ -51,7 +51,7 @@ class InfoMasterScraper < Scraper
   end
   
   def split_lines(html)
-    html.inner_text.split(/[\r\n]/).map{|s| s.strip}
+    html.inner_text.gsub("\r\n", "\n").split(/[\r\n]/).map{|s| s.strip}
   end 
 end
 

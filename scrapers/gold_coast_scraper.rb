@@ -6,10 +6,11 @@ class GoldCoastScraper < InfoMasterScraper
     base_url = "http://pdonline.goldcoast.qld.gov.au/masterview/modules/applicationmaster/default.aspx"
     raw_table_values(date, "#{base_url}?page=search", 1).map do |values|
       da = DevelopmentApplication.new(
-        :application_id => values[1].inner_html.strip,
-        :description => values[3].inner_text.split("\n")[3..-1].join("\n").strip,
-        :address => values[3].inner_text.split("\n")[1].strip,
-        :date_received => values[2].inner_html)
+        :application_id => extract_application_id(values[1]),
+        :description => extract_description(values[3], 3..-1),
+        :address => extract_address(values[3], 1..1),
+        :date_received => extract_date_received(values[2]))
+
       if da.application_id =~ /([A-Z]+)(\d+)/
         application_type, application_number = $~[1..2]
       else

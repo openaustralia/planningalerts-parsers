@@ -4,12 +4,11 @@ class CabooltureScraper < InfoMasterScraper
   def applications(date)
     base_url = "http://pdonline.caboolture.qld.gov.au/modules/applicationmaster/default.aspx"
     raw_table_values(date, "#{base_url}?page=search", 1).map do |values|
-      address_description = values[3].inner_text.split(/[\r\n]/).map{|s| s.strip}
-
-      da = DevelopmentApplication.new(:application_id => values[1].inner_html.strip,
-        :date_received => values[2].inner_html.strip,
-        :address => address_description[2..3].join(', ') + ", QLD",
-        :description =>  address_description[5])
+      da = DevelopmentApplication.new(
+        :application_id => extract_application_id(values[1]),
+        :date_received => extract_date_received(values[2]),
+        :address => extract_address(values[3]),
+        :description =>  extract_description(values[3]))
 
       # Generate the info link by creating a search. More reliable since we don't depend on a key that could change
       # Because InfoMaster doesn't generate URLs for development applications that appear to be persistent.
