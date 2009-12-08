@@ -4,19 +4,19 @@ require 'planning_authority_results'
 require 'uri'
 
 class Scraper
-  attr_reader :agent, :planning_authority_name, :planning_authority_short_name
+  attr_reader :agent, :planning_authority_name, :planning_authority_short_name, :state
 
+  def initialize(name, short_name, state)
+    @planning_authority_name, @planning_authority_short_name, @state = name, short_name, state
+    @agent = WWW::Mechanize.new    
+  end
+  
   def extract_relative_url(html)
     agent.page.uri + URI.parse(html.at('a').attributes['href'])
   end
   
   def email_url(to, subject, body = "")
     "mailto:#{to}?subject=#{URI.escape(subject)}&Body=#{URI.escape(body)}"
-  end
-  
-  def initialize(name, short_name)
-    @planning_authority_name, @planning_authority_short_name = name, short_name
-    @agent = WWW::Mechanize.new    
   end
   
   # A version of the short name that is encoded for use in url's

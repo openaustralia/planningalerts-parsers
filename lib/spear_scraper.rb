@@ -1,8 +1,8 @@
 require 'scraper'
 
 class SPEARScraper < Scraper
-  def initialize(name, short_name, web_form_name)
-    super(name, short_name)
+  def initialize(name, short_name, state, web_form_name)
+    super(name, short_name, state)
     @web_form_name = web_form_name
   end
   
