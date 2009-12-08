@@ -4,6 +4,7 @@ require 'blue_mountains_scraper'
 require 'brisbane_scraper'
 require 'gold_coast_scraper'
 require 'spear_scraper'
+require 'caboolture_scraper'
 
 module Scrapers
   # Central registry of scrapers
@@ -50,6 +51,7 @@ module Scrapers
       SPEARScraper.new("Whittlesea City Council, VIC", "Whittlesea", "Whittlesea City Council"),
       SPEARScraper.new("Wyndham City Council, VIC", "Wyndham", "Wyndham City Council"),
       SPEARScraper.new("Yarra City Council, VIC", "Yarra", "Yarra City Council"),
+      CabooltureScraper.new,
     ]
   end
   
