@@ -3,9 +3,13 @@ $:.unshift "#{File.dirname(__FILE__)}/../lib"
 require 'scraper'
 
 class BlueMountainsScraper < Scraper
-  def planning_authority_name; "Blue Mountains City Council, NSW"; end
-  def planning_authority_short_name; "Blue Mountains"; end
-  
+  attr_reader :agent, :planning_authority_name, :planning_authority_short_name
+
+  def initialize(name, short_name)
+    super()
+    @planning_authority_name, @planning_authority_short_name = name, short_name
+  end
+
   def applications(date)
     # TODO: We're currently ignoring the date. Need to figure out what to do here
     

@@ -10,9 +10,9 @@ require 'pine_rivers_scraper'
 module Scrapers
   # Central registry of scrapers
   def self.scrapers
-    [BlueMountainsScraper.new,
-      BrisbaneScraper.new,
-      GoldCoastScraper.new,
+    [BlueMountainsScraper.new("Blue Mountains City Council, NSW", "Blue Mountains"),
+      BrisbaneScraper.new("Brisbane City Council, QLD", "Brisbane"),
+      GoldCoastScraper.new("Gold Coast City Council, QLD", "Gold Coast"),
       # TODO: Figure out which of these authorities using the SPEAR system have planning information
       # in the system and which just have subdivision information
       SPEARScraper.new("Ararat Rural City Council, VIC", "Ararat", "Ararat Rural City Council"),
@@ -52,8 +52,8 @@ module Scrapers
       SPEARScraper.new("Whittlesea City Council, VIC", "Whittlesea", "Whittlesea City Council"),
       SPEARScraper.new("Wyndham City Council, VIC", "Wyndham", "Wyndham City Council"),
       SPEARScraper.new("Yarra City Council, VIC", "Yarra", "Yarra City Council"),
-      CabooltureScraper.new,
-      PineRiversScraper.new,
+      CabooltureScraper.new("Caboolture District, Moreton Bay Regional Council, QLD", "Caboolture"),
+      PineRiversScraper.new("Pine Rivers District, Moreton Bay Regional Council, QLD", "Pine Rivers"),
     ]
   end
   

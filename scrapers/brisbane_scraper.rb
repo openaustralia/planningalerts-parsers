@@ -4,8 +4,12 @@ require 'rubygems'
 require 'info_master_scraper'
 
 class BrisbaneScraper < InfoMasterScraper
-  def planning_authority_name; "Brisbane City Council, QLD"; end
-  def planning_authority_short_name; "Brisbane"; end
+  attr_reader :agent, :planning_authority_name, :planning_authority_short_name
+
+  def initialize(name, short_name)
+    super()
+    @planning_authority_name, @planning_authority_short_name = name, short_name
+  end
 
   def applications(date)
     table = raw_table_values(date, "http://pdonline.brisbane.qld.gov.au/MasterView/modules/applicationmaster/default.aspx?page=search", 2)

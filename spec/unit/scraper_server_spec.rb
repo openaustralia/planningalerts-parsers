@@ -12,30 +12,30 @@ describe "Server for scraper XML" do
   def app
     Sinatra::Application
   end
+  
+  before(:each) do
+    @blue_mountains = BlueMountainsScraper.new("Blue Mountains City Council, NSW", "Blue Mountains")
+    @brisbane = BrisbaneScraper.new("Brisbane City Council, QLD", "Brisbane")
+    # Restrict parsers to just two
+    Scrapers.stub!(:scrapers).and_return([@blue_mountains, @brisbane])
+    @results = mock("PlanningAuthorityResults")
+  end
 
   it "should retrieve the Blue Mountains data" do
-    r = mock("PlanningAuthorityResults")
-    p = BlueMountainsScraper.new
-    r.should_receive(:to_xml).and_return("foo")
-    p.should_receive(:results).with(Date.new(2009,11,12)).and_return(r)
-    BlueMountainsScraper.stub!(:new).and_return(p)
+    @results.should_receive(:to_xml).and_return("foo")
+    @blue_mountains.should_receive(:results).with(Date.new(2009,11,12)).and_return(@results)
     get "/blue_mountains?year=2009&month=11&day=12"
     last_response.body.should == "foo"
   end
 
   it "should retrieve the Brisbane data" do
-    r = mock("PlanningAuthorityResults")
-    p = BrisbaneScraper.new
-    r.should_receive(:to_xml).and_return("foo")
-    p.should_receive(:results).with(Date.new(2009,11,12)).and_return(r)
-    BrisbaneScraper.stub!(:new).and_return(p)
+    @results.should_receive(:to_xml).and_return("foo")
+    @brisbane.should_receive(:results).with(Date.new(2009,11,12)).and_return(@results)
     get "/brisbane?year=2009&month=11&day=12"
     last_response.body.should == "foo"
   end
   
   it "should retrieve a list of all the scraper urls" do
-    # Restrict parsers to just two
-    Scrapers.stub!(:scrapers).and_return([BlueMountainsScraper.new, BrisbaneScraper.new])
     get "/"
     last_response.body.should == <<-EOF
 <scrapers>
