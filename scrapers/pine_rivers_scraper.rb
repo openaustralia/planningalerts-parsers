@@ -1,32 +1,11 @@
 require 'info_master_scraper'
 
 class PineRiversScraper < InfoMasterScraper
-  def extract_date_received(html)
-    inner(html)
-  end
-  
-  def extract_application_id(html)
-    inner(html)
-  end
-  
-  def inner(html)
-    html.inner_html.strip
-  end
-  
-  def state
-    "QLD"
-  end
-  
-  def split_lines(html)
-    html.inner_text.split(/[\r\n]/).map{|s| s.strip}
-  end
-  
-  def extract_address(html)
-    (split_lines(html)[2..-3] + [state]).join(', ')
-  end
-  
-  def extract_description(html)
-    split_lines(html).last
+  attr_reader :state
+
+  def initialize(name, short_name, state)
+    super(name, short_name)
+    @state = state
   end
   
   def applications(date)

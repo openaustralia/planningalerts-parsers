@@ -29,5 +29,29 @@ class InfoMasterScraper < Scraper
     search_form.submit(search_form.button_with(:name => /btnSearch/)).search('span > table')
     # TODO: Need to handle what happens when the results span multiple pages. Can this happen?
   end
+
+  def extract_date_received(html)
+    inner(html)
+  end
+  
+  def extract_application_id(html)
+    inner(html)
+  end
+  
+  def extract_address(html)
+    (split_lines(html)[2..-3] + [state]).join(', ')
+  end
+  
+  def extract_description(html)
+    split_lines(html).last
+  end
+  
+  def inner(html)
+    html.inner_html.strip
+  end
+  
+  def split_lines(html)
+    html.inner_text.split(/[\r\n]/).map{|s| s.strip}
+  end 
 end
 

@@ -53,7 +53,7 @@ module Scrapers
       SPEARScraper.new("Wyndham City Council, VIC", "Wyndham", "Wyndham City Council"),
       SPEARScraper.new("Yarra City Council, VIC", "Yarra", "Yarra City Council"),
       CabooltureScraper.new("Caboolture District, Moreton Bay Regional Council, QLD", "Caboolture"),
-      PineRiversScraper.new("Pine Rivers District, Moreton Bay Regional Council, QLD", "Pine Rivers"),
+      PineRiversScraper.new("Pine Rivers District, Moreton Bay Regional Council, QLD", "Pine Rivers", "QLD"),
     ]
   end
   
