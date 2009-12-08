@@ -3,14 +3,22 @@ require 'info_master_scraper'
 
 class GoldCoastScraper < InfoMasterScraper
   def applications(date)
-    url = "http://pdonline.goldcoast.qld.gov.au/masterview/modules/applicationmaster/default.aspx?page=search"
-    raw_table_values(date, url, 1).map do |values|
+    base_url = "http://pdonline.goldcoast.qld.gov.au/masterview/modules/applicationmaster/default.aspx"
+    raw_table_values(date, "#{base_url}?page=search", 1).map do |values|
       da = DevelopmentApplication.new(
         :application_id => values[1].inner_html.strip,
         :description => values[3].inner_text.split("\n")[3..-1].join("\n").strip,
         :address => values[3].inner_text.split("\n")[1].strip,
         :info_url => agent.page.uri + URI.parse(values[0].at('a').attributes['href']),
         :date_received => values[2].inner_html)
+      if da.application_id =~ /([A-Z]+)(\d+)/
+        application_type = $~[1]
+        application_number = $~[2]
+      else
+        raise "Unexpected form for application_id: #{da.application_id}"
+      end
+      da.info_url = "#{base_url}?page=found&4a=#{application_type}&7=#{application_number}"
+      
       email_body = <<-EOF
 Thank you for your enquiry.
 
