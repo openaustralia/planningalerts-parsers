@@ -4,7 +4,7 @@ require 'planning_authority_results'
 require 'uri'
 
 class Scraper
-  attr_reader :agent
+  attr_reader :agent, :planning_authority_name, :planning_authority_short_name
 
   def extract_relative_url(html)
     agent.page.uri + URI.parse(html.at('a').attributes['href'])

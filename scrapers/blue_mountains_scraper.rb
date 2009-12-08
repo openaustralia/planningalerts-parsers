@@ -3,8 +3,6 @@ $:.unshift "#{File.dirname(__FILE__)}/../lib"
 require 'scraper'
 
 class BlueMountainsScraper < Scraper
-  attr_reader :agent, :planning_authority_name, :planning_authority_short_name
-
   def initialize(name, short_name)
     super()
     @planning_authority_name, @planning_authority_short_name = name, short_name

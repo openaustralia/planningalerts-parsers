@@ -2,8 +2,6 @@ $:.unshift "#{File.dirname(__FILE__)}/../lib"
 require 'info_master_scraper'
 
 class GoldCoastScraper < InfoMasterScraper
-  attr_reader :agent, :planning_authority_name, :planning_authority_short_name
-
   def initialize(name, short_name)
     super()
     @planning_authority_name, @planning_authority_short_name = name, short_name

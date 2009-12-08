@@ -1,8 +1,6 @@
 require 'scraper'
 
 class SPEARScraper < Scraper
-  attr_reader :planning_authority_name, :planning_authority_short_name
-  
   def initialize(name, short_name, web_form_name)
     @planning_authority_name, @planning_authority_short_name, @web_form_name = name, short_name, web_form_name
     super()
