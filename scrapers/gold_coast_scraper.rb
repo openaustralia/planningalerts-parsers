@@ -6,13 +6,8 @@ class GoldCoastScraper < InfoMasterScraper
   def planning_authority_short_name; "Gold Coast"; end
 
   def applications(date)
-    table = raw_table(date, "http://pdonline.goldcoast.qld.gov.au/masterview/modules/applicationmaster/default.aspx?page=search")
-    applications = []
-    
-    # Skip first row of the table
-    table.search('tr')[1..-1].each do |row|
-      values = row.search('td')
-      
+    url = "http://pdonline.goldcoast.qld.gov.au/masterview/modules/applicationmaster/default.aspx?page=search"
+    raw_table_values(date, url, 1).map do |values|
       da = DevelopmentApplication.new(
         :application_id => values[1].inner_html.strip,
         :description => values[3].inner_text.split("\n")[3..-1].join("\n").strip,
@@ -34,8 +29,7 @@ Your query regarding this Application:
 
       EOF
       da.comment_url = email_url("gcccmail@goldcoast.qld.gov.au", "Development Application Enquiry: #{da.application_id}", email_body)
-      applications << da
+      da
     end
-    applications
   end
 end

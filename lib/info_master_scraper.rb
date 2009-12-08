@@ -1,6 +1,11 @@
 require 'scraper'
 
 class InfoMasterScraper < Scraper
+  
+  def raw_table_values(date, url, rows_to_skip_at_start)
+    raw_table(date, url).search('tr')[rows_to_skip_at_start..-1].map {|row| row.search('td')}
+  end
+  
   # Downloads html table and returns it, ready for the data to be extracted from it
   def raw_table(date, url)
     page = agent.get(url)

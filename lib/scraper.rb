@@ -6,6 +6,10 @@ require 'uri'
 class Scraper
   attr_reader :agent
 
+  def extract_relative_url(html)
+    agent.page.uri + URI.parse(html.at('a').attributes['href'])
+  end
+  
   def email_url(to, subject, body)
     "mailto:#{to}?subject=#{URI.escape(subject)}&Body=#{URI.escape(body)}"
   end
