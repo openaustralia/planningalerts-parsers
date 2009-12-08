@@ -15,7 +15,7 @@ describe "Server for scraper XML" do
   
   before(:each) do
     @blue_mountains = BlueMountainsScraper.new("Blue Mountains City Council, NSW", "Blue Mountains")
-    @brisbane = BrisbaneScraper.new("Brisbane City Council, QLD", "Brisbane")
+    @brisbane = BrisbaneScraper.new("Brisbane City Council, QLD", "Brisbane", "QLD")
     # Restrict parsers to just two
     Scrapers.stub!(:scrapers).and_return([@blue_mountains, @brisbane])
     @results = mock("PlanningAuthorityResults")

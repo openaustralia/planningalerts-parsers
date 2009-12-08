@@ -1,17 +1,12 @@
-$:.unshift "#{File.dirname(__FILE__)}/../../lib"
-$:.unshift "#{File.dirname(__FILE__)}/../../scrapers"
+$:.unshift "#{File.dirname(__FILE__)}/../.."
 
 require 'spec'
-require 'brisbane_scraper'
+require 'scraper_factory'
 
 describe BrisbaneScraper do
   it "should return a particular expected planning application for a particular day" do
     date = Date.new(2009, 11, 12)
-    results = BrisbaneScraper.new("Brisbane City Council, QLD", "Brisbane").results(date)
-    results.name.should == "Brisbane City Council, QLD"
-    results.short_name.should == "Brisbane"
-    
-    results.applications.should include(DevelopmentApplication.new(
+    Scrapers::scraper_factory("brisbane").applications(date).should include(DevelopmentApplication.new(
       :application_id => "A002473914",
       :description => "House in DCP (Demolition/Extension), House in DCP (Demolition/Extension)",
       :address => "108 ORIEL RD CLAYFIELD QLD 4011",
