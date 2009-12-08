@@ -14,10 +14,9 @@ class CabooltureScraper < InfoMasterScraper
       # Generate the info link by creating a search. More reliable since we don't depend on a key that could change
       # Because InfoMaster doesn't generate URLs for development applications that appear to be persistent.
       if da.application_id =~ /CDE-(\d{4})\/(\d{4})/
-        application_number = $~[1]
-        application_year = $~[2]
+        application_number, application_year = $~[1..2]
       else
-        raise "Unexpected form for application_id: #{application_id}"
+        raise "Unexpected form for application_id: #{da.application_id}"
       end
       da.info_url = "#{base_url}?page=found&7=#{application_number}&8=#{application_year}"
       da.comment_url = email_url("idasclo@caboolture.qld.gov.au",

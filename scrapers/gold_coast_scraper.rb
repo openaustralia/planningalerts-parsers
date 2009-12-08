@@ -12,8 +12,7 @@ class GoldCoastScraper < InfoMasterScraper
         :info_url => agent.page.uri + URI.parse(values[0].at('a').attributes['href']),
         :date_received => values[2].inner_html)
       if da.application_id =~ /([A-Z]+)(\d+)/
-        application_type = $~[1]
-        application_number = $~[2]
+        application_type, application_number = $~[1..2]
       else
         raise "Unexpected form for application_id: #{da.application_id}"
       end
