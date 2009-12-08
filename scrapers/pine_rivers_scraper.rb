@@ -37,6 +37,7 @@ class PineRiversScraper < InfoMasterScraper
         :date_received => extract_date_received(values[2]),
         :address => extract_address(values[3]),
         :description => extract_description(values[3]))
+        
       if da.application_id =~ /^(\d+)\/(\d+)\//
         application_year, application_number = $~[1..2]
       else
@@ -44,7 +45,7 @@ class PineRiversScraper < InfoMasterScraper
       end
       
       da.info_url = "#{base_url}?page=found&7=#{application_number}&8=#{application_year}"
-      da.comment_url = email_url("developmentservices@pinerivers.qld.gov.au", "Development Application Enquiry: #{da.application_id} - #{da.description}", "")
+      da.comment_url = email_url("developmentservices@pinerivers.qld.gov.au", "Development Application Enquiry: #{da.application_id} - #{da.description}")
       da
     end
   end

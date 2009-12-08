@@ -20,7 +20,7 @@ class CabooltureScraper < InfoMasterScraper
       end
       da.info_url = "#{base_url}?page=found&7=#{application_number}&8=#{application_year}"
       da.comment_url = email_url("idasclo@caboolture.qld.gov.au",
-        "Development Application Enquiry: #{da.application_id} - Code Assessment", "")
+        "Development Application Enquiry: #{da.application_id} - Code Assessment")
       da
     end
   end
