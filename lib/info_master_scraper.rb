@@ -1,6 +1,13 @@
 require 'scraper'
 
 class InfoMasterScraper < Scraper
+  attr_reader :state
+
+  def initialize(name, short_name, state)
+    super(name, short_name)
+    @state = state
+  end
+  
   def raw_table_values(date, url, rows_to_skip_at_start)
     raw_table(date, url).search('tr')[rows_to_skip_at_start..-1].map {|row| row.search('td')}
   end

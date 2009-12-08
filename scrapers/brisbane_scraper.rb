@@ -4,13 +4,6 @@ require 'rubygems'
 require 'info_master_scraper'
 
 class BrisbaneScraper < InfoMasterScraper
-  attr_reader :state
-
-  def initialize(name, short_name, state)
-    super(name, short_name)
-    @state = state
-  end
-  
   def applications(date)
     table = raw_table_values(date, "http://pdonline.brisbane.qld.gov.au/MasterView/modules/applicationmaster/default.aspx?page=search", 2)
     table.map do |values|
