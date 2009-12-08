@@ -2,8 +2,8 @@ require 'scraper'
 
 class SPEARScraper < Scraper
   def initialize(name, short_name, web_form_name)
-    @planning_authority_name, @planning_authority_short_name, @web_form_name = name, short_name, web_form_name
-    super()
+    super(name, short_name)
+    @web_form_name = web_form_name
   end
   
   # Extracts all the data on a single page of results

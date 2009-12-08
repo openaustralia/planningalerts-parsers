@@ -14,7 +14,8 @@ class Scraper
     "mailto:#{to}?subject=#{URI.escape(subject)}&Body=#{URI.escape(body)}"
   end
   
-  def initialize
+  def initialize(name, short_name)
+    @planning_authority_name, @planning_authority_short_name = name, short_name
     @agent = WWW::Mechanize.new    
   end
   

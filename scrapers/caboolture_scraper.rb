@@ -1,11 +1,6 @@
 require 'info_master_scraper'
 
 class CabooltureScraper < InfoMasterScraper
-  def initialize(name, short_name)
-    super()
-    @planning_authority_name, @planning_authority_short_name = name, short_name
-  end
-
   def applications(date)
     base_url = "http://pdonline.caboolture.qld.gov.au/modules/applicationmaster/default.aspx"
     raw_table_values(date, "#{base_url}?page=search", 1).map do |values|

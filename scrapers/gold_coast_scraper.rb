@@ -2,11 +2,6 @@ $:.unshift "#{File.dirname(__FILE__)}/../lib"
 require 'info_master_scraper'
 
 class GoldCoastScraper < InfoMasterScraper
-  def initialize(name, short_name)
-    super()
-    @planning_authority_name, @planning_authority_short_name = name, short_name
-  end
-
   def applications(date)
     url = "http://pdonline.goldcoast.qld.gov.au/masterview/modules/applicationmaster/default.aspx?page=search"
     raw_table_values(date, url, 1).map do |values|
