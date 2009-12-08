@@ -13,10 +13,10 @@ class BlueMountainsScraper < Scraper
     url = "http://www.bmcc.nsw.gov.au/files/daily_planning_notifications.htm"
     info_url = "http://www.bmcc.nsw.gov.au/sustainableliving/developmentapplicationsinnotification/"
     
-    agent.get(url).search('table > tr').map do |row|
+    agent.get(url).search('table > tr')[1..-1].map do |row|
       values = row.search('td').map {|t| t.inner_text.strip.delete("\n")}
       DevelopmentApplication.new(:application_id => values[0], :address => values[1], :description => values[2],
-        :on_notice_from => values[3], :on_notice_to => values[4], :info_url => info_url, :comment_url => info_url) unless values.empty?
+        :on_notice_from => values[3], :on_notice_to => values[4], :info_url => info_url, :comment_url => info_url)
     end
   end
 end
