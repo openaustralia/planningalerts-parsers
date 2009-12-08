@@ -17,7 +17,7 @@ describe "Server for scraper XML" do
     r = mock("PlanningAuthorityResults")
     p = BlueMountainsScraper.new
     r.should_receive(:to_xml).and_return("foo")
-    p.should_receive(:applications).with(Date.new(2009,11,12)).and_return(r)
+    p.should_receive(:results).with(Date.new(2009,11,12)).and_return(r)
     BlueMountainsScraper.stub!(:new).and_return(p)
     get "/blue_mountains?year=2009&month=11&day=12"
     last_response.body.should == "foo"
@@ -27,7 +27,7 @@ describe "Server for scraper XML" do
     r = mock("PlanningAuthorityResults")
     p = BrisbaneScraper.new
     r.should_receive(:to_xml).and_return("foo")
-    p.should_receive(:applications).with(Date.new(2009,11,12)).and_return(r)
+    p.should_receive(:results).with(Date.new(2009,11,12)).and_return(r)
     BrisbaneScraper.stub!(:new).and_return(p)
     get "/brisbane?year=2009&month=11&day=12"
     last_response.body.should == "foo"

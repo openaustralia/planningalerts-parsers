@@ -35,7 +35,7 @@ end
 
 scraper = Scrapers::scraper_factory(short_name)
 if scraper
-  puts scraper.applications(date).to_xml
+  puts scraper.results(date).to_xml
 else
   puts "Could not find an authority with that short name"
   valid_short_names = Scrapers::scrapers.map{|s| s.planning_authority_short_name_encoded}.sort

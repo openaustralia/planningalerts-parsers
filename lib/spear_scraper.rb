@@ -54,7 +54,7 @@ class SPEARScraper < Scraper
     end.at('td').inner_text.strip
   end
   
-  def applications(date)
+  def results(date)
     url = "http://www.landexchange.vic.gov.au/spear/publicSearch/Search.do"
 
     page = agent.get(url)

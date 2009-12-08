@@ -6,7 +6,7 @@ class GoldCoastScraper < InfoMasterScraper
   def planning_authority_name; "Gold Coast City Council, QLD"; end
   def planning_authority_short_name; "Gold Coast"; end
 
-  def applications(date)
+  def results(date)
     results = PlanningAuthorityResults.new(:name => planning_authority_name, :short_name => planning_authority_short_name)
     table = raw_table(date, "http://pdonline.goldcoast.qld.gov.au/masterview/modules/applicationmaster/default.aspx?page=search")
     

@@ -7,7 +7,7 @@ class BlueMountainsScraper < Scraper
   def planning_authority_name; "Blue Mountains City Council, NSW"; end
   def planning_authority_short_name; "Blue Mountains"; end
   
-  def applications(date)
+  def results(date)
     # TODO: We're currently ignoring the date. Need to figure out what to do here
     
     # This is the page that we're parsing

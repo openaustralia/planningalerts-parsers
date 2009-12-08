@@ -7,7 +7,7 @@ require 'brisbane_scraper'
 describe BrisbaneScraper do
   it "should return a particular expected planning application for a particular day" do
     date = Date.new(2009, 11, 12)
-    results = BrisbaneScraper.new.applications(date)
+    results = BrisbaneScraper.new.results(date)
     results.name.should == "Brisbane City Council, QLD"
     results.short_name.should == "Brisbane"
     

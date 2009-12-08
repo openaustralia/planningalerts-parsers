@@ -12,7 +12,7 @@ require 'gold_coast_scraper'
 #describe GoldCoastScraper do
 #  it "should return a particular expected planning application for a particular day" do
 #    date = Date.new(2009, 11, 2)
-#    GoldCoastScraper.new.applications(date).applications.should include(DevelopmentApplication.new(
+#    GoldCoastScraper.new.results(date).applications.should include(DevelopmentApplication.new(
 #      :application_id => "MCU2900729",
 #      :description => "Description: ATTACHED DWELLING - ADDITIONS\r\n      Class: CODE\r\n      Work Type:",
 #      :date_received => date,

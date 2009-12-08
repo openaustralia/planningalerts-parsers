@@ -8,7 +8,7 @@ class BrisbaneScraper < InfoMasterScraper
   def planning_authority_name; "Brisbane City Council, QLD"; end
   def planning_authority_short_name; "Brisbane"; end
 
-  def applications(date)
+  def results(date)
     results = PlanningAuthorityResults.new(:name => planning_authority_name, :short_name => planning_authority_short_name)
     table = raw_table(date, "http://pdonline.brisbane.qld.gov.au/MasterView/modules/applicationmaster/default.aspx?page=search")
 
