@@ -14,7 +14,7 @@ class BrisbaneScraper < InfoMasterScraper
         # TODO: Sometimes the address has what I'm assuming is a lot number in brackets after the address. Handle this properly.
         :address => values[2].inner_html.strip,
         :info_url => extract_relative_url(values[0]),
-        :date_received => values[3].inner_html.strip)
+        :date_received => extract_date_received(values[3]))
       da.comment_url = "https://obonline.ourbrisbane.com/services/startDASubmission.do?direct=true&daNumber=#{URI.escape(da.application_id)}&sdeprop=#{URI.escape(da.address)}"
       da
     end
