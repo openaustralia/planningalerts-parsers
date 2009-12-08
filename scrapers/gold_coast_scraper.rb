@@ -33,8 +33,7 @@ Business Hours Contact Phone Number:
 Your query regarding this Application: 
 
       EOF
-      email_subject = "Development Application Enquiry: #{da.application_id}"
-      da.comment_url = "mailto:gcccmail@goldcoast.qld.gov.au?subject=#{URI.escape(email_subject)}&Body=#{URI.escape(email_body)}"
+      da.comment_url = email_url("gcccmail@goldcoast.qld.gov.au", "Development Application Enquiry: #{da.application_id}", email_body)
       applications << da
     end
     applications

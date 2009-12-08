@@ -1,10 +1,15 @@
 require 'rubygems'
 require 'mechanize'
 require 'planning_authority_results'
+require 'uri'
 
 class Scraper
   attr_reader :agent
 
+  def email_url(to, subject, body)
+    "mailto:#{to}?subject=#{URI.escape(subject)}&Body=#{URI.escape(body)}"
+  end
+  
   def initialize
     @agent = WWW::Mechanize.new    
   end
