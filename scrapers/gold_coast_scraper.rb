@@ -1,14 +1,13 @@
 $:.unshift "#{File.dirname(__FILE__)}/../lib"
 require 'info_master_scraper'
-require 'planning_authority_results'
 
 class GoldCoastScraper < InfoMasterScraper
   def planning_authority_name; "Gold Coast City Council, QLD"; end
   def planning_authority_short_name; "Gold Coast"; end
 
-  def results(date)
-    results = PlanningAuthorityResults.new(:name => planning_authority_name, :short_name => planning_authority_short_name)
+  def applications(date)
     table = raw_table(date, "http://pdonline.goldcoast.qld.gov.au/masterview/modules/applicationmaster/default.aspx?page=search")
+    applications = []
     
     # Skip first row of the table
     table.search('tr')[1..-1].each do |row|
@@ -36,8 +35,8 @@ Your query regarding this Application:
       EOF
       email_subject = "Development Application Enquiry: #{da.application_id}"
       da.comment_url = "mailto:gcccmail@goldcoast.qld.gov.au?subject=#{URI.escape(email_subject)}&Body=#{URI.escape(email_body)}"
-      results << da
+      applications << da
     end
-    results
+    applications
   end
 end

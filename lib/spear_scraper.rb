@@ -1,5 +1,4 @@
 require 'scraper'
-require 'planning_authority_results'
 
 class SPEARScraper < Scraper
   attr_reader :planning_authority_name, :planning_authority_short_name
@@ -54,7 +53,7 @@ class SPEARScraper < Scraper
     end.at('td').inner_text.strip
   end
   
-  def results(date)
+  def applications(date)
     url = "http://www.landexchange.vic.gov.au/spear/publicSearch/Search.do"
 
     page = agent.get(url)
@@ -74,9 +73,6 @@ class SPEARScraper < Scraper
     applications.each do |a|
       a.description = extract_description(a.info_url)
     end
-    
-    PlanningAuthorityResults.new(:name => planning_authority_name,
-      :short_name => planning_authority_short_name,
-      :applications => applications)
+    applications
   end
 end

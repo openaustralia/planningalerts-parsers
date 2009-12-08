@@ -1,17 +1,15 @@
 $:.unshift "#{File.dirname(__FILE__)}/../lib"
 require 'rubygems'
 
-require 'planning_authority_results'
 require 'info_master_scraper'
 
 class BrisbaneScraper < InfoMasterScraper
   def planning_authority_name; "Brisbane City Council, QLD"; end
   def planning_authority_short_name; "Brisbane"; end
 
-  def results(date)
-    results = PlanningAuthorityResults.new(:name => planning_authority_name, :short_name => planning_authority_short_name)
+  def applications(date)
     table = raw_table(date, "http://pdonline.brisbane.qld.gov.au/MasterView/modules/applicationmaster/default.aspx?page=search")
-
+    applications = []
     # Skip first two rows of the table
     table.search('tr')[2..-1].each do |row|
       values = row.search('td')
@@ -25,8 +23,8 @@ class BrisbaneScraper < InfoMasterScraper
         :info_url => agent.page.uri + URI.parse(values[0].at('a').attributes['href']),
         :date_received => values[3].inner_html.strip)
       da.comment_url = "https://obonline.ourbrisbane.com/services/startDASubmission.do?direct=true&daNumber=#{URI.escape(da.application_id)}&sdeprop=#{URI.escape(da.address)}"
-      results << da
+      applications << da
     end
-    results
+    applications
   end
 end
