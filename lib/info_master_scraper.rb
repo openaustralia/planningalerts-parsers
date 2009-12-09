@@ -2,12 +2,13 @@ require 'scraper'
 require 'htmlentities'
 
 class InfoMasterScraper < Scraper
-  def raw_table_values(date, url, rows_to_skip_at_start)
-    raw_table(date, url).search('tr')[rows_to_skip_at_start..-1].map {|row| row.search('td')}
+  def raw_table_values(date, url, rows_to_skip_at_start, table_search = 'span > table')
+    raw_table(date, url, table_search).search('tr')[rows_to_skip_at_start..-1].map {|row| row.search('td')}
   end
   
   # Downloads html table and returns it, ready for the data to be extracted from it
-  def raw_table(date, url)
+  # Not sure if that 'span > table' is specific enough to work generally for finding the needed table
+  def raw_table(date, url, table_search)
     page = agent.get(url)
     
     # Click the Ok button on the form
@@ -26,8 +27,7 @@ class InfoMasterScraper < Scraper
     search_form[search_form.field_with(:name => /drDates:txtMonth2/).name] = date.month
     search_form[search_form.field_with(:name => /drDates:txtYear2/).name] = date.year
 
-    # Not sure if that 'span > table' is specific enough to work generally
-    search_form.submit(search_form.button_with(:name => /btnSearch/)).search('span > table')
+    search_form.submit(search_form.button_with(:name => /btnSearch/)).search(table_search)
     # TODO: Need to handle what happens when the results span multiple pages. Can this happen?
   end
 
