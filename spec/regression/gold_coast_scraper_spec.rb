@@ -18,7 +18,7 @@ describe GoldCoastScraper do
     )
   end
   
-  it "should do the same for another day (this is one that causes problems earlier)" do
+  it "should return no applications on a day when there were no applications" do
     date = Date.new(2009, 12, 9)
     results = Scrapers::scraper_factory("gold_coast").applications(date)
     results.size.should == 0

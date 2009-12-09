@@ -18,6 +18,12 @@ describe CaloundraScraper do
       :comment_url => "http://pdonline.caloundra.qld.gov.au/modules/applicationmaster/default.aspx?page=found&7=55-00050&8=2009"
     )
   end
+  
+  it "should return no applications on a day when there were no applications" do
+    date = Date.new(2009, 12, 9)
+    results = Scrapers::scraper_factory("caloundra").applications(date)
+    results.size.should == 0
+  end
 end
 
 

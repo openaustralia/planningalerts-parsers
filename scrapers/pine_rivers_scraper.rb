@@ -17,7 +17,7 @@ class PineRiversScraper < InfoMasterScraper
       end
       
       da.info_url = "#{base_url}?page=found&7=#{application_number}&8=#{application_year}"
-      da.comment_url = email_url("developmentservices@pinerivers.qld.gov.au", "Development Application Enquiry: #{da.application_id} - #{da.description}")
+      da.comment_url = da.info_url
       da
     end
   end

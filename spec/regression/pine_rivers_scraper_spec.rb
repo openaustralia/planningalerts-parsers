@@ -15,7 +15,7 @@ describe PineRiversScraper do
       :date_received => date,
       :address => "1 Bottle Tree Crescent MANGO HILL 4509, QLD",
       :info_url => "http://pdonline-pinerivers.moretonbay.qld.gov.au/modules/applicationmaster/default.aspx?page=found&7=12367&8=2009",
-      :comment_url => "mailto:developmentservices@pinerivers.qld.gov.au?subject=Development%20Application%20Enquiry:%202009/12367/MCU%20-%20MATERIAL%20CHANGE%20OF%20USE%20-%20DEVELOPMENT%20PERMIT%20(DUPLEX)"
+      :comment_url => "http://pdonline-pinerivers.moretonbay.qld.gov.au/modules/applicationmaster/default.aspx?page=found&7=12367&8=2009"
     )
   end
 end
