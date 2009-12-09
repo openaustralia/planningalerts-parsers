@@ -4,7 +4,12 @@ require 'htmlentities'
 class InfoMasterScraper < Scraper
   def raw_table_values(date, url, rows_to_skip_at_start, table_search = 'span > table', rows_to_skip_at_end = 0)
     range = rows_to_skip_at_start..(-1-rows_to_skip_at_end)
-    raw_table(date, url, table_search).search('tr')[range].map {|row| row.search('td')}
+    values = raw_table(date, url, table_search).search('tr')[range].map {|row| row.search('td')}
+    if values.first.first.inner_text =~ /no applications found/i
+      []
+    else
+      values
+    end
   end
   
   # Downloads html table and returns it, ready for the data to be extracted from it

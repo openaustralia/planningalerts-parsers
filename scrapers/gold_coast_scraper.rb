@@ -4,7 +4,7 @@ require 'info_master_scraper'
 class GoldCoastScraper < InfoMasterScraper
   def applications(date)
     base_url = "http://pdonline.goldcoast.qld.gov.au/masterview/modules/applicationmaster/default.aspx"
-    raw_table_values(date, "#{base_url}?page=search", 1).map do |values|
+    raw_table_values(date, "#{base_url}?page=search", 1, 'span#_ctl3_lblData').map do |values|
       da = DevelopmentApplication.new(
         :application_id => extract_application_id(values[1]),
         :description => extract_description(values[3], 1..-1),
