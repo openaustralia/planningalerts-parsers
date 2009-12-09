@@ -15,8 +15,10 @@ class Scraper
     agent.page.uri + URI.parse(html.at('a').attributes['href'])
   end
   
-  def email_url(to, subject, body = "")
-    "mailto:#{to}?subject=#{URI.escape(subject)}&Body=#{URI.escape(body)}"
+  def email_url(to, subject, body = nil)
+    v = "mailto:#{to}?subject=#{URI.escape(subject)}"
+    v += "&Body=#{URI.escape(body)}" if body
+    v
   end
   
   # A version of the short name that is encoded for use in url's
