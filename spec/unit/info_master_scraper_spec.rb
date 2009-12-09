@@ -26,4 +26,8 @@ describe InfoMasterScraper do
   it "should break along a <br/> tag" do
     @s.split_lines(Nokogiri.parse("<td>a<br/>b</td>").at('td')).should == ["a", "b"]
   end
+  
+  it "should convert html entities" do
+    @s.split_lines(Nokogiri.parse("<td>a&amp;b</td>").at('td')).should == ["a&b"]
+  end
 end

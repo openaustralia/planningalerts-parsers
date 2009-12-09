@@ -1,4 +1,5 @@
 require 'scraper'
+require 'htmlentities'
 
 class InfoMasterScraper < Scraper
   def raw_table_values(date, url, rows_to_skip_at_start)
@@ -50,8 +51,12 @@ class InfoMasterScraper < Scraper
     html.inner_html.strip
   end
   
+  def convert_html_entities(str)
+    HTMLEntities.new.decode(str)
+  end
+  
   def split_lines(html)
-    html.inner_html.gsub("\r\n", "\n").split(/[\r\n]|<br>/).map{|s| strip_html_tags(s).strip}
+    html.inner_html.gsub("\r\n", "\n").split(/[\r\n]|<br>/).map{|s| convert_html_entities(strip_html_tags(s)).strip}
   end
   
   def strip_html_tags(str)
