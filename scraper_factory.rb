@@ -6,6 +6,7 @@ require 'gold_coast_scraper'
 require 'spear_scraper'
 require 'caboolture_scraper'
 require 'pine_rivers_scraper'
+require 'redcliffe_scraper'
 
 module Scrapers
   # Central registry of scrapers
@@ -54,6 +55,7 @@ module Scrapers
       SPEARScraper.new("Yarra City Council, VIC", "Yarra", "VIC", "Yarra City Council"),
       CabooltureScraper.new("Caboolture District, Moreton Bay Regional Council, QLD", "Caboolture", "QLD"),
       PineRiversScraper.new("Pine Rivers District, Moreton Bay Regional Council, QLD", "Pine Rivers", "QLD"),
+      RedcliffeScraper.new("Redcliffe District, Moreton Bay Regional Council, QLD", "Redcliffe", "QLD"),
     ]
   end
   
