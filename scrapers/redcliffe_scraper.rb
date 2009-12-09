@@ -7,7 +7,7 @@ class RedcliffeScraper < InfoMasterScraper
       da = DevelopmentApplication.new(
         :application_id => extract_application_id(values[1]),
         :date_received => extract_date_received(values[2]),
-        :address => extract_address(values[3], 1..-3),
+        :address => extract_address(values[3]),
         :description => extract_description(values[3])
       )  
       if da.application_id =~ /^\w+\s*-(\d+)\/(\d+)/

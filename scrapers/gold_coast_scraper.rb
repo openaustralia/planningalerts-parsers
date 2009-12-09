@@ -7,8 +7,8 @@ class GoldCoastScraper < InfoMasterScraper
     raw_table_values(date, "#{base_url}?page=search", 1).map do |values|
       da = DevelopmentApplication.new(
         :application_id => extract_application_id(values[1]),
-        :description => extract_description(values[3], 3..-1),
-        :address => extract_address(values[3], 1..1),
+        :description => extract_description(values[3], 1..-1),
+        :address => extract_address(values[3]),
         :date_received => extract_date_received(values[2]))
 
       if da.application_id =~ /([A-Z]+)(\d+)/
