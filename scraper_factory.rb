@@ -9,6 +9,7 @@ require 'pine_rivers_scraper'
 require 'redcliffe_scraper'
 require 'caloundra_scraper'
 require 'maroochy_scraper'
+require 'noosa_scraper'
 
 module Scrapers
   # Central registry of scrapers
@@ -60,6 +61,7 @@ module Scrapers
       RedcliffeScraper.new("Redcliffe District, Moreton Bay Regional Council, QLD", "Redcliffe", "QLD"),
       CaloundraScraper.new("Caloundra, Sunshine Coast Regional Council, QLD", "Caloundra", "QLD"),
       MaroochyScraper.new("Maroochydore and Nambour offices, Sunshine Coast Regional Council, QLD", "Maroochy", "QLD"),
+      NoosaScraper.new("Noosa, Sunshine Coast Regional Council, QLD", "Noosa", "QLD"),
     ]
   end
   
