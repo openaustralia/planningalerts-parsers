@@ -51,7 +51,11 @@ class InfoMasterScraper < Scraper
   end
   
   def split_lines(html)
-    html.inner_text.gsub("\r\n", "\n").split(/[\r\n]/).map{|s| s.strip}
-  end 
+    html.inner_html.gsub("\r\n", "\n").split(/[\r\n]|<br>/).map{|s| strip_html_tags(s).strip}
+  end
+  
+  def strip_html_tags(str)
+    str.gsub(/<\/?[^>]*>/, "")
+  end
 end
 
