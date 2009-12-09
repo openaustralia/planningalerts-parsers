@@ -23,3 +23,21 @@ describe InfoMasterScraper do
     @s.split_lines(Nokogiri.parse("<td>a&amp;b</td>").at('td')).should == ["a&b"]
   end
 end
+
+describe InfoMasterScraper, "simplify_whitespace" do
+  before(:each) do
+    @s = InfoMasterScraper.new("long", "short", "state") 
+  end
+
+  it "should replace carriage return by space" do
+    @s.simplify_whitespace("a\nb").should == "a b"
+  end
+  
+  it "should replace tabs with space" do
+    @s.simplify_whitespace("a\tb").should == "a b"
+  end
+  
+  it "should replace multiple spaces with just one" do
+    @s.simplify_whitespace("a \n\tb").should == "a b"
+  end
+end

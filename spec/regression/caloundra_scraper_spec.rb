@@ -13,7 +13,7 @@ describe CaloundraScraper do
       :application_id => "2009/55-00050",
       :description => "Change to Development Approval - Extension of Relevent Period", 
       :date_received => date,
-      :address => "72 Caloundra Rd, Caloundra\nQLD",
+      :address => "72 Caloundra Rd, Caloundra, QLD",
       :info_url => "http://pdonline.caloundra.qld.gov.au/modules/applicationmaster/default.aspx?page=found&7=55-00050&8=2009",
       :comment_url => "http://pdonline.caloundra.qld.gov.au/modules/applicationmaster/default.aspx?page=found&7=55-00050&8=2009"
     )

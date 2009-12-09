@@ -13,7 +13,7 @@ describe MaroochyScraper do
       :application_id => "OPW09/0282",
       :description => "Description: Parklakes Sports Reserve Yandina Bli Bli Road Bli Bli - Landscaping for stormwater treatment facility and sports reserve - Covey & Associates",
       :date_received => date,
-      :address => "0 /\n\n\t\t\t\t\t\t   0 Camp Flat Rd, BLI BLI\nQLD",
+      :address => "0 / 0 Camp Flat Rd, BLI BLI, QLD",
       :info_url => "http://pdonline.maroochy.qld.gov.au/modules/applicationmaster/default.aspx?page=found&7=OPW09/0282&8=",
       :comment_url => "http://pdonline.maroochy.qld.gov.au/modules/applicationmaster/default.aspx?page=found&7=OPW09/0282&8="
     )

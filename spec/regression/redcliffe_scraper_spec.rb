@@ -13,7 +13,7 @@ describe RedcliffeScraper do
       :application_id => "35OPW -257/2009",
       :description => "Description: Operational Works - Development Permit for Boat Ramp, Boardwalk & Platform",
       :date_received => date,
-      :address => "57 Australia Court\nNEWPORT  4020\nQLD",
+      :address => "57 Australia Court NEWPORT 4020, QLD",
       :info_url => "http://pdonline.redcliffe.qld.gov.au/modules/applicationMaster/default.aspx?page=found&7=257&8=2009",
       :comment_url => "http://pdonline.redcliffe.qld.gov.au/modules/applicationMaster/default.aspx?page=found&7=257&8=2009"
     )

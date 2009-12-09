@@ -8,7 +8,7 @@ class CaloundraScraper < InfoMasterScraper
       da = DevelopmentApplication.new(
         :application_id => extract_application_id(values[1]),
         :date_received => extract_date_received(values[2]),
-        :address => extract_address(values[3]).split("\n\n").first + "\n" + state,
+        :address => split_lines(values[3]).first.split("\n\n").first + ", " + state,
         :description => extract_description(values[3])
       )  
       if da.application_id =~ /^(\d+)\/(.+)/
