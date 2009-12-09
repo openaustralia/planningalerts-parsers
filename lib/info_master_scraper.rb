@@ -2,8 +2,9 @@ require 'scraper'
 require 'htmlentities'
 
 class InfoMasterScraper < Scraper
-  def raw_table_values(date, url, rows_to_skip_at_start, table_search = 'span > table')
-    raw_table(date, url, table_search).search('tr')[rows_to_skip_at_start..-1].map {|row| row.search('td')}
+  def raw_table_values(date, url, rows_to_skip_at_start, table_search = 'span > table', rows_to_skip_at_end = 0)
+    range = rows_to_skip_at_start..(-1-rows_to_skip_at_end)
+    raw_table(date, url, table_search).search('tr')[range].map {|row| row.search('td')}
   end
   
   # Downloads html table and returns it, ready for the data to be extracted from it
