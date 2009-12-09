@@ -52,4 +52,9 @@ describe "Server for scraper XML" do
 </scrapers>
     EOF
   end
+  
+  it "should return a blank document if a invalid date is given" do
+    get "/brisbane"
+    last_response.body.should == ""
+  end
 end
