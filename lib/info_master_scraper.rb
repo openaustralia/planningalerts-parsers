@@ -7,7 +7,8 @@ class InfoMasterScraper < Scraper
     rows = raw_table(date, url, table_search).search('tr')
     return [] if rows.nil? || rows.size < rows_to_skip_at_start
     values = rows[range].map {|row| row.search('td')}
-    return [] if values.first.first.inner_text =~ /no applications found/i || values.first.first.inner_text =~ /no results found/i
+    first_row = values.first
+    return [] if first_row.nil? || first_row.first.inner_text =~ /no applications found/i || first_row.first.inner_text =~ /no results found/i
     values
   end
   

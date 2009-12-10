@@ -18,6 +18,11 @@ describe MaroochyScraper do
       :comment_url => "http://pdonline.maroochy.qld.gov.au/modules/applicationmaster/default.aspx?page=found&7=OPW09/0282&8="
     )
   end
+  
+  it "should work for a quiet day where there are no planning applications" do
+    date = Date.new(2009, 12, 10)
+    Scrapers::scraper_factory("maroochy").applications(date).should be_empty
+  end
 end
 
 
