@@ -15,7 +15,11 @@ describe CabooltureScraper do
       :date_received => date,
       :address => "23 Sumar Lane BELLMERE, QLD",
       :info_url => "http://pdonline.caboolture.qld.gov.au/modules/applicationmaster/default.aspx?page=found&7=2288&8=2009",
-      :comment_url => "mailto:idasclo@caboolture.qld.gov.au?subject=Development%20Application%20Enquiry:%20CDE-2288/2009%20-%20Code%20Assessment"
+      :comment_url => "http://pdonline.caboolture.qld.gov.au/modules/applicationmaster/default.aspx?page=found&7=2288&8=2009"
     )
+  end
+  
+  it "should description" do
+    
   end
 end

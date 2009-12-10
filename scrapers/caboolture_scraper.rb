@@ -18,8 +18,7 @@ class CabooltureScraper < InfoMasterScraper
         raise "Unexpected form for application_id: #{da.application_id}"
       end
       da.info_url = "#{base_url}?page=found&7=#{application_number}&8=#{application_year}"
-      da.comment_url = email_url("idasclo@caboolture.qld.gov.au",
-        "Development Application Enquiry: #{da.application_id} - Code Assessment")
+      da.comment_url = da.info_url
       da
     end
   end

@@ -17,22 +17,7 @@ class GoldCoastScraper < InfoMasterScraper
         raise "Unexpected form for application_id: #{da.application_id}"
       end
       da.info_url = "#{base_url}?page=found&4a=#{application_type}&7=#{application_number}"
-      
-      email_body = <<-EOF
-Thank you for your enquiry.
-
-Please complete the following details and someone will get back to you as soon as possible.  Before submitting you email request you may want to check out the Frequently Asked Questions (FAQ's) Located at http://pdonline.goldcoast.qld.gov.au/masterview/documents/FREQUENTLY_ASKED_QUESTIONS_PD_ONLINE.pdf
-
-Name: 
-
-Contact Email Address: 
-
-Business Hours Contact Phone Number: 
-
-Your query regarding this Application: 
-
-      EOF
-      da.comment_url = email_url("gcccmail@goldcoast.qld.gov.au", "Development Application Enquiry: #{da.application_id}", email_body)
+      da.comment_url = da.info_url
       da
     end
   end
