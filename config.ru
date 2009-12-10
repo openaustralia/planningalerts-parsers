@@ -14,8 +14,9 @@ use Rack::MailExceptions do |mail|
 end
 
 # When running from this rackup script we'll always be in production mode
-# Putting it in production mode will not display exceptions which will then trickle up to
-# exceptions mailer so we should then get an email
+# Putting it in production mode will not display exceptions using it's internal pretty display
 set :environment, :production
+# This will allow exceptions to go outside of Sinatra to be caught by the MailExceptions handler
+set :raise_errors, true
 
 run Sinatra::Application
