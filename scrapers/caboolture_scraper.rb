@@ -12,7 +12,7 @@ class CabooltureScraper < InfoMasterScraper
 
       # Generate the info link by creating a search. More reliable since we don't depend on a key that could change
       # Because InfoMaster doesn't generate URLs for development applications that appear to be persistent.
-      if da.application_id =~ /CDE-(\d{4})\/(\d{4})/
+      if da.application_id =~ /\w+-(\d+)\/(\d+)/
         application_number, application_year = $~[1..2]
       else
         raise "Unexpected form for application_id: #{da.application_id}"
