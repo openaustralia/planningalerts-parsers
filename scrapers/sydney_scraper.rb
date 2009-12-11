@@ -16,6 +16,9 @@ class SydneyScraper < Scraper
       paras[1].at('a').remove
       paras[2].at('strong').remove
 
+      # TODO: We're currently missing the date_received field. This is available at the info_url and
+      # to get at will obviously involve a bunch more automated clicking around
+      
       DevelopmentApplication.new(
         :info_url => info_url,
         :comment_url => info_url,
