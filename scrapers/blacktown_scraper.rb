@@ -2,8 +2,11 @@ require 'scraper'
 
 class BlacktownScraper < Scraper
   def applications(date)
-    url = "http://www.blacktown.nsw.gov.au/planning-and-development/development-online/development-applications/development-applications_home.cfm"
-    page = agent.get(url)
+    search_url = "http://www.blacktown.nsw.gov.au/planning-and-development/development-online/development-applications/development-applications_home.cfm"
+    # For all the comment url's linking to this page because it has some info about how to comment on an application, etc..
+    comment_url = "http://www.blacktown.nsw.gov.au/planning-and-development/development-online/development-online_home.cfm"
+
+    page = agent.get(search_url)
     
     # Click the agree button on the form
     form = page.form_with(:name => "Loginform")
@@ -15,30 +18,33 @@ class BlacktownScraper < Scraper
     form.radiobutton_with(:value => "undetermined").click
     page = form.submit
     
-    app = page.at("table.DAResults")
-    description, date_received = nil, nil
-    app.search("tr").each do |row|
-      heading = row.at("th").inner_html.strip if row.at("th")
-      data = row.at("td").inner_html.strip if row.at("td")
-      case heading
-      when "Lodgement Date"
-        date_received = data
-      when "Notes"
-        description = data
+    page.search("table.DAResults").map do |app|
+      description, date_received = nil, nil
+      app.search("tr").each do |row|
+        heading = row.at("th").inner_html.strip if row.at("th")
+        data = row.at("td").inner_html.strip if row.at("td")
+        case heading
+        when "Lodgement Date"
+          # Sometimes this thing is empty. Humph.
+          date_received = data if data != ""
+        when "Notes"
+          description = data
+        end
       end
+    
+      # Sometimes there is an "Addresses" field as well as the "Primary Address" field. For the time being at least
+      # I'm going to ignore the "Addresses" field as the one instance where I've seen it it was for two addresses very
+      # close to each other.
+    
+      puts "Date: #{date_received}"
+      DevelopmentApplication.new(
+        :application_id => app.at("#InspAppNo").inner_html.strip,
+        :address => app.at('#GotoMapAddress').inner_html.strip + ", " + state,
+        :description => description,
+        :date_received => date_received,
+        # We can't link to an individual application so we'll have to link to the search page
+        :info_url => search_url,
+        :comment_url => comment_url)
     end
-    
-    # Sometimes there is an "Addresses" field as well as the "Primary Address" field. For the time being at least
-    # I'm going to ignore the "Addresses" field as the one instance where I've seen it it was for two addresses very
-    # close to each other.
-    
-    application_id = app.at("#InspAppNo").inner_html.strip
-    address = app.at('#GotoMapAddress').inner_html.strip
-    puts "Application_id: #{application_id}"
-    puts "Description: #{description}"
-    puts "Address: #{address}"
-    puts "Date receive: #{date_received}"
-    exit
-    []
   end
 end
