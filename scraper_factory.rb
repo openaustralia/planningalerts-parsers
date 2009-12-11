@@ -1,5 +1,6 @@
 $:.unshift "#{File.dirname(__FILE__)}/scrapers"
 
+# TODO: Make it load everything in this directory ending in "_scraper" automatically
 require 'blue_mountains_scraper'
 require 'brisbane_scraper'
 require 'gold_coast_scraper'
@@ -11,6 +12,7 @@ require 'caloundra_scraper'
 require 'maroochy_scraper'
 require 'noosa_scraper'
 require 'blacktown_scraper'
+require 'sydney_scraper'
 
 module Scrapers
   # Central registry of scrapers
@@ -64,6 +66,7 @@ module Scrapers
       MaroochyScraper.new("Maroochydore and Nambour offices, Sunshine Coast Regional Council, QLD", "Maroochy", "QLD"),
       NoosaScraper.new("Noosa, Sunshine Coast Regional Council, QLD", "Noosa", "QLD"),
       BlacktownScraper.new("Blacktown City Council, NSW", "Blacktown", "NSW"),
+      SydneyScraper.new("City of Sydney, NSW", "Sydney", "NSW"),
     ]
   end
   
