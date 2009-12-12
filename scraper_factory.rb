@@ -1,18 +1,12 @@
-$:.unshift "#{File.dirname(__FILE__)}/scrapers"
+$:.unshift "#{File.dirname(__FILE__)}/lib"
 
-# TODO: Make it load everything in this directory ending in "_scraper" automatically
-require 'blue_mountains_scraper'
-require 'brisbane_scraper'
-require 'gold_coast_scraper'
+Dir.glob("#{File.dirname(__FILE__)}/scrapers/*_scraper.rb").each do |file|
+  require file
+end
+
+# Require the generic scrapers.
+# TODO: Should really move these together with all the other scrapers
 require 'spear_scraper'
-require 'caboolture_scraper'
-require 'pine_rivers_scraper'
-require 'redcliffe_scraper'
-require 'caloundra_scraper'
-require 'maroochy_scraper'
-require 'noosa_scraper'
-require 'blacktown_scraper'
-require 'sydney_scraper'
 
 module Scrapers
   # Central registry of scrapers
