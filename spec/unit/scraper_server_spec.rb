@@ -14,11 +14,15 @@ describe "Server for scraper XML" do
   end
   
   before(:each) do
-    @blue_mountains = BlueMountainsScraper.new("Blue Mountains City Council, NSW", "Blue Mountains", "NSW")
-    @brisbane = BrisbaneScraper.new("Brisbane City Council, QLD", "Brisbane", "QLD")
+    @blue_mountains = BlueMountainsScraper.new("Blue Mountains City Council", "Blue Mountains", "NSW")
+    @brisbane = BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD")
     # Restrict parsers to just two
     Scrapers.stub!(:scrapers).and_return([@blue_mountains, @brisbane])
     @results = mock("PlanningAuthorityResults")
+  end
+  
+  it "should append the name of the state to the end of the long name" do
+    @brisbane.planning_authority_name.should == "Brisbane City Council, QLD"
   end
 
   it "should retrieve the Blue Mountains data" do

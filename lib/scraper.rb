@@ -4,11 +4,16 @@ require 'planning_authority_results'
 require 'uri'
 
 class Scraper
-  attr_reader :agent, :planning_authority_name, :planning_authority_short_name, :state
+  attr_reader :agent, :planning_authority_short_name, :state
 
   def initialize(name, short_name, state)
     @planning_authority_name, @planning_authority_short_name, @state = name, short_name, state
     @agent = WWW::Mechanize.new    
+  end
+  
+  # Append the state/territory onto the planning authority name
+  def planning_authority_name
+    @planning_authority_name + ", " + state
   end
   
   def extract_relative_url(html)
