@@ -12,9 +12,7 @@ class InfoMasterScraper < Scraper
     values
   end
   
-  # Downloads html table and returns it, ready for the data to be extracted from it
-  # Not sure if that 'span > table' is specific enough to work generally for finding the needed table
-  def raw_table(date, url, table_search)
+  def get_page(date, url)
     page = agent.get(url)
     
     # Click the Ok button on the form
@@ -33,8 +31,14 @@ class InfoMasterScraper < Scraper
     search_form[search_form.field_with(:name => /drDates:txtMonth2/).name] = date.month
     search_form[search_form.field_with(:name => /drDates:txtYear2/).name] = date.year
 
-    search_form.submit(search_form.button_with(:name => /btnSearch/)).search(table_search)
+    search_form.submit(search_form.button_with(:name => /btnSearch/))
     # TODO: Need to handle what happens when the results span multiple pages. Can this happen?
+  end
+  
+  # Downloads html table and returns it, ready for the data to be extracted from it
+  # Not sure if that 'span > table' is specific enough to work generally for finding the needed table
+  def raw_table(date, url, table_search)
+    get_page(date, url).search(table_search)
   end
 
   def extract_date_received(html)
