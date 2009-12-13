@@ -64,6 +64,7 @@ module Scrapers
       LoganScraper.new("Logan City Council", "Logan", "QLD"),
       WoollahraScraper.new("Woollahra Municipal Council", "Woollahra", "NSW"),
       RandwickScraper.new("Randwick City Council", "Randwick", "NSW"),
+      SutherlandScraper.new("Sutherland Shire Council", "Sutherland", "NSW"),
     ]
   end
   
