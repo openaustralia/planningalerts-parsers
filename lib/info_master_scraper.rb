@@ -4,7 +4,7 @@ require 'htmlentities'
 class InfoMasterScraper < Scraper
   def raw_table_values(date, url, rows_to_skip_at_start, table_search = 'span > table', rows_to_skip_at_end = 0)
     range = rows_to_skip_at_start..(-1-rows_to_skip_at_end)
-    rows = raw_table(date, url, table_search).search('tr')
+    rows = get_page(date, url).search(table_search).search('tr')
     return [] if rows.nil? || rows.size < rows_to_skip_at_start
     values = rows[range].map {|row| row.search('td')}
     first_row = values.first
@@ -35,12 +35,6 @@ class InfoMasterScraper < Scraper
     # TODO: Need to handle what happens when the results span multiple pages. Can this happen?
   end
   
-  # Downloads html table and returns it, ready for the data to be extracted from it
-  # Not sure if that 'span > table' is specific enough to work generally for finding the needed table
-  def raw_table(date, url, table_search)
-    get_page(date, url).search(table_search)
-  end
-
   def extract_date_received(html)
     inner(html)
   end
