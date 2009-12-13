@@ -61,6 +61,7 @@ module Scrapers
       NoosaScraper.new("Noosa, Sunshine Coast Regional Council", "Noosa", "QLD"),
       BlacktownScraper.new("Blacktown City Council", "Blacktown", "NSW"),
       SydneyScraper.new("City of Sydney", "Sydney", "NSW"),
+      LoganScraper.new("Logan City Council", "Logan", "QLD"),
     ]
   end
   

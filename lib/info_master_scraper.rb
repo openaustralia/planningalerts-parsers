@@ -19,7 +19,7 @@ class InfoMasterScraper < Scraper
     
     # Click the Ok button on the form
     form = page.forms.first
-    form.submit(form.button_with(:name => /btnOk/))
+    form.submit(form.button_with(:name => /btnOk|Yes/))
 
     # Get the page again
     page = agent.get(url)
@@ -49,8 +49,12 @@ class InfoMasterScraper < Scraper
     str.gsub(/[\n\t]/, " ").squeeze(" ")
   end
   
+  def extract_address_without_state(html, lines = 0..0)
+    simplify_whitespace(split_lines(html)[lines].join(" "))
+  end
+  
   def extract_address(html, lines = 0..0)
-    simplify_whitespace(split_lines(html)[lines].join(" ")) + ", " + state
+    extract_address_without_state(html, lines) + ", " + state
   end
   
   def extract_description(html, lines = -1..-1)
