@@ -62,6 +62,7 @@ module Scrapers
       BlacktownScraper.new("Blacktown City Council", "Blacktown", "NSW"),
       SydneyScraper.new("City of Sydney", "Sydney", "NSW"),
       LoganScraper.new("Logan City Council", "Logan", "QLD"),
+      WoollahraScraper.new("Woollahra Municipal Council", "Woollahra", "NSW"),
     ]
   end
   
