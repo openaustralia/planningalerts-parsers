@@ -65,6 +65,7 @@ module Scrapers
       WoollahraScraper.new("Woollahra Municipal Council", "Woollahra", "NSW"),
       RandwickScraper.new("Randwick City Council", "Randwick", "NSW"),
       SutherlandScraper.new("Sutherland Shire Council", "Sutherland", "NSW"),
+      ACTScraper.new("ACT Planning & Land Authority", "ACT", "ACT"),
     ]
   end
   

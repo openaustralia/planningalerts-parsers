@@ -10,6 +10,7 @@ class ACTScraper < Scraper
     page = Nokogiri::HTML(page.body)
     
     # Walking through the lines. Every 7 lines is a new application
+    applications = []
     page.search('table tr td').each_slice(7) do |lines|
       # First double check that each line has the correct form
       labels = lines.map do |line|
@@ -37,16 +38,17 @@ class ACTScraper < Scraper
       address = lines[2].inner_text.strip
       description = lines[4].inner_text.strip
       on_notice_to = lines[5].inner_text.strip
+      on_notice_to = nil if on_notice_to == ""
       info_url = extract_relative_url(lines[6])
 
-      puts "Suburb: #{suburb}"
-      puts "Application id: #{application_id}"
-      puts "Address: #{address}"
-      puts "Description: #{description}"
-      puts "On notice to: #{on_notice_to}"
-      puts "Info url: #{info_url}"
+      applications << DevelopmentApplication.new(
+        :application_id => application_id,
+        :address => address + ", " + suburb + ", " + state,
+        :description => description,
+        :on_notice_to => on_notice_to,
+        :info_url => info_url,
+        :comment_url => url)
     end
-    exit
-    []
+    applications
   end
 end
