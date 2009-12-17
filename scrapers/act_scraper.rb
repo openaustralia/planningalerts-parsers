@@ -33,20 +33,12 @@ class ACTScraper < Scraper
       lines[4].at('b').remove
       lines[5].at('strong').remove
 
-      suburb = lines[0].inner_text.strip
-      application_id = lines[1].inner_text.strip
-      address = lines[2].inner_text.strip
-      description = lines[4].inner_text.strip
-      on_notice_to = lines[5].inner_text.strip
-      on_notice_to = nil if on_notice_to == ""
-      info_url = extract_relative_url(lines[6])
-
       applications << DevelopmentApplication.new(
-        :application_id => application_id,
-        :address => address + ", " + suburb + ", " + state,
-        :description => description,
-        :on_notice_to => on_notice_to,
-        :info_url => info_url,
+        :application_id => lines[1].inner_text.strip,
+        :address => lines[2].inner_text.strip + ", " + lines[0].inner_text.strip + ", " + state,
+        :description => lines[4].inner_text.strip,
+        :on_notice_to => (lines[5].inner_text.strip if lines[5].inner_text.strip != ""),
+        :info_url => extract_relative_url(lines[6]),
         :comment_url => url)
     end
     applications
