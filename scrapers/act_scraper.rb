@@ -20,6 +20,7 @@ class ACTScraper < Scraper
           line.at('b').inner_text
         end
       end
+      
       raise "Unexpected form for suburb line" unless lines[0].at('a').has_attribute?('name')
       raise "Unexpected form application_id line" unless labels[1] == "Development Application:"
       raise "Unexpected form address line" unless labels[2] == "Address:"
@@ -32,12 +33,13 @@ class ACTScraper < Scraper
       lines[2].at('strong').remove
       lines[4].at('b').remove
       lines[5].at('strong').remove
+      stripped = lines.map{|l| l.inner_text.strip}
 
       applications << DevelopmentApplication.new(
-        :application_id => lines[1].inner_text.strip,
-        :address => lines[2].inner_text.strip + ", " + lines[0].inner_text.strip + ", " + state,
-        :description => lines[4].inner_text.strip,
-        :on_notice_to => (lines[5].inner_text.strip if lines[5].inner_text.strip != ""),
+        :application_id => stripped[1],
+        :address => stripped[2] + ", " + stripped[0] + ", " + state,
+        :description => stripped[4],
+        :on_notice_to => (stripped[5] if stripped[5] != ""),
         :info_url => extract_relative_url(lines[6]),
         :comment_url => url)
     end
