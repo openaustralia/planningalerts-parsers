@@ -36,7 +36,6 @@ module Scrapers
       SPEARScraper.new("Hobsons Bay City Council", "Hobsons Bay", "VIC", "Hobsons Bay City Council"),
       SPEARScraper.new("Manningham City Council", "Manningham", "VIC", "Manningham City Council"),
       SPEARScraper.new("Maroondah City Council", "Maroondah", "VIC", "Maroondah City Council"),
-      SPEARScraper.new("Melbourne City Council", "Melbourne", "VIC", "Melbourne City Council"),
       # This one is a little strange. Need to see what we can sensibly call it
       SPEARScraper.new("Minister for Planning", "Victoria", "VIC", "Minister for Planning"),
       SPEARScraper.new("Mitchell Shire Council", "Mitchell", "VIC", "Mitchell Shire Council"),
@@ -67,6 +66,10 @@ module Scrapers
       SutherlandScraper.new("Sutherland Shire Council", "Sutherland", "NSW"),
       ACTScraper.new("ACT Planning & Land Authority", "ACT", "ACT"),
       MosmanScraper.new("Mosman Municipal Council", "Mosman", "NSW"),
+      # There are two websites that we're getting data for Melbourne City Council from.
+      # Using "Melbourne (City)" to disambiguate from the "Melbourne" used by the SPEAR scraper.
+      SPEARScraper.new("Melbourne City Council (SPEAR)", "Melbourne", "VIC", "Melbourne City Council"),
+      MelbourneScraper.new("Melbourne City Council", "Melbourne (City)", "VIC"),
     ]
   end
   

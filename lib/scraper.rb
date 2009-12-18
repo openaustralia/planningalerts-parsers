@@ -28,7 +28,7 @@ class Scraper
   
   # A version of the short name that is encoded for use in url's
   def planning_authority_short_name_encoded
-    planning_authority_short_name.downcase.gsub(' ', '_')
+    planning_authority_short_name.downcase.gsub(' ', '_').gsub(/\W/, '')
   end
   
   def results(date)
