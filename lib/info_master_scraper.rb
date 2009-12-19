@@ -43,10 +43,6 @@ class InfoMasterScraper < Scraper
     inner(html)
   end
   
-  def simplify_whitespace(str)
-    str.gsub(/[\n\t]/, " ").squeeze(" ")
-  end
-  
   def extract_address_without_state(html, lines = 0..0)
     simplify_whitespace(split_lines(html)[lines].join(" "))
   end

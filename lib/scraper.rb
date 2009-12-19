@@ -31,6 +31,10 @@ class Scraper
     planning_authority_short_name.downcase.gsub(' ', '_').gsub(/\W/, '')
   end
   
+  def simplify_whitespace(str)
+    str.gsub(/[\n\t\r]/, " ").squeeze(" ")
+  end
+  
   def results(date)
     PlanningAuthorityResults.new(:name => planning_authority_name, :short_name => planning_authority_short_name,
       :applications => applications(date))
