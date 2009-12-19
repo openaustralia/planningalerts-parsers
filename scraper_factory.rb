@@ -70,6 +70,7 @@ module Scrapers
       # Using "Melbourne (City)" to disambiguate from the "Melbourne" used by the SPEAR scraper.
       SPEARScraper.new("Melbourne City Council (SPEAR)", "Melbourne", "VIC", "Melbourne City Council"),
       MelbourneScraper.new("Melbourne City Council", "Melbourne (City)", "VIC"),
+      WollongongScraper.new("Wollongong City Council", "Wollongong", "NSW"),
     ]
   end
   
