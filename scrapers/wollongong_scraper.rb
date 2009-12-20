@@ -84,8 +84,7 @@ class WollongongScraper < Scraper
         :date_received => date_received,
         :application_id => application_id,
         :description => description,
-        # TODO: Only using the first address until http://tickets.openaustralia.org/browse/PA-72 is implemented
-        :address => addresses[0],
+        :addresses => addresses,
         :info_url => enquiry_url,
         :comment_url => enquiry_url)
     end
