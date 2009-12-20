@@ -47,7 +47,7 @@ class SPEARScraper < Scraper
     # Also I think the "Intended use" bit looks like the most useful. So, we'll use that for the description
     page.at('div#bodypadding table').search('table')[1].search('tr').find do |row|
       # <th> tag contains the name of the field, <td> tag contains its value
-      row.at('th').inner_text.strip == "Intended use"
+      row.at('th') && row.at('th').inner_text.strip == "Intended use"
     end.at('td').inner_text.strip
   end
   
