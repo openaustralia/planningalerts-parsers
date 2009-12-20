@@ -5,7 +5,8 @@ class SydneyScraper < Scraper
     url = "http://www.cityofsydney.nsw.gov.au/Development/DAsOnExhibition/DAExhibition.asp"
     page = agent.get(url)
     page.search('#main-content > table').map do |app|
-      address = app.search('tr')[0].at('th > strong > a').inner_text.strip
+      # Several addresses will be separated by commas
+      addresses = app.search('tr')[0].at('th > strong > a').inner_text.split(',').map{|t| t.strip}
       info_url = extract_relative_url(app.search('tr')[0])
 
       paras = app.search('tr')[1].at('td').search('p')
@@ -22,7 +23,7 @@ class SydneyScraper < Scraper
       DevelopmentApplication.new(
         :info_url => info_url,
         :comment_url => info_url,
-        :address => address,
+        :addresses => addresses,
         :application_id => paras[0].inner_text,
         :description => paras[1].inner_text,
         :on_notice_to => paras[2].inner_text)
