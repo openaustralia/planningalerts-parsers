@@ -5,8 +5,22 @@ require 'uri'
 require 'date_with_non_american_bias'
 
 class DevelopmentApplication < SimpleStruct
-  add_attributes :application_id, :description, :address, :on_notice_from, :on_notice_to, :info_url, :comment_url, :date_received
+  add_attributes :application_id, :description, :address, :addresses, :on_notice_from, :on_notice_to, :info_url, :comment_url, :date_received
   
+  def initialize(options = {})
+    @addresses = []
+    super
+  end
+  
+  def address
+    raise "Can not use address when there are several addresses" if addresses.size > 1
+    addresses.first
+  end
+  
+  def address=(a)
+    @addresses = [a]
+  end
+
   def info_url=(url)
     @info_url = parse_url(url)
   end
@@ -30,14 +44,17 @@ class DevelopmentApplication < SimpleStruct
   def to_xml(options = {})
     options[:indent] ||= 2
     xml = options[:builder] ||= Builder::XmlMarkup.new(:indent => options[:indent])
-    xml.application do
-      xml.council_reference application_id
-      xml.address address
-      xml.description description
-      xml.info_url info_url
-      xml.comment_url comment_url
-      xml.date_received date_received
+    addresses.each do |a|
+      xml.application do
+        xml.council_reference application_id
+        xml.address a
+        xml.description description
+        xml.info_url info_url
+        xml.comment_url comment_url
+        xml.date_received date_received
+      end
     end
+    xml
   end
   
   private

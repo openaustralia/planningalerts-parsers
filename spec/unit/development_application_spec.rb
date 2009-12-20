@@ -53,3 +53,44 @@ describe DevelopmentApplication do
     EOF
   end
 end
+
+describe DevelopmentApplication, "multiple addresses" do
+  it "should be able to store multiple addresses" do
+    DevelopmentApplication.new(:addresses => ["First", "Second"]).addresses.should == ["First", "Second"]
+  end
+  
+  it "should be able to set a single address using addresses too" do
+    DevelopmentApplication.new(:addresses => ["Address"]).address.should == "Address"
+  end
+  
+  it "should be able to get a single address using addresses too" do
+    DevelopmentApplication.new(:address => "Address").addresses.should == ["Address"]
+  end
+  
+  it "should error when trying to retrieve a single address when there are multiple" do
+    da = DevelopmentApplication.new(:addresses => ["First", "Second"])
+    lambda{da.address}.should raise_error(RuntimeError, "Can not use address when there are several addresses")
+  end
+  
+  it "should output multiple applications in xml when there are multiple addresses" do
+    da = DevelopmentApplication.new(:application_id => "27B/6", :description => "foo", :addresses => ["First", "Second"])
+    da.to_xml.should == <<-EOF
+<application>
+  <council_reference>27B/6</council_reference>
+  <address>First</address>
+  <description>foo</description>
+  <info_url></info_url>
+  <comment_url></comment_url>
+  <date_received></date_received>
+</application>
+<application>
+  <council_reference>27B/6</council_reference>
+  <address>Second</address>
+  <description>foo</description>
+  <info_url></info_url>
+  <comment_url></comment_url>
+  <date_received></date_received>
+</application>
+    EOF
+  end
+end
