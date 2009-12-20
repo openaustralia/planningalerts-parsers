@@ -74,7 +74,7 @@ describe DevelopmentApplication, "multiple addresses" do
   
   it "should output multiple applications in xml when there are multiple addresses" do
     da = DevelopmentApplication.new(:application_id => "27B/6", :description => "foo", :addresses => ["First", "Second"])
-    da.to_xml.should == <<-EOF
+    da.to_xml.to_s.should == <<-EOF
 <application>
   <council_reference>27B/6</council_reference>
   <address>First</address>

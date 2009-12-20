@@ -54,7 +54,8 @@ class DevelopmentApplication < SimpleStruct
         xml.date_received date_received
       end
     end
-    xml
+    # Hack to return type of object you would normally expect
+    xml.text!("")
   end
   
   private
