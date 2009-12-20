@@ -77,8 +77,13 @@ class WollongongScraper < Scraper
       description = simplify_whitespace(extract_field(table.search('tr')[3], "Proposal"))
       #puts "description: #{description}"
       table = page.search('table#ctl00_MainBodyContent_DynamicTable > tr')[3].search('td')[0].search('table')[2]
-      addresses = table.search('tr')[0].search('table > tr')[1..-1].map do |a|
-        a.search('td')[0].inner_text.strip
+      rows = table.search('tr')[0].search('table > tr')[1..-1]
+      if rows
+        addresses = rows.map do |a|
+          a.search('td')[0].inner_text.strip
+        end
+      else
+        addresses = []
       end
       DevelopmentApplication.new(
         :date_received => date_received,
