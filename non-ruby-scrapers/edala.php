@@ -6,6 +6,9 @@
  */
 require_once 'Net/URL.php';
 
+// Make warnings on using date without setting timezone go quiet
+date_default_timezone_set('Australia/Adelaide');
+
 function clean($data) {
     $tidy = new tidy();
     $options = array('output-xml' => true, 'clean' => true, 'indent' => true, 'output-xhtml' => true, 'char-encoding' => 'utf8');
