@@ -71,7 +71,8 @@ module Scrapers
       SPEARScraper.new("Melbourne City Council (SPEAR)", "Melbourne", "VIC", "Melbourne City Council"),
       MelbourneScraper.new("Melbourne City Council", "Melbourne (City)", "VIC"),
       WollongongScraper.new("Wollongong City Council", "Wollongong", "NSW"),
-      MarrickvilleScraper.new("Marrickville Council", "Marrickville", "NSW")
+      MarrickvilleScraper.new("Marrickville Council", "Marrickville", "NSW"),
+      EDALAScraper.new("Department of Planning and Local Government", "EDALA", "SA"),
     ]
   end
   
