@@ -3,17 +3,31 @@ require 'mechanize'
 require 'planning_authority_results'
 require 'uri'
 
-class Scraper
-  attr_reader :agent, :planning_authority_short_name, :state
-
+# Base class for ruby and non-ruby scrapers
+class ScraperBase
+  attr_reader :planning_authority_short_name, :state
+  
   def initialize(name, short_name, state)
     @planning_authority_name, @planning_authority_short_name, @state = name, short_name, state
-    @agent = WWW::Mechanize.new    
   end
   
   # Append the state/territory onto the planning authority name
   def planning_authority_name
     @planning_authority_name + ", " + state
+  end
+  
+  # A version of the short name that is encoded for use in url's
+  def planning_authority_short_name_encoded
+    planning_authority_short_name.downcase.gsub(' ', '_').gsub(/\W/, '')
+  end 
+end
+
+class Scraper < ScraperBase
+  attr_reader :agent
+
+  def initialize(name, short_name, state)
+    super
+    @agent = WWW::Mechanize.new    
   end
   
   def extract_relative_url(html)
@@ -24,11 +38,6 @@ class Scraper
     v = "mailto:#{to}?subject=#{URI.escape(subject)}"
     v += "&Body=#{URI.escape(body)}" if body
     v
-  end
-  
-  # A version of the short name that is encoded for use in url's
-  def planning_authority_short_name_encoded
-    planning_authority_short_name.downcase.gsub(' ', '_').gsub(/\W/, '')
   end
   
   def simplify_whitespace(str)
