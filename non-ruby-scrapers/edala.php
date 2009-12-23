@@ -88,7 +88,7 @@ $rows = $sxe->xpath('//xhtml:table[@id="General_0"]/xhtml:tbody/xhtml:tr[@class=
             $parts[] = $house_number;
         }
 
-        $address = trim(implode("/", $parts) . " " . $street . ", " . $suburb);
+        $address = trim(implode("/", $parts) . " " . $street . ", " . $suburb . ", SA");
 
         ?>
         <application>
