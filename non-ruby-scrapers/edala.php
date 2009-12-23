@@ -50,7 +50,7 @@ $rows = $sxe->xpath('//xhtml:table[@id="General_0"]/xhtml:tbody/xhtml:tr[@class=
 ?>
 <?xml version="1.0" encoding="UTF-8"?>
 <planning>
-  <authority_name>Department of Planning and Local Government (SA)</authority_name>
+  <authority_name>Department of Planning and Local Government, SA</authority_name>
   <authority_short_name>EDALA</authority_short_name>
   <applications>
   <?php
