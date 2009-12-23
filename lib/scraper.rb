@@ -35,6 +35,10 @@ class Scraper
     str.gsub(/[\n\t\r]/, " ").squeeze(" ")
   end
   
+  def results_as_xml(date)
+    results(date).to_xml
+  end
+  
   def results(date)
     PlanningAuthorityResults.new(:name => planning_authority_name, :short_name => planning_authority_short_name,
       :applications => applications(date))

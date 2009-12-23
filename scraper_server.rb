@@ -26,6 +26,6 @@ get '/:short_name' do
   content_type 'application/xml', :charset => 'utf-8'
   if Date.valid_civil?(params[:year].to_i, params[:month].to_i, params[:day].to_i)
     date = Date.new(params[:year].to_i, params[:month].to_i, params[:day].to_i)
-    Scrapers::scraper_factory(params[:short_name]).results(date).to_xml
+    Scrapers::scraper_factory(params[:short_name]).results_as_xml(date)
   end
 end
