@@ -36,7 +36,7 @@ $d = !empty($_GET['day'])? $_GET['day'] : date("D");
 $m = !empty($_GET['month'])? $_GET['month'] : date("M");
 $y = !empty($_GET['year'])? $_GET['year'] : date("Y");
 
-$from = date("d M Y", strtotime("$d $m $y"));
+$from = date("d M Y", strtotime("$y-$m-$d"));
 
 $url = fetch_index($from);
 
