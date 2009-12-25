@@ -35,9 +35,6 @@
 # the system (at the time of writting you could only access this month or last
 # month anyway)
 
-# This script also needs to have permission to write in the current directory,
-# to save a file to store cookies.
-
 # Check the exit status of this program! If its not 0 then you probably don't 
 # have valid data or even valid XML. There is probably an error message in STDOUT.
 
@@ -111,7 +108,7 @@ my $WEB_URL_PREFIX = 'http://www2.kogarah.nsw.gov.au/datracking/modules/applicat
 my $ua = LWP::UserAgent->new;
 
 #we need to save the cookies so lets set up our user agent ($ua) to save cookies
-$ua->cookie_jar(HTTP::Cookies->new(file => "${0}_lwpcookies.txt", autosave => 1));
+$ua->cookie_jar(HTTP::Cookies->new);
 
 #lets make an initial request
 my $tc_req = $ua->request(HTTP::Request->new(GET => "${WEB_URL_PREFIX}default.aspx"));
