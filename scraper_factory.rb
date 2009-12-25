@@ -73,6 +73,7 @@ module Scrapers
       WollongongScraper.new("Wollongong City Council", "Wollongong", "NSW"),
       MarrickvilleScraper.new("Marrickville Council", "Marrickville", "NSW"),
       EDALAScraper.new("Department of Planning and Local Government", "EDALA", "SA"),
+      KogarahScraper.new("Kogarah City Council", "Kogarah", "NSW"),
     ]
   end
   
