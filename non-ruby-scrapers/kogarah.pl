@@ -53,7 +53,7 @@ use HTML::Parser;
 use HTML::Entities;
 #use URI::Escape;
 
-my $EXECUTION_METHOD = 'commandline'; #set to either 'cgi' or 'commandline'
+my $EXECUTION_METHOD = 'cgi'; #set to either 'cgi' or 'commandline'
 
 #arguments (set below)
 my $day;
