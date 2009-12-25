@@ -248,16 +248,10 @@ print "    <application>
       <address>$da_address NSW</address>
       <description>$da_description</description>
       <info_url>$da_info_url</info_url>
-      <comment_url></comment_url>
+      <comment_url>$da_info_url</comment_url>
       <date_received>$da_date_received</date_received>
     </application>
 ";
-            #I was following the example brisbane.xml very closelly here
-            #however I don't have the postcode as in brisbane.xml
-            #There is no url for comments, but the page that lists more details
-            #has an email contact which is linked to in the form,
-            #mailto:kmcmail@kogarah.nsw.gov.au?subject=Development%20Application%20Enquiry:%20009/2009/00000362/001%20&Body=
-            #where 009/2009/00000362/001 is the council reference
         }
     }
 }
