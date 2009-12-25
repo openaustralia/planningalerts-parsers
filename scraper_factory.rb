@@ -7,6 +7,7 @@ end
 # Require the generic scrapers.
 # TODO: Should really move these together with all the other scrapers
 require 'spear_scraper'
+require 'cgi_scraper'
 
 module Scrapers
   # Central registry of scrapers
@@ -72,8 +73,8 @@ module Scrapers
       MelbourneScraper.new("Melbourne City Council", "Melbourne (City)", "VIC"),
       WollongongScraper.new("Wollongong City Council", "Wollongong", "NSW"),
       MarrickvilleScraper.new("Marrickville Council", "Marrickville", "NSW"),
-      EDALAScraper.new("Department of Planning and Local Government", "EDALA", "SA"),
-      KogarahScraper.new("Kogarah City Council", "Kogarah", "NSW"),
+      CGIScraper.new("Department of Planning and Local Government", "EDALA", "SA", "php-cgi -d short_open_tag=0 -d cgi.force_redirect=0 -f", "edala.php"),
+      CGIScraper.new("Kogarah City Council", "Kogarah", "NSW", "perl", "kogarah.pl"),
     ]
   end
   
