@@ -17,7 +17,7 @@ class InfoMasterScraper < Scraper
     
     # Click the Ok button on the form
     form = page.forms.first
-    form.submit(form.button_with(:name => /btnOk|Yes|Button1/))
+    form.submit(form.button_with(:name => /btnOk|Yes|Button1|Agree/))
 
     # Get the page again
     page = agent.get(url)
