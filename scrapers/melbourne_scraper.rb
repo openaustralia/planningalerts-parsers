@@ -5,6 +5,7 @@ class MelbourneScraper < Scraper
     formatted_date = "#{date.day}/#{date.month}/#{date.year}"
     base_url = "http://ex.melbourne.vic.gov.au/icompasweb/picker.asp"
     url = "#{base_url}?std=#{formatted_date}&end=#{formatted_date}"
+    url = "http://ex.melbourne.vic.gov.au/icompasweb/picker.asp?std=01/12/2009&end=04/01/2010"
     comment_url = "http://www.melbourne.vic.gov.au/AboutCouncil/ContactUs/Pages/ContactUs.aspx"
     
     page = agent.get(url)
@@ -24,16 +25,28 @@ class MelbourneScraper < Scraper
         da.info_url = "#{base_url}?permit=#{da.application_id}"
         applications << da
       else
-        table_rows.each_slice(4) do |rows|
-          info_url = extract_relative_url(rows[3].search('td')[0])
-          da = DevelopmentApplication.new(
-            :address => rows[1].search('th')[1].inner_text.strip,
-            :application_id => rows[3].search('td')[0].inner_text.strip,
-            :description => rows[3].search('td')[1].inner_text.strip,
-            :date_received => rows[3].search('td')[2].inner_text.strip,
-            :comment_url => comment_url)
-          da.info_url = "#{base_url}?permit=#{da.application_id}"
-          applications << da
+        address = nil
+        table_rows.each do |rows|
+          # Skip empty rows
+          if rows.search('td')[0]
+            case rows.search('td')[0].inner_text.strip
+            when ""
+              # This is an address row
+              address = rows.search('th')[1].inner_text.strip
+            when "Permit Number"
+              # skip row
+            else
+              values = rows.search('td').map{|t| t.inner_text.strip}
+              da = DevelopmentApplication.new(
+                :address => address,
+                :application_id => values[0],
+                :description => values[1],
+                :date_received => values[2],
+                :comment_url => comment_url)
+              da.info_url = "#{base_url}?permit=#{da.application_id}"
+              applications << da
+            end
+          end
         end
       end
     end
