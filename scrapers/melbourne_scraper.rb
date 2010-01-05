@@ -1,17 +1,12 @@
 require 'scraper'
 
 class MelbourneScraper < Scraper
-  def applications(date)
-    formatted_date = "#{date.day}/#{date.month}/#{date.year}"
-    base_url = "http://ex.melbourne.vic.gov.au/icompasweb/picker.asp"
-    url = "#{base_url}?std=#{formatted_date}&end=#{formatted_date}"
-    url = "http://ex.melbourne.vic.gov.au/icompasweb/picker.asp?std=01/12/2009&end=04/01/2010"
-    comment_url = "http://www.melbourne.vic.gov.au/AboutCouncil/ContactUs/Pages/ContactUs.aspx"
-    
-    page = agent.get(url)
+  
+  BASE_URL = "http://ex.melbourne.vic.gov.au/icompasweb/picker.asp"
+  COMMENT_URL = "http://www.melbourne.vic.gov.au/AboutCouncil/ContactUs/Pages/ContactUs.aspx"
+  
+  def extract_applications_from_page(page)
     applications = []
-    # TODO: Doesn't currently handle days when there are a large number of
-    # applications that run over several pages
     if page.at('table')
       table_rows = page.at('table').search('tr')
       # If only a single entry is returned it displays that entry in a more detailed format. Check for this
@@ -42,14 +37,28 @@ class MelbourneScraper < Scraper
                 :application_id => values[0],
                 :description => values[1],
                 :date_received => values[2],
-                :comment_url => comment_url)
-              da.info_url = "#{base_url}?permit=#{da.application_id}"
+                :comment_url => COMMENT_URL)
+              da.info_url = "#{BASE_URL}?permit=#{da.application_id}"
               applications << da
             end
           end
         end
       end
     end
+    applications
+  end
+  
+  def applications(date)
+    formatted_date = "#{date.day}/#{date.month}/#{date.year}"
+    url = "#{BASE_URL}?std=#{formatted_date}&end=#{formatted_date}"
+    
+    page = agent.get(url)
+    applications = []
+    begin
+      applications += extract_applications_from_page(page)
+      next_link = page.link_with(:text => /next/i)
+      page = agent.click(next_link) if next_link
+    end while next_link
     applications
   end
 end
