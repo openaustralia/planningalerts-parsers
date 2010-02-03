@@ -25,7 +25,6 @@ class SutherlandScraper < InfoMasterScraper
   
   def applications(date)
     url = "https://remote.ssc.nsw.gov.au/datracking"
-    info_url = "http://www.sutherland.nsw.gov.au/ssc/home.nsf/HeadingPagesDisplay/Current+noticesCurrent+DAs?opendocument"
     raw_table_values(date, url, 1, 'span#_ctl2_lblData').map do |values|
       da = DevelopmentApplication.new(
         :application_id => extract_application_id(values[1]),
@@ -33,9 +32,9 @@ class SutherlandScraper < InfoMasterScraper
         :address => extract_address(values[3]),
         :date_received => extract_date_received(values[2]),
         # Don't think there's a URL that gives the result of the search. There are some very weird things
-        # with authentication on this app. So, just going to point to the generic DA page
-        :info_url => info_url,
-        :comment_url => info_url)
+        # with authentication on this app. So, just going to point to the generic DA tracker login page
+        :info_url => url,
+        :comment_url => url)
       da
     end
   end
