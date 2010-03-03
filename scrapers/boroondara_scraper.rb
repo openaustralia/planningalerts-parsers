@@ -6,6 +6,9 @@ class BoroondaraScraper < Scraper
   BASE_URLS = ["http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?d=lastweek&k=LodgementDate&t=PlnPermit",
                "http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?d=thisweek&k=LodgementDate&t=PlnPermit"]
 
+  # A general page (applicable to all applications) for downloading an "objections" form
+  COMMENT_URL = "http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections"
+  
   def extract_applications_from_page(page, date)
 	applications = []
         links = page.links_with(:href => /SearchApplication.aspx\?id=\d+/)
@@ -13,6 +16,7 @@ class BoroondaraScraper < Scraper
             app_page = link.click
             da = DevelopmentApplication.new(:info_url => app_page.uri)
             da.application_id = app_page.search('h1')[1].inner_text.strip.sub(/Reference number: /, "")
+            da.comment_url = COMMENT_URL
             rows = app_page.search('.detail')
             rows.each do |row|
                 label = row.at('.detailleft').inner_text.strip
