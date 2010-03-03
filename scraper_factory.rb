@@ -20,7 +20,10 @@ module Scrapers
       SPEARScraper.new("Ararat Rural City Council", "Ararat", "VIC", "Ararat Rural City Council"),
       SPEARScraper.new("Ballarat City Council", "Ballarat", "VIC", "Ballarat City Council"),
       SPEARScraper.new("Banyule City Council", "Banyule", "VIC", "Banyule City Council"),
-      SPEARScraper.new("Boroondara City Council", "Boroondara", "VIC", "Boroondara City Council"),
+      # There are two websites that we're getting data for Boroondara City Council from.
+      # Using "Boroondara (City)" to disambiguate from the "Boroondara" used by the SPEAR scraper.
+      SPEARScraper.new("Boroondara City Council (SPEAR)", "Boroondara", "VIC", "Boroondara City Council"),
+      BoroondaraScraper.new("Boroondara City Council", "Boroondara (City)", "VIC"),
       SPEARScraper.new("Brimbank City Council", "Brimbank", "VIC", "Brimbank City Council"),
       SPEARScraper.new("Cardinia Shire Council", "Cardinia", "VIC", "Cardinia Shire Council"),
       SPEARScraper.new("Casey City Council", "Casey", "VIC", "Casey City Council"),
