@@ -10,7 +10,7 @@ require 'rack/contrib'
 # Send out email on any exceptions raised
 use Rack::MailExceptions do |mail|
   mail.from "contact@planningalerts.org.au"
-  mail.to "matthew@openaustralia.org"
+  mail.to "web-administrators.openaustralia.org"
 end
 
 # When running from this rackup script we'll always be in production mode
