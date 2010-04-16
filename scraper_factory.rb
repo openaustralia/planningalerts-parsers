@@ -78,7 +78,8 @@ module Scrapers
       MarrickvilleScraper.new("Marrickville Council", "Marrickville", "NSW"),
       CGIScraper.new("Department of Planning and Local Government", "EDALA", "SA", "php-cgi -d short_open_tag=0 -d cgi.force_redirect=0 -f", "edala.php"),
       CGIScraper.new("Kogarah City Council", "Kogarah", "NSW", "perl", "kogarah.pl"),
-      LakeMacquarieScraper.new("Lake Macquarie City Council", "Lake Macquarie", "NSW")
+      LakeMacquarieScraper.new("Lake Macquarie City Council", "Lake Macquarie", "NSW"),
+      ParramattaScraper.new("Parramatta City Council", "Parramatta", "NSW")
     ]
   end
   
