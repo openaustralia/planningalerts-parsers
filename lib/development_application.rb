@@ -52,6 +52,8 @@ class DevelopmentApplication < SimpleStruct
         xml.info_url info_url
         xml.comment_url comment_url
         xml.date_received date_received
+        xml.on_notice_from on_notice_from if on_notice_from
+        xml.on_notice_to on_notice_to if on_notice_to
       end
     end
     # Hack to return type of object you would normally expect
