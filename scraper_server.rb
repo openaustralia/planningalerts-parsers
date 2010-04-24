@@ -14,8 +14,9 @@ get '/' do
   xml.scrapers do
     Scrapers::scrapers.each do |scraper|
       xml.scraper do
-        xml.authority_name scraper.planning_authority_name
+        xml.authority_name scraper.planning_authority_name_no_state
         xml.authority_short_name scraper.planning_authority_short_name
+        xml.state scraper.state
         xml.url "#{request.url}#{scraper.planning_authority_short_name_encoded}?year={year}&month={month}&day={day}"
       end
     end

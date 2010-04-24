@@ -44,13 +44,15 @@ describe "Server for scraper XML" do
     last_response.body.should == <<-EOF
 <scrapers>
   <scraper>
-    <authority_name>Blue Mountains City Council, NSW</authority_name>
+    <authority_name>Blue Mountains City Council</authority_name>
     <authority_short_name>Blue Mountains</authority_short_name>
+    <state>NSW</state>
     <url>http://example.org/blue_mountains?year={year}&amp;month={month}&amp;day={day}</url>
   </scraper>
   <scraper>
-    <authority_name>Brisbane City Council, QLD</authority_name>
+    <authority_name>Brisbane City Council</authority_name>
     <authority_short_name>Brisbane</authority_short_name>
+    <state>QLD</state>
     <url>http://example.org/brisbane?year={year}&amp;month={month}&amp;day={day}</url>
   </scraper>
 </scrapers>

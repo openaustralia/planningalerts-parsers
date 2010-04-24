@@ -13,7 +13,11 @@ class ScraperBase
   
   # Append the state/territory onto the planning authority name
   def planning_authority_name
-    @planning_authority_name + ", " + state
+    planning_authority_name_no_state + ", " + state
+  end
+  
+  def planning_authority_name_no_state
+    @planning_authority_name
   end
   
   # A version of the short name that is encoded for use in url's
