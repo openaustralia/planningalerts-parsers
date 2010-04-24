@@ -49,6 +49,8 @@ describe DevelopmentApplication do
   <info_url>http://foo.nsw.gov.au/aplications/1234</info_url>
   <comment_url>http://foo.nsw.gov.au/comment/1234</comment_url>
   <date_received>2009-02-01</date_received>
+  <on_notice_from>2009-11-12</on_notice_from>
+  <on_notice_to>2010-01-01</on_notice_to>
 </application>
     EOF
   end
