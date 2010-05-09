@@ -80,7 +80,8 @@ module Scrapers
       CGIScraper.new("Kogarah City Council", "Kogarah", "NSW", "perl", "kogarah.pl"),
       LakeMacquarieScraper.new("Lake Macquarie City Council", "Lake Macquarie", "NSW"),
       ParramattaScraper.new("Parramatta City Council", "Parramatta", "NSW"),
-      KuringgaiScraper.new("Ku-ring-gai Council", "Ku-ring-gai", "NSW")
+      KuringgaiScraper.new("Ku-ring-gai Council", "Ku-ring-gai", "NSW"),
+      AlburyScraper.new("Albury City Council", "Albury", "NSW")
     ]
   end
   

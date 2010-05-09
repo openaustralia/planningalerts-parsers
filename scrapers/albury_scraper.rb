@@ -23,7 +23,7 @@ class AlburyScraper < Scraper
         description = block.search('tr')[1].search('td')[2].inner_text.strip
         application_id = block.search('tr')[3].search('td')[2].inner_text.strip
         on_notice_text = block.search('tr')[4].search('td')[2].inner_text.strip
-        if on_notice_text =~ /(\d+\/\d+\/\d+)\s+Expires\s+(\d+\/\d+\/\d+)/
+        if on_notice_text =~ /(\d+\/\d+\/\d+)\s+Submissions close\s+(\d+\/\d+\/\d+)/
           on_notice_from, on_notice_to = $~[1..2]
         else
           raise "Unexpected form for text: #{on_notice_text}"
