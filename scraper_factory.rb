@@ -81,7 +81,8 @@ module Scrapers
       LakeMacquarieScraper.new("Lake Macquarie City Council", "Lake Macquarie", "NSW"),
       ParramattaScraper.new("Parramatta City Council", "Parramatta", "NSW"),
       KuringgaiScraper.new("Ku-ring-gai Council", "Ku-ring-gai", "NSW"),
-      AlburyScraper.new("Albury City Council", "Albury", "NSW")
+      AlburyScraper.new("Albury City Council", "Albury", "NSW"),
+      StonningtonScraper.new("City of Stonnington", "Stonnington", "VIC")
     ]
   end
   
