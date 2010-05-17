@@ -9,8 +9,8 @@ class SPEARScraper < Scraper
   # Extracts all the data on a single page of results
   def extract_page_data(page)
     apps = []
-    # Skip first row (header) and last row (page navigation)
-    page.at('div#list table').search('tr')[1..-2].each do |row|
+    # Skip first two row (header) and last row (page navigation)
+    page.at('div#list table').search('tr')[2..-2].each do |row|
       values = row.search('td')
       
       # Type appears to be either something like "Certification of a Plan" or "Planning Permit and Certification"
@@ -63,7 +63,7 @@ class SPEARScraper < Scraper
     applications = []
     begin
       applications += extract_page_data(page).find_all{|r| r.date_received == date}
-      next_link = page.link_with(:text => /next 50/)
+      next_link = page.link_with(:text => /next/)
       page = next_link.click if next_link
     end until next_link.nil?
 
