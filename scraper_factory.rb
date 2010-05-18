@@ -41,7 +41,8 @@ module Scrapers
       SPEARScraper.new("Manningham City Council (SPEAR)", "Manningham", "VIC", "Manningham City Council"),
       SPEARScraper.new("Maroondah City Council (SPEAR)", "Maroondah", "VIC", "Maroondah City Council"),
       # This one is a little strange. Need to see what we can sensibly call it
-      SPEARScraper.new("Minister for Planning (SPEAR)", "Victoria", "VIC", "Minister for Planning"),
+      SPEARScraper.new("Minister for Planning - Others (SPEAR)", "Victoria", "VIC", "Minister for Planning - Others"),
+      SPEARScraper.new("Minister for Planning - Social Housing (SPEAR)", "Victoria (Social Housing)", "VIC", "Minister for Planning - Social Housing"),
       SPEARScraper.new("Mitchell Shire Council (SPEAR)", "Mitchell", "VIC", "Mitchell Shire Council"),
       SPEARScraper.new("Moonee Valley City Council (SPEAR)", "Moonee Valley", "VIC", "Moonee Valley City Council"),
       SPEARScraper.new("Moreland City Council (SPEAR)", "Moreland", "VIC", "Moreland City Council"),
