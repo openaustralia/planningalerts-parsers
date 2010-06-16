@@ -7,7 +7,7 @@ class WarringahScraper < Scraper
     page = Nokogiri::XML(agent.get(url).body)
     page.search('Application').map do |app|
       DevelopmentApplication.new(
-        :address => app.at('Address/Line1').inner_text + " " + app.at('Address/Line2').inner_text,
+        :address => app.at('Address/Line1').inner_text + ", " + app.at('Address/Line2').inner_text,
         :info_url => "http://www.warringah.nsw.gov.au/ePlanning/pages/XC.Track/SearchApplication.aspx?id=" + app.at('ApplicationId').inner_text,
         # TODO: I couldn't find any DAs that were open for comment so this the generic one they suggest
         :comment_url => "http://www.warringah.nsw.gov.au/council_now/contact.aspx",
