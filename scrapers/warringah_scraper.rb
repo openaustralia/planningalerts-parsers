@@ -12,7 +12,7 @@ class WarringahScraper < Scraper
         # TODO: I couldn't find any DAs that were open for comment so this the generic one they suggest
         :comment_url => "http://www.warringah.nsw.gov.au/council_now/contact.aspx",
         # Yeesh, crappy description provided by the council
-        :description => app.at('NatureOfApplication').inner_text,
+        :description => app.at('NatureOfApplication').inner_text + " - " + app.at('ApplicationDetails').inner_text,
         :application_id => app.at('ReferenceNumber').inner_text,
         :date_received => Date.parse(app.at('LodgementDate').inner_text))
     end
