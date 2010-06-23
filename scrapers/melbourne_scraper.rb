@@ -3,7 +3,7 @@ require 'scraper'
 class MelbourneScraper < Scraper
   
   BASE_URL = "http://ex.melbourne.vic.gov.au/icompasweb/picker.asp"
-  COMMENT_URL = "http://www.melbourne.vic.gov.au/AboutCouncil/ContactUs/Pages/ContactUs.aspx"
+  COMMENT_URL = "http://www.melbourne.vic.gov.au/BuildingandPlanning/Planning/planningpermits/Pages/Objecting.aspx"
   
   def extract_applications_from_page(page)
     applications = []
