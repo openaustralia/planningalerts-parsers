@@ -17,6 +17,8 @@ class CGIScraper < ScraperBase
     ENV['PATH_TRANSLATED'] = ENV['PATH_INFO']
     ENV['SCRIPT_FILENAME'] = File.expand_path("#{File.dirname(__FILE__)}/../cgi-scrapers/#{@script}")
     f = IO.popen("#{@command} #{ENV['SCRIPT_FILENAME']}")
-    f.read
+    ret = f.read
+    # Remove any headers that are set. Crude way to do this is remove anything before the proper XML starts (with a "<")
+    ret[ret.index("<")..-1]
   end
 end
