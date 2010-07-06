@@ -64,7 +64,11 @@ class DevelopmentApplication < SimpleStruct
   
   def parse_date(date)
     if date && !date.kind_of?(Date)
-      Date.parse(date)
+      begin
+        Date.parse(date)
+      rescue
+        nil
+      end
     else
       date
     end
