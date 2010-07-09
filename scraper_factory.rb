@@ -87,7 +87,8 @@ module Scrapers
       WarringahScraper.new("Warringah Council", "Warringah", "NSW"),
       YarraScraper.new("City of Yarra", "Yarra City", "VIC"),
       LeichhardtScraper.new("Leichhardt Council", "Leichhardt", "NSW"),
-      WaggaWaggaScraper.new("City of Wagga Wagga", "Wagga Wagga", "NSW")
+      WaggaWaggaScraper.new("City of Wagga Wagga", "Wagga Wagga", "NSW"),
+      GriffithScraper.new("Griffith City Council", "Griffith", "NSW")
     ]
   end
   
