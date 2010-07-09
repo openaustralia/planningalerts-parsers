@@ -55,6 +55,10 @@ class InfoMasterScraper < Scraper
     split_lines(html)[lines].join("\n").strip
   end
   
+  def extract_info_url(html)
+    html.at('a').attributes['href']
+  end
+  
   def inner(html)
     html.inner_html.strip
   end

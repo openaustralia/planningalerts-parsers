@@ -85,7 +85,8 @@ module Scrapers
       AlburyScraper.new("Albury City Council", "Albury", "NSW"),
       StonningtonScraper.new("City of Stonnington", "Stonnington", "VIC"),
       WarringahScraper.new("Warringah Council", "Warringah", "NSW"),
-      YarraScraper.new("City of Yarra", "Yarra City", "VIC")
+      YarraScraper.new("City of Yarra", "Yarra City", "VIC"),
+      LeichhardtScraper.new("Leichhardt Council", "Leichhardt", "NSW")
     ]
   end
   
