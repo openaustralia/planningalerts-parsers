@@ -1,20 +1,21 @@
 require 'info_master_scraper'
 
-class WaggaWaggaScraper < InfoMasterScraper
+class HornsbyScraper < InfoMasterScraper
   def applications(date)
-    base_path = "http://203.38.125.72/datracking/Modules/applicationmaster/"
+    base_path = "http://hsconline.hornsby.nsw.gov.au/appenquiry/modules/applicationmaster/"
     base_url = base_path + "default.aspx"
     raw_table_values(date, "#{base_url}?page=search", 1).map do |values|
       
       #Example description column in applications listing:
-      #NUM ROAD, SUBURB
+      #NUM ROAD SUBURB STATE POSTCODE
       #DESCRIPTION TEXT
-      
+      #Applicant: ...
+
       da = DevelopmentApplication.new(
-        :application_id => extract_application_id(values[1]),
+        :application_id => simplify_whitespace(extract_application_id(values[1])),
         :date_received => extract_date_received(values[2]),
-        :address => extract_address(values[3]),
-        :description => extract_description(values[3])
+        :address => extract_address_without_state(values[3]),
+        :description => extract_description(values[3],1..1)
       )
       
       application_number = da.application_id

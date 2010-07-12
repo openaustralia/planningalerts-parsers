@@ -88,7 +88,13 @@ module Scrapers
       YarraScraper.new("City of Yarra", "Yarra City", "VIC"),
       LeichhardtScraper.new("Leichhardt Council", "Leichhardt", "NSW"),
       WaggaWaggaScraper.new("City of Wagga Wagga", "Wagga Wagga", "NSW"),
-      GriffithScraper.new("Griffith City Council", "Griffith", "NSW")
+      GriffithScraper.new("Griffith City Council", "Griffith", "NSW"),
+      PenrithScraper.new("Penrith City Council", "Penrith", "NSW"),
+      PittwaterScraper.new("Pittwater Council", "Pittwater", "NSW"),
+      WyongScraper.new("Wyong Shire Council", "Wyong", "NSW"),
+      NorthSydneyScraper.new("North Sydney Council", "North Sydney", "NSW"),
+      HawkesburyScraper.new("Hawkesbury City Council", "Hawkesbury", "NSW"),
+      HornsbyScraper.new("Hornsby Shire Council", "Hornsby", "NSW")
     ]
   end
   
