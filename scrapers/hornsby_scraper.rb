@@ -12,7 +12,7 @@ class HornsbyScraper < InfoMasterScraper
       #Applicant: ...
 
       da = DevelopmentApplication.new(
-        :application_id => simplify_whitespace(extract_application_id(values[1])),
+        :application_id => extract_application_id(values[1]),
         :date_received => extract_date_received(values[2]),
         :address => extract_address_without_state(values[3]),
         :description => extract_description(values[3],1..1)

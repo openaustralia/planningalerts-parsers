@@ -41,7 +41,7 @@ class InfoMasterScraper < Scraper
   end
   
   def extract_application_id(html)
-    inner(html)
+    simplify_whitespace(inner(html))
   end
   
   def extract_address_without_state(html, lines = 0..0)
