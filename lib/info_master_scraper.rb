@@ -7,6 +7,7 @@ class InfoMasterScraper < Scraper
     rows = get_page(date, url).search(table_search).search('tr')
     return [] if rows.nil? || rows.size < rows_to_skip_at_start
     values = rows[range].map {|row| row.search('td')}
+    values.delete_if {|row| row.inner_text =~ /\A\s*\Z/} #some InfoMaster installations insert a blank every second row, we can just remove these
     first_row = values.first
     return [] if first_row.nil? || first_row.first.inner_text =~ /no applications found/i || first_row.first.inner_text =~ /no results found/i
     values

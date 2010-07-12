@@ -94,7 +94,8 @@ module Scrapers
       WyongScraper.new("Wyong Shire Council", "Wyong", "NSW"),
       NorthSydneyScraper.new("North Sydney Council", "North Sydney", "NSW"),
       HawkesburyScraper.new("Hawkesbury City Council", "Hawkesbury", "NSW"),
-      HornsbyScraper.new("Hornsby Shire Council", "Hornsby", "NSW")
+      HornsbyScraper.new("Hornsby Shire Council", "Hornsby", "NSW"),
+      FraserCoastScraper.new("Fraser Coast Regional Council", "Fraser Coast", "QLD")
     ]
   end
   
