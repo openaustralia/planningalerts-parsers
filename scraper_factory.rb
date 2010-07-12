@@ -96,7 +96,11 @@ module Scrapers
       HawkesburyScraper.new("Hawkesbury City Council", "Hawkesbury", "NSW"),
       HornsbyScraper.new("Hornsby Shire Council", "Hornsby", "NSW"),
       FraserCoastScraper.new("Fraser Coast Regional Council", "Fraser Coast", "QLD"),
-      IpswichScraper.new("City of Ipswich", "Ipswich", "QLD")
+      IpswichScraper.new("City of Ipswich", "Ipswich", "QLD"),
+      LockyerValleyScraper.new("Lockyer Valley Regional Council", "Lockyer Valley", "QLD"),
+      ToowoombaScraper.new("Toowoomba Regional Council", "Toowoomba", "QLD"),
+      RedlandScraper.new("Redland City Council", "Redland", "QLD"),
+      MarionScraper.new("City of Marion", "Marion", "SA")
     ]
   end
   
