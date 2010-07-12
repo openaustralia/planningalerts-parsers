@@ -78,7 +78,7 @@ module Scrapers
       WollongongScraper.new("Wollongong City Council", "Wollongong", "NSW"),
       MarrickvilleScraper.new("Marrickville Council", "Marrickville", "NSW"),
       CGIScraper.new("Department of Planning and Local Government", "EDALA", "SA", "php-cgi -d short_open_tag=0 -d cgi.force_redirect=0 -f", "edala.php"),
-      CGIScraper.new("Kogarah City Council", "Kogarah", "NSW", "perl", "kogarah.pl"),
+      KogarahScraper.new("Kogarah City Council", "Kogarah", "NSW"),
       LakeMacquarieScraper.new("Lake Macquarie City Council", "Lake Macquarie", "NSW"),
       ParramattaScraper.new("Parramatta City Council", "Parramatta", "NSW"),
       KuringgaiScraper.new("Ku-ring-gai Council", "Ku-ring-gai", "NSW"),
