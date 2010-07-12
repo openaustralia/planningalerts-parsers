@@ -17,13 +17,13 @@ class InfoMasterScraper < Scraper
     page = agent.get(url)
     
     # Click the Ok button on the form
-    form = page.forms.first
+    form = page.forms_with(:name => /frmMasterView/).first
     form.submit(form.button_with(:name => /btnOk|Yes|Button1|Agree/))
 
     # Get the page again
     page = agent.get(url)
 
-    search_form = page.forms.first
+    search_form = page.forms_with(:name => /frmMasterView/).first
     
     search_form[search_form.field_with(:name => /drDates:txtDay1/).name] = date.day
     search_form[search_form.field_with(:name => /drDates:txtMonth1/).name] = date.month
