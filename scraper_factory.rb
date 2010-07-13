@@ -100,7 +100,8 @@ module Scrapers
       LockyerValleyScraper.new("Lockyer Valley Regional Council", "Lockyer Valley", "QLD"),
       ToowoombaScraper.new("Toowoomba Regional Council", "Toowoomba", "QLD"),
       RedlandScraper.new("Redland City Council", "Redland", "QLD"),
-      MarionScraper.new("City of Marion", "Marion", "SA")
+      MarionScraper.new("City of Marion", "Marion", "SA"),
+      BankstownScraper.new("Bankstown City Council", "Bankstown", "NSW")
     ]
   end
   
