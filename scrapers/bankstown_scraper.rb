@@ -26,7 +26,7 @@ class BankstownScraper < Scraper
     fetched_applications.map do |a|
       DevelopmentApplication.new(
         :application_id => a.at('ReferenceNumber').inner_text,
-        :address => simplify_whitespace(a.at('Address/Line1').inner_text + ", " + a.at('Address/Line2').inner_text.gsub(/\s*$/, "")), #There was always a Line1 and Line 2 when I checked. I'm not sure if we should check for a Line3, or also work if there is no Line2.
+        :address => simplify_whitespace(a.at('Address/Line1').inner_text + ", " + a.at('Address/Line2').inner_text.rstrip), #There was always a Line1 and Line 2 when I checked. I'm not sure if we should check for a Line3, or also work if there is no Line2.
         :description => a.at('ApplicationDetails').inner_text,
         :date_received => a.at('LodgementDate').inner_text.gsub(/T.*$/,""), #dates look like 2010-12-29T00:00:00+10:00
         :info_url => base_url + "?id=" + a.at('ApplicationId').inner_text,
