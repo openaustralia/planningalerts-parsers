@@ -101,7 +101,8 @@ module Scrapers
       ToowoombaScraper.new("Toowoomba Regional Council", "Toowoomba", "QLD"),
       RedlandScraper.new("Redland City Council", "Redland", "QLD"),
       MarionScraper.new("City of Marion", "Marion", "SA"),
-      BankstownScraper.new("Bankstown City Council", "Bankstown", "NSW")
+      BankstownScraper.new("Bankstown City Council", "Bankstown", "NSW"),
+      CoffsHarbourScraper.new("Coffs Harbour City Council", "Coffs Harbour", "NSW")
     ]
   end
   
