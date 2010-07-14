@@ -102,7 +102,8 @@ module Scrapers
       RedlandScraper.new("Redland City Council", "Redland", "QLD"),
       MarionScraper.new("City of Marion", "Marion", "SA"),
       BankstownScraper.new("Bankstown City Council", "Bankstown", "NSW"),
-      CoffsHarbourScraper.new("Coffs Harbour City Council", "Coffs Harbour", "NSW")
+      CoffsHarbourScraper.new("Coffs Harbour City Council", "Coffs Harbour", "NSW"),
+      TheHillsScraper.new("The Hills Shire Council", "The Hills", "NSW")
     ]
   end
   

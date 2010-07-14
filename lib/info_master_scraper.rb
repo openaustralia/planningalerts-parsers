@@ -9,7 +9,7 @@ class InfoMasterScraper < Scraper
     values = rows[range].map {|row| row.search('td')}
     values.delete_if {|row| row.inner_text =~ /\A\s*\Z/} #some InfoMaster installations insert a blank every second row, we can just remove these
     first_row = values.first
-    return [] if first_row.nil? || first_row.first.inner_text =~ /no applications found/i || first_row.first.inner_text =~ /no results found/i
+    return [] if first_row.nil? || first_row.first.inner_text =~ /no applications found/i || first_row.first.inner_text =~ /no results found/i || first_row.first.inner_text =~ /no records matching/i
     values
   end
   
@@ -25,14 +25,19 @@ class InfoMasterScraper < Scraper
 
     search_form = page.forms_with(:name => /frmMasterView|frmMasterPlan|frmApplicationMaster/).first
     
-    search_form[search_form.field_with(:name => /drDates:txtDay1/).name] = date.day
-    search_form[search_form.field_with(:name => /drDates:txtMonth1/).name] = date.month
-    search_form[search_form.field_with(:name => /drDates:txtYear1/).name] = date.year
-    search_form[search_form.field_with(:name => /drDates:txtDay2/).name] = date.day
-    search_form[search_form.field_with(:name => /drDates:txtMonth2/).name] = date.month
-    search_form[search_form.field_with(:name => /drDates:txtYear2/).name] = date.year
+    if search_form.field_with(:name => /txtFrom/).nil?
+      search_form[search_form.field_with(:name => /drDates:txtDay1/).name] = date.day
+      search_form[search_form.field_with(:name => /drDates:txtMonth1/).name] = date.month
+      search_form[search_form.field_with(:name => /drDates:txtYear1/).name] = date.year
+      search_form[search_form.field_with(:name => /drDates:txtDay2/).name] = date.day
+      search_form[search_form.field_with(:name => /drDates:txtMonth2/).name] = date.month
+      search_form[search_form.field_with(:name => /drDates:txtYear2/).name] = date.year
+    else
+      search_form[search_form.field_with(:name => /txtFrom/).name] = "#{date.day}/#{date.month}/#{date.year}"
+      search_form[search_form.field_with(:name => /txtTo/).name] = "#{date.day}/#{date.month}/#{date.year}"
+    end
 
-    search_form.submit(search_form.button_with(:name => /btnSearch/))
+    search_form.submit(search_form.button_with(:name => /btnSearch|SearchBtn/))
     # TODO: Need to handle what happens when the results span multiple pages. Can this happen?
   end
   
