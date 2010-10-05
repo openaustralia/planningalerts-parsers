@@ -4,7 +4,7 @@ Dir['vendor/plugins/*/recipes/*.rb'].each { |plugin| load(plugin) }
 set :application, "planningalerts.org.au/parsers"
 set :repository,  "git://git.openaustralia.org/planningalerts-parsers.git"
 
-role :web, "openaustralia.org"
+role :web, "kedumba.openaustraliafoundation.org.au"
 
 set :use_sudo, false
 set :user, "deploy"
