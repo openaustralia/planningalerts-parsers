@@ -18,3 +18,8 @@ elsif stage == "test"
   #set :branch, "test"
 end
 
+namespace :deploy do
+  task :restart, :except => { :no_release => true } do
+    run "touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
+end
