@@ -18,7 +18,3 @@ elsif stage == "test"
   #set :branch, "test"
 end
 
-namespace :deploy do
-  desc "Restart doesn't do anything"
-  task :restart do ; end
-end
