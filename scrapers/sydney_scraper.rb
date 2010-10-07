@@ -14,7 +14,6 @@ class SydneyScraper < Scraper
       
       # Being a little sneeky here. Removing bits of the text that we don't want
       paras[0].at('strong').remove
-      paras[1].at('a').remove
       paras[2].at('strong').remove
 
       # TODO: We're currently missing the date_received field. This is available at the info_url and
