@@ -103,7 +103,8 @@ module Scrapers
       MarionScraper.new("City of Marion", "Marion", "SA"),
       BankstownScraper.new("Bankstown City Council", "Bankstown", "NSW"),
       CoffsHarbourScraper.new("Coffs Harbour City Council", "Coffs Harbour", "NSW"),
-      TheHillsScraper.new("The Hills Shire Council", "The Hills", "NSW")
+      TheHillsScraper.new("The Hills Shire Council", "The Hills", "NSW"),
+      WaverleyScraper.new("Waverley Council", "Waverley", "NSW")
     ]
   end
   
