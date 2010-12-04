@@ -8,12 +8,12 @@ end
 # TODO: Should really move these together with all the other scrapers
 require 'spear_scraper'
 require 'cgi_scraper'
+require 'scraperwiki_scraper'
 
 module Scrapers
   # Central registry of scrapers
   def self.scrapers
-    [BlueMountainsScraper.new("Blue Mountains City Council", "Blue Mountains", "NSW"),
-      BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
+    [BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
       GoldCoastScraper.new("Gold Coast City Council", "Gold Coast", "QLD"),
       # TODO: Figure out which of these authorities using the SPEAR system have planning information
       # in the system and which just have subdivision information
@@ -104,7 +104,8 @@ module Scrapers
       BankstownScraper.new("Bankstown City Council", "Bankstown", "NSW"),
       CoffsHarbourScraper.new("Coffs Harbour City Council", "Coffs Harbour", "NSW"),
       TheHillsScraper.new("The Hills Shire Council", "The Hills", "NSW"),
-      WaverleyScraper.new("Waverley Council", "Waverley", "NSW")
+      WaverleyScraper.new("Waverley Council", "Waverley", "NSW"),
+      ScraperWikiScraper.new("Blue Mountains City Council", "Blue Mountains", "NSW", "blue-mountains-city-council-development-applicatio")
     ]
   end
   
