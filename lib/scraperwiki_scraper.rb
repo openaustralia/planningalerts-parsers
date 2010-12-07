@@ -22,6 +22,7 @@ class ScraperWikiScraper < Scraper
         :address => a["address"], 
         :on_notice_from => a["on_notice_from"],
         :on_notice_to => a["on_notice_to"],
+        :date_received => a["date_received"],
         :info_url => a["info_url"],
         :comment_url => a["comment_url"])
     end
