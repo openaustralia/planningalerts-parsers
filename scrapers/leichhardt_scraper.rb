@@ -2,7 +2,7 @@ require 'info_master_scraper'
 
 class LeichhardtScraper < InfoMasterScraper
   def applications(date)
-    base_path = "http://210.9.33.126/DATracking/modules/applicationmaster/"
+    base_path = "http://203.111.164.213/DATracking/modules/applicationmaster/"
     base_url = base_path + "default.aspx"
     raw_table_values(date, "#{base_url}?page=search", 1).map do |values|
       
