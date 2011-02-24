@@ -3,6 +3,7 @@ require 'scraper'
 class WaverleyScraper < Scraper
   def applications(date)
     url = "http://epwgate.waverley.nsw.gov.au/ePathway/Production/Web/default.aspx"
+    new_url = "https://epwgate.waverley.nsw.gov.au/DA_Tracking/Modules/Applicationmaster/Default.aspx?page=disc"
     
     # Get the home page
     page = agent.get(url)
@@ -34,7 +35,7 @@ class WaverleyScraper < Scraper
         :description => app.search("td")[3].inner_text,
         :address => app.search("td")[2].inner_text,
         :date_received => app.search("td")[1].inner_text,
-        :info_url => url,
+        :info_url => new_url,
         :comment_url => email_url("dutyplanner@waverley.nsw.gov.au", app.search("td")[0].inner_text))
     end
   end
