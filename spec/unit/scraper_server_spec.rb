@@ -14,10 +14,10 @@ describe "Server for scraper XML" do
   end
   
   before(:each) do
-    @blue_mountains = BlueMountainsScraper.new("Blue Mountains City Council", "Blue Mountains", "NSW")
+    @waverley = WaverleyScraper.new("Waverley Council", "Waverley", "NSW")
     @brisbane = BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD")
     # Restrict parsers to just two
-    Scrapers.stub!(:scrapers).and_return([@blue_mountains, @brisbane])
+    Scrapers.stub!(:scrapers).and_return([@waverley, @brisbane])
     @results = mock("PlanningAuthorityResults")
   end
   
@@ -25,10 +25,10 @@ describe "Server for scraper XML" do
     @brisbane.planning_authority_name.should == "Brisbane City Council, QLD"
   end
 
-  it "should retrieve the Blue Mountains data" do
+  it "should retrieve the Waverley data" do
     @results.should_receive(:to_xml).and_return("foo")
-    @blue_mountains.should_receive(:results).with(Date.new(2009,11,12)).and_return(@results)
-    get "/blue_mountains?year=2009&month=11&day=12"
+    @waverley.should_receive(:results).with(Date.new(2009,11,12)).and_return(@results)
+    get "/waverley?year=2009&month=11&day=12"
     last_response.body.should == "foo"
   end
 
@@ -44,10 +44,10 @@ describe "Server for scraper XML" do
     last_response.body.should == <<-EOF
 <scrapers>
   <scraper>
-    <authority_name>Blue Mountains City Council</authority_name>
-    <authority_short_name>Blue Mountains</authority_short_name>
+    <authority_name>Waverley Council</authority_name>
+    <authority_short_name>Waverley</authority_short_name>
     <state>NSW</state>
-    <url>http://example.org/blue_mountains?year={year}&amp;month={month}&amp;day={day}</url>
+    <url>http://example.org/waverley?year={year}&amp;month={month}&amp;day={day}</url>
   </scraper>
   <scraper>
     <authority_name>Brisbane City Council</authority_name>
