@@ -39,5 +39,14 @@ describe PlanningAuthorityResults do
 </planning>
     EOF
   end
-end
 
+  it "should not have duplicate short names" do
+    short_names = []
+    Scrapers::scrapers.each do |s|
+      short_names << s.planning_authority_short_name
+    end
+    short_names.each do |s|
+      short_names.count(s).should == 1
+    end
+  end
+end
