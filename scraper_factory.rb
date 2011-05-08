@@ -76,7 +76,7 @@ module Scrapers
       SydneyScraper.new("City of Sydney", "Sydney", "NSW"),
       LoganScraper.new("Logan City Council", "Logan", "QLD"),
       WoollahraScraper.new("Woollahra Municipal Council", "Woollahra", "NSW"),
-      RandwickScraper.new("Randwick City Council", "Randwick", "NSW"),
+      ScraperWikiScraper.new("Randwick City Council", "Randwick", "NSW", "randwick_city_council_development_applications"),
       SutherlandScraper.new("Sutherland Shire Council", "Sutherland", "NSW"),
       ACTScraper.new("ACT Planning & Land Authority", "ACT", "ACT"),
       MosmanScraper.new("Mosman Municipal Council", "Mosman", "NSW"),
