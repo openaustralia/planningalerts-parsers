@@ -65,7 +65,7 @@ module Scrapers
       SPEARScraper.new("Maribyrnong City Council (SPEAR)", "Maribyrnong", "VIC", "Maribyrnong City Council"),
       SPEARScraper.new("Rural City of Wangaratta (SPEAR)", "Wangaratta", "VIC", "Rural City of Wangaratta"),
       SPEARScraper.new("Shire of Campaspe (SPEAR)", "Campaspe", "VIC", "Shire of Campaspe"),
-      SPEARScraper.new("Stonnington City Council (SPEAR)", "Stonnington", "VIC", "Stonnington City Council"),
+      SPEARScraper.new("Stonnington City Council (SPEAR)", "Stonnington (SPEAR)", "VIC", "Stonnington City Council"),
       CabooltureScraper.new("Caboolture District, Moreton Bay Regional Council", "Caboolture", "QLD"),
       PineRiversScraper.new("Pine Rivers District, Moreton Bay Regional Council", "Pine Rivers", "QLD"),
       RedcliffeScraper.new("Redcliffe District, Moreton Bay Regional Council", "Redcliffe", "QLD"),
