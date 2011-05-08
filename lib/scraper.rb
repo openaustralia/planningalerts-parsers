@@ -31,7 +31,7 @@ class Scraper < ScraperBase
 
   def initialize(name, short_name, state)
     super
-    @agent = WWW::Mechanize.new    
+    @agent = Mechanize.new
   end
   
   def extract_relative_url(html)
