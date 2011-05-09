@@ -115,7 +115,8 @@ module Scrapers
       ScraperWikiScraper.new("Blue Mountains City Council", "Blue Mountains", "NSW", "blue-mountains-city-council-development-applicatio"),
       ScraperWikiScraper.new("Bellingen Shire Council", "Bellingen", "NSW", "bellingen-shire-council-development-applications"),
       ScraperWikiScraper.new("NSW Department of Planning Major Project Assessments", "NSW DoP", "NSW", "nsw_department_of_planning_major_project_assessmen"),
-      ScraperWikiScraper.new("City of Kingston", "Kingston", "VIC", "city_of_kingston_development_applications")
+      ScraperWikiScraper.new("City of Kingston", "Kingston", "VIC", "city_of_kingston_development_applications"),
+      CGIScraper.new("Moreland City Council", "Moreland (City)", "VIC", "perl", "moreland.pl")
     ]
   end
   
