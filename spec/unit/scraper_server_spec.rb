@@ -14,7 +14,7 @@ describe "Server for scraper XML" do
   end
   
   before(:each) do
-    @waverley = WaverleyScraper.new("Waverley Council", "Waverley", "NSW")
+    @waverley = ScraperWikiScraper.new("Waverley Council", "Waverley", "NSW", "waverley_council_development_applications")
     @brisbane = BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD")
     # Restrict parsers to just two
     Scrapers.stub!(:scrapers).and_return([@waverley, @brisbane])
