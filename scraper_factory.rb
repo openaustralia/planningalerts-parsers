@@ -118,7 +118,8 @@ module Scrapers
       ScraperWikiScraper.new("City of Kingston", "Kingston", "VIC", "city_of_kingston_development_applications"),
       CGIScraper.new("Moreland City Council", "Moreland (City)", "VIC", "perl", "moreland.pl"),
       ScraperWikiScraper.new("NSW Office of Liquor, Gaming and Racing", "NSW OLGR", "NSW", "nsw_office_of_liquor_gaming_and_racing_-_liquor_ap"),
-      ScraperWikiScraper.new("City of Ryde", "Ryde", "NSW", "city_of_ryde_development_applications")
+      ScraperWikiScraper.new("City of Ryde", "Ryde", "NSW", "city_of_ryde_development_applications"),
+      ScraperWikiScraper.new("Mornington Peninsula Shire", "Mornington Peninsula", "VIC", "mornington_peninsula_shire_-_development_applicati")
     ]
   end
   
