@@ -97,7 +97,7 @@ module Scrapers
       WaggaWaggaScraper.new("City of Wagga Wagga", "Wagga Wagga", "NSW"),
       GriffithScraper.new("Griffith City Council", "Griffith", "NSW"),
       PenrithScraper.new("Penrith City Council", "Penrith", "NSW"),
-      PittwaterScraper.new("Pittwater Council", "Pittwater", "NSW"),
+      ScraperWikiScraper.new("Pittwater Council", "Pittwater", "NSW", "pittwater_council_development_applications"),
       WyongScraper.new("Wyong Shire Council", "Wyong", "NSW"),
       NorthSydneyScraper.new("North Sydney Council", "North Sydney", "NSW"),
       HawkesburyScraper.new("Hawkesbury City Council", "Hawkesbury", "NSW"),
