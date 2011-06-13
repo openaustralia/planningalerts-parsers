@@ -2,7 +2,7 @@ require 'scraper'
 
 class ACTScraper < Scraper
   def applications(date)
-    url = "http://apps.actpla.act.gov.au/pubnote"
+    url = "http://www.actpla.act.gov.au/topics/your_say/comment/pubnote"
     page = agent.get(url)
     # The way that Mechanize is invoking Nokogiri for parsing the html is for some reason not working with this html which
     # is malformed: See http://validator.w3.org/check?uri=http://apps.actpla.act.gov.au/pubnote/index.asp&charset=(detect+automatically)&doctype=Inline&group=0
@@ -11,7 +11,7 @@ class ACTScraper < Scraper
     
     # Walking through the lines. Every 7 lines is a new application
     applications = []
-    page.search('table tr td').each_slice(7) do |lines|
+    page.search('table')[1].search('tr').each_slice(7) do |lines|
       # First double check that each line has the correct form
       labels = lines.map do |line|
         if line.at('strong')
@@ -26,7 +26,7 @@ class ACTScraper < Scraper
       raise "Unexpected form address line" unless labels[2] == "Address:"
       raise "Unexpected form block line" unless labels[3] == "Block: "
       raise "Unexpected form description line" unless labels[4] == "Proposal:"
-      raise "Unexpected form on notice to line" unless labels[5] == "Period for comments closes:"
+      raise "Unexpected form on notice to line" unless labels[5] == "Period for representations closes:"
       raise "Unexpected form info url line" unless lines[6].at('a').inner_text == "Click here to view the plans"
       
       lines[1].at('strong').remove
