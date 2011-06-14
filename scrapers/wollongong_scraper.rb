@@ -21,21 +21,12 @@ class WollongongScraper < Scraper
 
   # Returns a list of URLs for all the applications submitted on the given date
   def urls(date)
+    # Get the main page and ask for the list of DAs on exhibition
     page = agent.get(enquiry_url)
     form = page.forms.first
-    form.radiobuttons[1].click
-    page = form.submit(form.button_with(:name => /Continue/))
-    form = page.forms.first
-    # Going to enter a date range
-    form.radiobutton_with(:value => /DateRange/).click
-    formatted_date = "#{date.day}/#{date.month}/#{date.year}"
-    form.field_with(:name => /DateFrom/).value = formatted_date
-    form.field_with(:name => /DateTo/).value = formatted_date
+    form.radiobuttons[0].click
+    page = form.submit(form.button_with(:value => /Next/))
 
-    page = form.submit(form.button_with(:name => /Search/))
-    #p page.parser
-
-    #exit
     page_label = page.at('span#ctl00_MainBodyContent_mPageNumberLabel')
     if page_label.nil?
       # If we can't find the label assume there is only one page of results
@@ -65,22 +56,20 @@ class WollongongScraper < Scraper
   def applications(date)
     urls = urls(date)
     urls.map do |url|
-      page = agent.get(url)
+      # Get application page with a referrer or we get an error page
+      page = agent.get(url, URI.parse(enquiry_url))
+
       table = page.search('table#ctl00_MainBodyContent_DynamicTable > tr')[0].search('td')[0].search('table')[2]
 
       date_received = extract_field(table.search('tr')[0], "Lodgement Date")
-      #puts "date received: #{date_received}"
-
       application_id = extract_field(table.search('tr')[2], "Application Number")
-      #puts "application id: #{application_id}"
-
       description = simplify_whitespace(extract_field(table.search('tr')[3], "Proposal"))
-      #puts "description: #{description}"
-      table = page.search('table#ctl00_MainBodyContent_DynamicTable > tr')[3].search('td')[0].search('table')[2]
+
+      table = page.search('table#ctl00_MainBodyContent_DynamicTable > tr')[2].search('td')[0].search('table')[2]
       rows = table.search('tr')[0].search('table > tr')[1..-1]
       if rows
         addresses = rows.map do |a|
-          a.search('td')[0].inner_text.strip
+          a.search('td')[0].inner_text.strip.gsub('  ', ' ')
         end
       else
         addresses = []
