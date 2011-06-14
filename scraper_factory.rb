@@ -90,7 +90,7 @@ module Scrapers
       ScraperWikiScraper.new("Parramatta City Council", "Parramatta", "NSW", "parramatta-city-council-development-applications"),
       KuringgaiScraper.new("Ku-ring-gai Council", "Ku-ring-gai", "NSW"),
       AlburyScraper.new("Albury City Council", "Albury", "NSW"),
-      StonningtonScraper.new("City of Stonnington", "Stonnington", "VIC"),
+      ScraperWikiScraper.new("City of Stonnington", "Stonnington", "VIC", "city_of_stonnington_development_applications"),
       WarringahScraper.new("Warringah Council", "Warringah", "NSW"),
       YarraScraper.new("City of Yarra", "Yarra City", "VIC"),
       LeichhardtScraper.new("Leichhardt Council", "Leichhardt", "NSW"),
