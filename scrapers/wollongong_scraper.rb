@@ -13,12 +13,12 @@ class WollongongScraper < Scraper
       []
     end
   end
-  
+
   # The main url for the planning system which can be reached directly without getting a stupid session timed out error
   def enquiry_url
     "https://epathway.wollongong.nsw.gov.au/ePathway/Production/Web/GeneralEnquiry/EnquiryLists.aspx"
   end
-  
+
   # Returns a list of URLs for all the applications submitted on the given date
   def urls(date)
     page = agent.get(enquiry_url)
@@ -31,7 +31,7 @@ class WollongongScraper < Scraper
     formatted_date = "#{date.day}/#{date.month}/#{date.year}"
     form.field_with(:name => /DateFrom/).value = formatted_date
     form.field_with(:name => /DateTo/).value = formatted_date
-    
+
     page = form.submit(form.button_with(:name => /Search/))
     #p page.parser
 
@@ -56,23 +56,23 @@ class WollongongScraper < Scraper
     end
     urls
   end
-  
+
   def extract_field(field, label)
     raise "unexpected form" unless field.search('td')[0].inner_text == label
     field.search('td')[1].inner_text.strip
   end
-  
+
   def applications(date)
     urls = urls(date)
     urls.map do |url|
       page = agent.get(url)
       table = page.search('table#ctl00_MainBodyContent_DynamicTable > tr')[0].search('td')[0].search('table')[2]
-    
-      date_received = extract_field(table.search('tr')[0], "Lodgement Date")    
+
+      date_received = extract_field(table.search('tr')[0], "Lodgement Date")
       #puts "date received: #{date_received}"
-    
+
       application_id = extract_field(table.search('tr')[2], "Application Number")
-      #puts "application id: #{application_id}" 
+      #puts "application id: #{application_id}"
 
       description = simplify_whitespace(extract_field(table.search('tr')[3], "Proposal"))
       #puts "description: #{description}"
