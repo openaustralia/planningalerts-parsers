@@ -99,7 +99,7 @@ module Scrapers
       PenrithScraper.new("Penrith City Council", "Penrith", "NSW"),
       ScraperWikiScraper.new("Pittwater Council", "Pittwater", "NSW", "pittwater_council_development_applications"),
       WyongScraper.new("Wyong Shire Council", "Wyong", "NSW"),
-      NorthSydneyScraper.new("North Sydney Council", "North Sydney", "NSW"),
+      ScraperWikiScraper.new("North Sydney Council", "North Sydney", "NSW", "north_sydney_council_development_applications"),
       HawkesburyScraper.new("Hawkesbury City Council", "Hawkesbury", "NSW"),
       HornsbyScraper.new("Hornsby Shire Council", "Hornsby", "NSW"),
       FraserCoastScraper.new("Fraser Coast Regional Council", "Fraser Coast", "QLD"),
