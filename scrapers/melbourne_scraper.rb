@@ -9,15 +9,16 @@ class MelbourneScraper < Scraper
     applications = []
     if page.at('table')
       table_rows = page.at('table').search('tr')
-      # If only a single entry is returned it displays that entry in a more detailed format. Check for this
-      if table_rows.size == 11
+      # If only a single entry is returned it displays that entry in a
+      # more detailed format, e.g. 2011-06-21 & 2011-05-11. Check for this
+      if table_rows.size == 10
         da = DevelopmentApplication.new(
           :application_id => table_rows[0].search('td')[1].inner_text.strip,
           :date_received => table_rows[1].search('td')[1].inner_text.strip,
           :address => table_rows[2].search('td')[1].inner_text.strip,
           :description => table_rows[4].search('td')[1].inner_text.strip,
-          :comment_url => comment_url)
-        da.info_url = "#{base_url}?permit=#{da.application_id}"
+          :comment_url => COMMENT_URL)
+        da.info_url = "#{BASE_URL}?permit=#{da.application_id}"
         applications << da
       else
         address = nil
