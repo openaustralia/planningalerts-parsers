@@ -1,0 +1,21 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    htmlentities (4.3.0)
+    mechanize (2.0.1)
+      net-http-digest_auth (~> 1.1, >= 1.1.1)
+      net-http-persistent (~> 1.8)
+      nokogiri (~> 1.4)
+      webrobots (~> 0.0, >= 0.0.9)
+    net-http-digest_auth (1.1.1)
+    net-http-persistent (1.8.1)
+    nokogiri (1.5.0)
+    webrobots (0.0.11)
+      nokogiri (>= 1.4.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  htmlentities
+  mechanize
