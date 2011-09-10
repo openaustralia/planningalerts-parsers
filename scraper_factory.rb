@@ -126,7 +126,8 @@ module Scrapers
       ScraperWikiScraper.new("Hobart City Council", "Hobart", "TAS", "hobart_city_council_development_applications"),
       ScraperWikiScraper.new("Mackay Regional Council", "Mackay", "QLD", "mackay_city_council_development_applications"),
       ScraperWikiScraper.new("Knox City Council", "Knox", "VIC", "knox_regional_council_development_applications"),
-      ScraperWikiScraper.new("Redfern-Waterloo Authority", "Redfern-Waterloo", "NSW", "redfern-waterloo-authority")
+      ScraperWikiScraper.new("Redfern-Waterloo Authority", "Redfern-Waterloo", "NSW", "redfern-waterloo-authority"),
+      ScraperWikiScraper.new("Port Stephens Council", "Port Stephens", "NSW", "port_stephens_development_applications")
     ]
   end
   
