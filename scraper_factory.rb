@@ -122,7 +122,8 @@ module Scrapers
       ScraperWikiScraper.new("Mornington Peninsula Shire", "Mornington Peninsula", "VIC", "mornington_peninsula_shire_-_development_applicati"),
       ScraperWikiScraper.new("Lane Cove Council", "Lane Cove", "NSW", "lane_cove_da_scraper"),
       ScraperWikiScraper.new("Northern Territory Lands Group", "Northern Territory", "NT", "northern_territory_development_applications"),
-      ScraperWikiScraper.new("City of Cockburn", "Cockburn", "WA", "city_of_cockburn_development_applications")
+      ScraperWikiScraper.new("City of Cockburn", "Cockburn", "WA", "city_of_cockburn_development_applications"),
+      ScraperWikiScraper.new("Hobart City Council", "Hobart", "TAS", "hobart_city_council_development_applications")
     ]
   end
   
