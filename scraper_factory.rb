@@ -124,7 +124,8 @@ module Scrapers
       ScraperWikiScraper.new("Northern Territory Lands Group", "Northern Territory", "NT", "northern_territory_development_applications"),
       ScraperWikiScraper.new("City of Cockburn", "Cockburn", "WA", "city_of_cockburn_development_applications"),
       ScraperWikiScraper.new("Hobart City Council", "Hobart", "TAS", "hobart_city_council_development_applications"),
-      ScraperWikiScraper.new("Mackay Regional Council", "Mackay", "QLD", "mackay_city_council_development_applications")
+      ScraperWikiScraper.new("Mackay Regional Council", "Mackay", "QLD", "mackay_city_council_development_applications"),
+      ScraperWikiScraper.new("Knox City Council", "Knox", "VIC", "knox_regional_council_development_applications")
     ]
   end
   
