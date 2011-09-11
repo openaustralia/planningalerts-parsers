@@ -139,7 +139,8 @@ module Scrapers
       ScraperWikiScraper.new("Fairfield City Council", "Fairfield", "NSW", "fairfield_city_development_applications"),
       ScraperWikiScraper.new("Scenic Rim Regional Council", "Scenic Rim", "QLD", "scenic_rim_regional_council_development_applicatio"),
       ScraperWikiScraper.new("Townsville City Council", "Townsville", "QLD", "townsville_city_council_development_applications"),
-      ScraperWikiScraper.new("Singleton Council", "Singleton", "NSW", "singleton_council_development_applications")
+      ScraperWikiScraper.new("Singleton Council", "Singleton", "NSW", "singleton_council_development_applications"),
+      ScraperWikiScraper.new("Bundaberg Regional Council", "Bundaberg", "QLD", "bundaberg_regional_council_development_application")
     ]
   end
   
