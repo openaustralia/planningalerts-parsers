@@ -132,7 +132,8 @@ module Scrapers
       ScraperWikiScraper.new("Shoalhaven City Council", "Shoalhaven", "NSW", "shoalhaven_council_development_applications"),
       ScraperWikiScraper.new("Rockdale City Council", "Rockdale", "NSW", "rockdale_applications"),
       ScraperWikiScraper.new("Ballina Shire Council", "Ballina", "NSW", "ballina_shire_council_development_applications"),
-      ScraperWikiScraper.new("Campbelltown City Council", "Campbelltown", "NSW", "campbelltown_city_council_development_proposals")
+      ScraperWikiScraper.new("Campbelltown City Council", "Campbelltown", "NSW", "campbelltown_city_council_development_proposals"),
+      ScraperWikiScraper.new("City of Vincent", "Vincent", "WA", "city_of_vincent_wa_development_applications")
     ]
   end
   
