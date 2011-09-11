@@ -136,7 +136,8 @@ module Scrapers
       ScraperWikiScraper.new("City of Vincent", "Vincent", "WA", "city_of_vincent_wa_development_applications"),
       ScraperWikiScraper.new("Gosford City Council", "Gosford", "NSW", "gosford_nsw_development_applications"),
       ScraperWikiScraper.new("City of Onkaparinga", "Onkaparinga", "SA", "onkaparinga_sa_development_applications"),
-      ScraperWikiScraper.new("Fairfield City Council", "Fairfield", "NSW", "fairfield_city_development_applications")
+      ScraperWikiScraper.new("Fairfield City Council", "Fairfield", "NSW", "fairfield_city_development_applications"),
+      ScraperWikiScraper.new("Scenic Rim Regional Council", "Scenic Rim", "QLD", "scenic_rim_regional_council_development_applicatio")
     ]
   end
   
