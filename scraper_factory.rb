@@ -129,7 +129,8 @@ module Scrapers
       ScraperWikiScraper.new("Redfern-Waterloo Authority", "Redfern-Waterloo", "NSW", "redfern-waterloo-authority"),
       ScraperWikiScraper.new("Port Stephens Council", "Port Stephens", "NSW", "port_stephens_development_applications"),
       ScraperWikiScraper.new("Clarence City Council", "Clarence", "TAS", "clarence_city_council_development_applications"),
-      ScraperWikiScraper.new("Shoalhaven City Council", "Shoalhaven", "NSW", "shoalhaven_council_development_applications")
+      ScraperWikiScraper.new("Shoalhaven City Council", "Shoalhaven", "NSW", "shoalhaven_council_development_applications"),
+      ScraperWikiScraper.new("Rockdale City Council", "Rockdale", "NSW", "rockdale_applications")
     ]
   end
   
