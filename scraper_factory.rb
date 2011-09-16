@@ -14,6 +14,7 @@ module Scrapers
   # Central registry of scrapers
   def self.scrapers
     [BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
+      BurnsideScraper.new("Burnside City Council", "Burnside", "SA"),
       GoldCoastScraper.new("Gold Coast City Council", "Gold Coast", "QLD"),
       # TODO: Figure out which of these authorities using the SPEAR system have planning information
       # in the system and which just have subdivision information
