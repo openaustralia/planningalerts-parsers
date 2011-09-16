@@ -9,11 +9,21 @@ end
 require 'spear_scraper'
 require 'cgi_scraper'
 require 'scraperwiki_scraper'
-
 module Scrapers
   # Central registry of scrapers
   def self.scrapers
     [BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
+
+      #EProclaim
+      # Used by https://eservices.holdfast.sa.gov.au/eproclaim/?request_url=ptgeApplications/ptgePlanningRegister.asp (Different version)
+      # http://www.marrickville.nsw.gov.au/p190800/eproclaim/ - disabled?
+      # https://epeninsula.mornpen.vic.gov.au/p190700/eproclaim/ invalid version?
+      # https://eproclaim.stonnington.vic.gov.au/P190901/eproclaim/ Module disabled?
+      # https://ecerts.ssc.nsw.gov.au/eproclaim/ DB connection errors?
+      # http://eproclaim.wyndham.vic.gov.au/ Errors encountered
+      EProclaimScraper.new("Charles Sturt City Council", "Charles Sturt", "SA", "https://ipa.charlessturt.sa.gov.au/eproclaim/"),
+      EProclaimScraper.new("Barossa Council", "Barossa", "SA", "https://eproclaim.barossa.sa.gov.au/p190900/eproclaim/"),
+
       BurnsideScraper.new("Burnside City Council", "Burnside", "SA"),
       GoldCoastScraper.new("Gold Coast City Council", "Gold Coast", "QLD"),
       # TODO: Figure out which of these authorities using the SPEAR system have planning information
