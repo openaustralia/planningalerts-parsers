@@ -20,8 +20,7 @@ class BurnsideScraper < Scraper
       detail = subpage.xpath("//table[@border=1]/tbody")[0]
       id = detail.xpath('tr')[0].xpath('td/p')[1].text
 
-      # TODO: Remove &#160; from the output. Nokogiri must have something to strip entities
-      address = detail.xpath('tr')[2].xpath('td/p')[1].text
+      address = detail.xpath('tr')[2].xpath('td/p')[1].text.gsub(/\302\240/, ' ')
 
       description = detail.xpath('tr')[3].xpath('td/p')[1].text
       email = detail.xpath('tr')[6].xpath('td/p')[1].xpath('a')[0]['href']
