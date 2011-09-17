@@ -8,6 +8,8 @@ class BurnsideScraper < Scraper
 
     applications = []
     page.xpath('//td[@class="uContentListDesc"]').each do |div|
+      on_notice_to = Date.parse(div.at('p').inner_html.split('<br>')[2].split(' - ')[1])
+
       link = div.xpath('p/a')[0]
       another_url = "http://www.burnside.sa.gov.au/site/" + link["href"]
       subpage = agent.get(another_url)
@@ -24,7 +26,8 @@ class BurnsideScraper < Scraper
         :address => address,
         :description => description,
         :info_url => another_url,
-        :comment_url => email)
+        :comment_url => email,
+        :on_notice_to => on_notice_to)
     end
     applications
   end
