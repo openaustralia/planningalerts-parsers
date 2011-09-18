@@ -3,44 +3,45 @@ require 'scraper'
 class EProclaimScraper < Scraper
   #"https://ipa.charlessturt.sa.gov.au/eproclaim/"
   def initialize(name, short_name, state, url)
-    @@url = url
+    @url = url
     super(name, short_name, state)
   end
 
   def applications(date)
     applications = []
     # First; get cookies
-    cookie_url = @@url
+    cookie_url = @url
     request = agent.get(cookie_url)
 
     # Now it's OK to get the actual notice list
     #print agent.cookies;
-    url = @@url + "ptgeApplications/ptgePublicNoticeAppsList.asp"
+    url = @url + "ptgeApplications/ptgePublicNoticeAppsList.asp"
 
     response = agent.get(url)
     page = Nokogiri::HTML(response.body)
 
     nodes = page.xpath("//table[@width='95%']/tr/td/table/tr")
 
-    begin
-        nodes.each do |content|
+    nodes.each do |content|
+      td = content.xpath('td')[0]
 
-          td = content.xpath('td')[0]
-          id = td.css('a').text
+      unless td['class'] == 't1Error' 
 
-          relative_link = td.css('a')[0]['href']
+        id = td.css('a').text
 
-          description = td.to_s.split('<br>')[3]
-          address = td.to_s.split('<br>')[5]
-          closing_date = td.to_s.split('<br>')[7]
+        relative_link = td.css('a')[0]['href']
 
-          applications << DevelopmentApplication.new(
-            :application_id => id,
-            :address => address,
-            :description => description,
-            :info_url => cookie_url + relative_link)
-        end
-    rescue
+        description = td.to_s.split('<br>')[3]
+        address = td.to_s.split('<br>')[5]
+        closing_date = td.to_s.split('<br>')[7]
+
+        applications << DevelopmentApplication.new(
+          :application_id => id,
+          :address => address,
+          :description => description,
+          :info_url => cookie_url + relative_link,
+          :on_notice_to => closing_date)
+      end
     end
 
     applications
