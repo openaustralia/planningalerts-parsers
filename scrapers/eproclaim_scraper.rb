@@ -29,7 +29,7 @@ class EProclaimScraper < Scraper
 
         id = td.css('a').text
 
-        relative_link = td.css('a')[0]['href']
+        relative_link = "ptgeApplications/" + td.css('a')[0]['href']
 
         description = td.to_s.split('<br>')[3]
         address = td.to_s.split('<br>')[5]
