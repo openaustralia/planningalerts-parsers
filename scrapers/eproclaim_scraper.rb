@@ -40,7 +40,8 @@ class EProclaimScraper < Scraper
           :address => address,
           :description => description,
           :info_url => cookie_url + relative_link,
-          :on_notice_to => closing_date)
+          :on_notice_to => closing_date,
+          :comment_url => 'http://www.charlessturt.sa.gov.au/webdata/resources/files/Application_Form_5_-_Statement_of_Representation_Form.pdf')
       end
     end
 
