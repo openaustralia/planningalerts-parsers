@@ -21,8 +21,15 @@ module Scrapers
       # https://eproclaim.stonnington.vic.gov.au/P190901/eproclaim/ Module disabled?
       # https://ecerts.ssc.nsw.gov.au/eproclaim/ DB connection errors?
       # http://eproclaim.wyndham.vic.gov.au/ Errors encountered
-      EProclaimScraper.new("Charles Sturt City Council", "Charles Sturt", "SA", "https://ipa.charlessturt.sa.gov.au/eproclaim/"),
-      EProclaimScraper.new("Barossa Council", "Barossa", "SA", "https://eproclaim.barossa.sa.gov.au/p190900/eproclaim/"),
+      EProclaimScraper.new(
+        "Charles Sturt City Council",
+        "Charles Sturt",
+        "SA",
+        "https://ipa.charlessturt.sa.gov.au/eproclaim/",
+        "http://www.charlessturt.sa.gov.au/webdata/resources/files/Application_Form_5_-_Statement_of_Representation_Form.pdf"
+      ),
+      # Disabled until a single DA can be found on their site for testing
+      #EProclaimScraper.new("Barossa Council", "Barossa", "SA", "https://eproclaim.barossa.sa.gov.au/p190900/eproclaim/"),
 
       BurnsideScraper.new("Burnside City Council", "Burnside", "SA"),
       GoldCoastScraper.new("Gold Coast City Council", "Gold Coast", "QLD"),

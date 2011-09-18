@@ -2,8 +2,9 @@ require 'scraper'
 
 class EProclaimScraper < Scraper
   #"https://ipa.charlessturt.sa.gov.au/eproclaim/"
-  def initialize(name, short_name, state, url)
+  def initialize(name, short_name, state, url, static_comment_link)
     @url = url
+    @static_comment_link = static_comment_link
     super(name, short_name, state)
   end
 
@@ -39,9 +40,13 @@ class EProclaimScraper < Scraper
           :application_id => id,
           :address => address,
           :description => description,
-          :info_url => cookie_url + relative_link,
+          # For the moment; link to the toplevel eproclaim
+          # unless we do horrible workarounds as discussed in
+          # https://github.com/openaustralia/planningalerts-parsers/pull/4
+          #:info_url => cookie_url + relative_link,
+          :info_url => @url,
           :on_notice_to => closing_date,
-          :comment_url => 'http://www.charlessturt.sa.gov.au/webdata/resources/files/Application_Form_5_-_Statement_of_Representation_Form.pdf')
+          :comment_url => @static_comment_link)
       end
     end
 
