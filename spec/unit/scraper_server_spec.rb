@@ -2,7 +2,6 @@ $:.unshift "#{File.dirname(__FILE__)}/../../lib"
 $:.unshift "#{File.dirname(__FILE__)}/../.."
 
 require 'scraper_server'
-require 'spec'
 require 'rack/test'
 require 'sinatra'
 

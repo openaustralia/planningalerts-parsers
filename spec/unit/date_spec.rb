@@ -1,5 +1,4 @@
 $:.unshift "#{File.dirname(__FILE__)}/../../lib"
-require 'spec'
 require 'date_with_non_american_bias'
 
 describe Date do

@@ -1,5 +1,4 @@
 $:.unshift "#{File.dirname(__FILE__)}/../../lib"
-require 'spec'
 require 'info_master_scraper'
 
 describe InfoMasterScraper do

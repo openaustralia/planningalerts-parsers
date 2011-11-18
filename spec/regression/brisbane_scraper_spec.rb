@@ -1,6 +1,5 @@
 $:.unshift "#{File.dirname(__FILE__)}/../.."
 
-require 'spec'
 require 'scraper_factory'
 
 describe BrisbaneScraper do
