@@ -13,6 +13,8 @@ require 'scraperwiki_scraper'
 module Scrapers
   # Central registry of scrapers
   def self.scrapers
+    # Council provided XML feeds, listed here for completeness:
+    # City of Salisbury: http://www.salisbury.sa.gov.au/feed.rss?listID=53
     [BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
       BurnsideScraper.new("City of Burnside", "Burnside", "SA"),
       GoldCoastScraper.new("Gold Coast City Council", "Gold Coast", "QLD"),
