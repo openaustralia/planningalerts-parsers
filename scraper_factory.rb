@@ -12,9 +12,12 @@ require 'scraperwiki_scraper'
 
 module Scrapers
   # Central registry of scrapers
+
+  # Council provided XML feeds, listed here for completeness:
+  # City of Salisbury: http://www.salisbury.sa.gov.au/feed.rss?listID=53
+  # Sutherland Shire Council: http://feeds.ssc.nsw.gov.au/?page=PlanningAlerts&Day=1&Month=11&Year=2011
+
   def self.scrapers
-    # Council provided XML feeds, listed here for completeness:
-    # City of Salisbury: http://www.salisbury.sa.gov.au/feed.rss?listID=53
     [BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
       BurnsideScraper.new("City of Burnside", "Burnside", "SA"),
       GoldCoastScraper.new("Gold Coast City Council", "Gold Coast", "QLD"),
@@ -78,7 +81,6 @@ module Scrapers
       LoganScraper.new("Logan City Council", "Logan", "QLD"),
       WoollahraScraper.new("Woollahra Municipal Council", "Woollahra", "NSW"),
       ScraperWikiScraper.new("Randwick City Council", "Randwick", "NSW", "randwick_city_council_development_applications"),
-      SutherlandScraper.new("Sutherland Shire Council", "Sutherland", "NSW"),
       ACTScraper.new("ACT Planning & Land Authority", "ACT", "ACT"),
       MosmanScraper.new("Mosman Municipal Council", "Mosman", "NSW"),
       # There are two websites that we're getting data for Melbourne City Council from.
