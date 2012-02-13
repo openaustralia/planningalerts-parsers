@@ -147,7 +147,8 @@ module Scrapers
       ScraperWikiScraper.new("Singleton Council", "Singleton", "NSW", "singleton_council_development_applications"),
       ScraperWikiScraper.new("Bundaberg Regional Council", "Bundaberg", "QLD", "bundaberg_regional_council_development_application"),
       ScraperWikiScraper.new("Willoughby City Council", "Willoughby", "NSW", "willoughby_da_scraper_1"),
-      ScraperWikiScraper.new("Muswellbrook Shire Council", "Muswellbrook", "NSW", "muswellbrook_shire_council_development_application")
+      ScraperWikiScraper.new("Muswellbrook Shire Council", "Muswellbrook", "NSW", "muswellbrook_shire_council_development_application"),
+      ScraperWikiScraper.new("City of Ballarat", "Ballarat (City)", "VIC", "city_of_ballarat_development_applications")
     ]
   end
   
