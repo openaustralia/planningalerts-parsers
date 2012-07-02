@@ -101,7 +101,7 @@ module Scrapers
       ScraperWikiScraper.new("Leichhardt Municipal Council", "Leichhardt", "NSW", "leichhardt_municipal_council_development_applicati"),
       WaggaWaggaScraper.new("City of Wagga Wagga", "Wagga Wagga", "NSW"),
       GriffithScraper.new("Griffith City Council", "Griffith", "NSW"),
-      PenrithScraper.new("Penrith City Council", "Penrith", "NSW"),
+      ScraperWikiScraper.new("Penrith City Council", "Penrith", "NSW", 'penrith_city_council_development_applications'),
       ScraperWikiScraper.new("Pittwater Council", "Pittwater", "NSW", "pittwater_council_development_applications"),
       WyongScraper.new("Wyong Shire Council", "Wyong", "NSW"),
       ScraperWikiScraper.new("North Sydney Council", "North Sydney", "NSW", "north_sydney_council_development_applications"),
