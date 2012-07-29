@@ -150,7 +150,8 @@ module Scrapers
       ScraperWikiScraper.new("City of Ballarat", "Ballarat (City)", "VIC", "city_of_ballarat_development_applications"),
       ScraperWikiScraper.new("City of Greater Geelong", "Geelong (City)", "VIC", "city_of_greater_geelong_development_applications"),
       ScraperWikiScraper.new("Nillumbik Shire Council", "Nillumbik", "VIC", "nillumbik_shire_council_development_applications"),
-      ScraperWikiScraper.new("Surf Coast Shire Council", "Surf Coast Shire", "VIC", "surf_coast_shire_council_development_applications")
+      ScraperWikiScraper.new("Surf Coast Shire Council", "Surf Coast Shire", "VIC", "surf_coast_shire_council_development_applications"),
+      ScraperWikiScraper.new("Victorian Commission for Gambling and Liquor Regulation", "VCGLR", "VIC", "victorian_liquor_licence_applications_1"),
     ]
   end
   
