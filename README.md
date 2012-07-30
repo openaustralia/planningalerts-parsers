@@ -1,4 +1,4 @@
-planningalerts-parsers
+planningalerts-parsers [![Build Status](https://secure.travis-ci.org/openaustralia/planningalerts-parsers.png?branch=master)](http://travis-ci.org/openaustralia/planningalerts-parsers) [![Dependency Status](https://gemnasium.com/openaustralia/planningalerts-parsers.png)](https://gemnasium.com/openaustralia/planningalerts-parsers)
 ======================
 
 Scrapers for [PlanningAlerts](http://www.planningalerts.org.au/).
