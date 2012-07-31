@@ -1,6 +1,10 @@
 load 'deploy' if respond_to?(:namespace) # cap2 differentiator
 Dir['vendor/plugins/*/recipes/*.rb'].each { |plugin| load(plugin) }
 
+require 'rvm/capistrano'
+
+set :rvm_ruby_string, '1.8.7'
+
 set :application, "planningalerts.org.au/parsers"
 set :repository,  "git://github.com/openaustralia/planningalerts-parsers.git"
 
