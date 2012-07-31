@@ -60,7 +60,6 @@ DEPENDENCIES
   htmlentities
   json
   mechanize
-  rack
   rack-contrib
   rack-test
   rake
