@@ -16,6 +16,7 @@ module Scrapers
   # Council provided XML feeds, listed here for completeness:
   # City of Salisbury: http://www.salisbury.sa.gov.au/feed.rss?listID=53
   # Sutherland Shire Council: http://feeds.ssc.nsw.gov.au/?page=PlanningAlerts&Day=1&Month=11&Year=2011
+  # Launceston City Council, TAS: http://api.launceston.tas.gov.au/planning/planningAlerts.ashx
 
   def self.scrapers
     [BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
