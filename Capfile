@@ -1,6 +1,7 @@
 load 'deploy' if respond_to?(:namespace) # cap2 differentiator
 Dir['vendor/plugins/*/recipes/*.rb'].each { |plugin| load(plugin) }
 
+require 'bundler/capistrano'
 require 'rvm/capistrano'
 
 set :rvm_ruby_string, '1.8.7'
