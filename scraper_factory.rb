@@ -153,7 +153,8 @@ module Scrapers
       ScraperWikiScraper.new("Nillumbik Shire Council", "Nillumbik", "VIC", "nillumbik_shire_council_development_applications"),
       ScraperWikiScraper.new("Surf Coast Shire Council", "Surf Coast Shire", "VIC", "surf_coast_shire_council_development_applications"),
       ScraperWikiScraper.new("Victorian Commission for Gambling and Liquor Regulation", "VCGLR", "VIC", "victorian_liquor_licence_applications_1"),
-      ScraperWikiScraper.new("City of Unley", "Unley", "SA", "city_of_unley_development_applications")
+      ScraperWikiScraper.new("City of Unley", "Unley", "SA", "city_of_unley_development_applications"),
+      ScraperWikiScraper.new("NSW Joint Regional Planning Panels", "NSW JRPP", "NSW", "nsw_joint_regional_planning_panels_development_reg")
     ]
   end
   
