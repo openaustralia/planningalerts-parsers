@@ -38,6 +38,8 @@ GEM
     rspec-mocks (2.7.0)
     rvm-capistrano (1.2.5)
       capistrano (>= 2.0.0)
+    shotgun (0.9)
+      rack (>= 1.0)
     sinatra (1.2.6)
       rack (~> 1.1)
       tilt (>= 1.2.2, < 2.0)
@@ -58,5 +60,6 @@ DEPENDENCIES
   rake
   rspec
   rvm-capistrano
+  shotgun
   sinatra
   tmail
