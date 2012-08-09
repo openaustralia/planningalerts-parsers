@@ -1,5 +1,4 @@
 $:.unshift "#{File.dirname(__FILE__)}/../../lib"
-
 require 'development_application'
 
 describe DevelopmentApplication do

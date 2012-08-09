@@ -1,8 +1,5 @@
 $:.unshift "#{File.dirname(__FILE__)}/../../lib"
-$:.unshift "#{File.dirname(__FILE__)}/../.."
-
-require 'rack/test'
-require 'sinatra'
+require 'spec_helper'
 require 'scraper_server'
 
 describe "Server for scraper XML" do

@@ -1,5 +1,4 @@
 $:.unshift "#{File.dirname(__FILE__)}/../../lib"
-
 require 'planning_authority_results'
 
 describe PlanningAuthorityResults do
