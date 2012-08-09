@@ -1,4 +1,5 @@
 $:.unshift "#{File.dirname(__FILE__)}/lib"
+require 'scraper'
 
 Dir.glob("#{File.dirname(__FILE__)}/scrapers/*_scraper.rb").each do |file|
   require file

@@ -1,7 +1,5 @@
-require 'rubygems'
-require 'mechanize'
 require 'planning_authority_results'
-require 'uri'
+require 'development_application'
 
 # Base class for ruby and non-ruby scrapers
 class ScraperBase

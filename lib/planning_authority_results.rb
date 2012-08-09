@@ -1,4 +1,3 @@
-require 'development_application'
 require 'simple_struct'
 
 class PlanningAuthorityResults < SimpleStruct

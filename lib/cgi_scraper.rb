@@ -1,5 +1,3 @@
-require 'scraper'
-
 # A simple Ruby wrapper around any scraper script that renders the correct XML and obeys the CGI interface
 # Can use this to give php and perl, for example, the same web interface as all the other Ruby scrapers
 # Performance is not really an issue so this very roundabout way of doing things is sort of okay.

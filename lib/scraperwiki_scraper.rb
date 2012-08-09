@@ -1,7 +1,3 @@
-require 'scraper'
-require 'open-uri'
-require 'json'
-
 class ScraperWikiScraper < Scraper
   def initialize(name, short_name, state, scraperwiki_name)
     super(name, short_name, state)

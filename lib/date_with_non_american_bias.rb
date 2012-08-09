@@ -1,5 +1,3 @@
-require 'date'
-
 # Monkey Patch the Date class
 class Date
   def self.parse_with_non_american_bias(text)

@@ -1,6 +1,3 @@
-require 'scraper'
-require 'htmlentities'
-
 class InfoMasterScraper < Scraper
   def raw_table_values(date, url, rows_to_skip_at_start, table_search = 'span > table', rows_to_skip_at_end = 0)
     range = rows_to_skip_at_start..(-1-rows_to_skip_at_end)
