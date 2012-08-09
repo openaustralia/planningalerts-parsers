@@ -1,10 +1,8 @@
 #!/usr/bin/env ruby
 #
-# This is a Sinatra web application. To use in a development mode start by doing "shotgun scraper_server.rb"
-
-require 'rubygems'
-require 'sinatra'
-require 'scraper_factory'
+# This is a Sinatra web application with dependencies managed by Bundler
+# To use in a development mode simply run `shotgun` (which reads `config.ru`)
+require './scraper_factory'
 
 # Return a list of all the scrapers found here
 get '/' do

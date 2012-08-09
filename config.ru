@@ -2,10 +2,11 @@
 # Not needed for normal development, just for deployment
 
 require 'rubygems'
-require 'sinatra'
-require 'scraper_server'
-require 'rack'
-require 'rack/contrib'
+require 'bundler'
+
+Bundler.require
+
+require './scraper_server'
 
 # Send out email on any exceptions raised
 use Rack::MailExceptions do |mail|
