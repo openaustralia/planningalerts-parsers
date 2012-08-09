@@ -16,7 +16,7 @@ Installation
     bundle # Install required Gems
     rake   # Run tests
 
-Then use `scraper_output.rb` to test output during development.
+To test your scraper during development use the `output` Rake task, e.g. `rake output[ballina]`
 
 License
 -------
