@@ -1,9 +1,9 @@
 $:.unshift "#{File.dirname(__FILE__)}/../../lib"
 $:.unshift "#{File.dirname(__FILE__)}/../.."
 
-require 'scraper_server'
 require 'rack/test'
 require 'sinatra'
+require 'scraper_server'
 
 describe "Server for scraper XML" do
   include Rack::Test::Methods
