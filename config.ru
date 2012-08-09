@@ -14,9 +14,6 @@ use Rack::MailExceptions do |mail|
   mail.to "web-administrators@openaustralia.org"
 end
 
-# When running from this rackup script we'll always be in production mode
-# Putting it in production mode will not display exceptions using it's internal pretty display
-set :environment, :production
 # This will allow exceptions to go outside of Sinatra to be caught by the MailExceptions handler
 set :raise_errors, true
 
