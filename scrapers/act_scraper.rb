@@ -31,7 +31,7 @@ class ACTScraper < Scraper
       
       lines[1].at('strong').remove
       lines[2].at('strong').remove
-      lines[4].at('b').remove
+      lines[4].at('strong').remove
       lines[5].at('strong').remove
       stripped = lines.map{|l| l.inner_text.strip}
 
