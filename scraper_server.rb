@@ -15,6 +15,7 @@ get '/' do
         xml.authority_name scraper.planning_authority_name_no_state
         xml.authority_short_name scraper.planning_authority_short_name
         xml.state scraper.state
+        xml.scraperwiki_name scraper.scraperwiki_name
         xml.url "#{request.url}#{scraper.planning_authority_short_name_encoded}?year={year}&month={month}&day={day}"
       end
     end

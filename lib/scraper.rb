@@ -3,7 +3,7 @@ require 'development_application'
 
 # Base class for ruby and non-ruby scrapers
 class ScraperBase
-  attr_reader :planning_authority_short_name, :state
+  attr_reader :planning_authority_short_name, :state, :scraperwiki_name
   
   def initialize(name, short_name, state)
     @planning_authority_name, @planning_authority_short_name, @state = name, short_name, state
