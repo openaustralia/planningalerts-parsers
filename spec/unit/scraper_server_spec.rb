@@ -43,12 +43,14 @@ describe "Server for scraper XML" do
     <authority_name>Waverley Council</authority_name>
     <authority_short_name>Waverley</authority_short_name>
     <state>NSW</state>
+    <scraperwiki_name>waverley_council_development_applications</scraperwiki_name>
     <url>http://example.org/waverley?year={year}&amp;month={month}&amp;day={day}</url>
   </scraper>
   <scraper>
     <authority_name>Brisbane City Council</authority_name>
     <authority_short_name>Brisbane</authority_short_name>
     <state>QLD</state>
+    <scraperwiki_name></scraperwiki_name>
     <url>http://example.org/brisbane?year={year}&amp;month={month}&amp;day={day}</url>
   </scraper>
 </scrapers>
