@@ -88,7 +88,7 @@ module Scrapers
       # There are two websites that we're getting data for Melbourne City Council from.
       # Using "Melbourne (City)" to disambiguate from the "Melbourne" used by the SPEAR scraper.
       SPEARScraper.new("Melbourne City Council (SPEAR)", "Melbourne", "VIC", "Melbourne City Council"),
-      MelbourneScraper.new("Melbourne City Council", "Melbourne (City)", "VIC"),
+      ScraperWikiScraper.new("Melbourne City Council", "Melbourne (City)", "VIC", "city_of_melbourne_planning_applications"),
       WollongongScraper.new("Wollongong City Council", "Wollongong", "NSW"),
       ScraperWikiScraper.new("Marrickville Council", "Marrickville", "NSW", "marrickville-council-development-applications"),
       CGIScraper.new("Department of Planning and Local Government", "EDALA", "SA", "php-cgi -d short_open_tag=0 -d cgi.force_redirect=0 -f", "edala.php"),
