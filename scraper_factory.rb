@@ -78,7 +78,7 @@ module Scrapers
       CaloundraScraper.new("Caloundra, Sunshine Coast Regional Council", "Caloundra", "QLD"),
       MaroochyScraper.new("Maroochydore and Nambour offices, Sunshine Coast Regional Council", "Maroochy", "QLD"),
       NoosaScraper.new("Noosa, Sunshine Coast Regional Council", "Noosa", "QLD"),
-      BlacktownScraper.new("Blacktown City Council", "Blacktown", "NSW"),
+      ScraperWikiScraper.new("Blacktown City Council", "Blacktown", "NSW", "blacktown_city_council_development_applications"),
       SydneyScraper.new("City of Sydney", "Sydney", "NSW"),
       LoganScraper.new("Logan City Council", "Logan", "QLD"),
       WoollahraScraper.new("Woollahra Municipal Council", "Woollahra", "NSW"),
