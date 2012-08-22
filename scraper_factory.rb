@@ -115,7 +115,7 @@ module Scrapers
       ToowoombaScraper.new("Toowoomba Regional Council", "Toowoomba", "QLD"),
       RedlandScraper.new("Redland City Council", "Redland", "QLD"),
       ScraperWikiScraper.new("City of Marion", "Marion", "SA", "city_of_marion_development_applications"),
-      BankstownScraper.new("Bankstown City Council", "Bankstown", "NSW"),
+      ScraperWikiScraper.new("Bankstown City Council", "Bankstown", "NSW", "bankstown_development_applications"),
       CoffsHarbourScraper.new("Coffs Harbour City Council", "Coffs Harbour", "NSW"),
       TheHillsScraper.new("The Hills Shire Council", "The Hills", "NSW"),
       ScraperWikiScraper.new("Waverley Council", "Waverley", "NSW", "waverley_council_development_applications"),
