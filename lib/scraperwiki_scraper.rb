@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class ScraperWikiScraper < Scraper
   def initialize(name, short_name, state, scraperwiki_name)
     super(name, short_name, state)
