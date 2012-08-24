@@ -97,7 +97,7 @@ module Scrapers
       AlburyScraper.new("Albury City Council", "Albury", "NSW"),
       ScraperWikiScraper.new("City of Stonnington", "Stonnington", "VIC", "city_of_stonnington_development_applications"),
       WarringahScraper.new("Warringah Council", "Warringah", "NSW"),
-      YarraScraper.new("City of Yarra", "Yarra City", "VIC"),
+      ScraperWikiScraper.new("City of Yarra", "Yarra City", "VIC", "yarra_city_development_applications"),
       ScraperWikiScraper.new("Leichhardt Municipal Council", "Leichhardt", "NSW", "leichhardt_municipal_council_development_applicati"),
       WaggaWaggaScraper.new("City of Wagga Wagga", "Wagga Wagga", "NSW"),
       GriffithScraper.new("Griffith City Council", "Griffith", "NSW"),
