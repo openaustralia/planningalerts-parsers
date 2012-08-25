@@ -9,7 +9,6 @@ end
 # TODO: Should really move these together with all the other scrapers
 require 'spear_scraper'
 require 'cgi_scraper'
-require 'scraperwiki_scraper'
 
 module Scrapers
   # Central registry of scrapers
@@ -22,7 +21,6 @@ module Scrapers
   def self.scrapers
     [BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
       BurnsideScraper.new("City of Burnside", "Burnside", "SA"),
-      ScraperWikiScraper.new("Gold Coast City Council", "Gold Coast", "QLD", "gold_coast_city_council_development_applications"),
       # TODO: Figure out which of these authorities using the SPEAR system have planning information
       # in the system and which just have subdivision information
       SPEARScraper.new("Ararat Rural City Council (SPEAR)", "Ararat", "VIC", "Ararat Rural City Council"),
@@ -74,37 +72,24 @@ module Scrapers
       SPEARScraper.new("Rural City of Wangaratta (SPEAR)", "Wangaratta", "VIC", "Rural City of Wangaratta"),
       SPEARScraper.new("Shire of Campaspe (SPEAR)", "Campaspe", "VIC", "Shire of Campaspe"),
       SPEARScraper.new("Stonnington City Council (SPEAR)", "Stonnington (SPEAR)", "VIC", "Stonnington City Council"),
-      ScraperWikiScraper.new("Moreton Bay Regional Council", "Moreton Bay", "QLD", "moreton_bay_regional_council_development_applicati"),
-      ScraperWikiScraper.new("Sunshine Coast Regional Council", "Sunshine Coast", "QLD", "sunshine_coast_council_development_applications"),
-      ScraperWikiScraper.new("Blacktown City Council", "Blacktown", "NSW", "blacktown_city_council_development_applications"),
       SydneyScraper.new("City of Sydney", "Sydney", "NSW"),
       LoganScraper.new("Logan City Council", "Logan", "QLD"),
       WoollahraScraper.new("Woollahra Municipal Council", "Woollahra", "NSW"),
-      ScraperWikiScraper.new("Randwick City Council", "Randwick", "NSW", "randwick_city_council_development_applications"),
       ACTScraper.new("ACT Planning & Land Authority", "ACT", "ACT"),
       MosmanScraper.new("Mosman Municipal Council", "Mosman", "NSW"),
       # There are two websites that we're getting data for Melbourne City Council from.
       # Using "Melbourne (City)" to disambiguate from the "Melbourne" used by the SPEAR scraper.
       SPEARScraper.new("Melbourne City Council (SPEAR)", "Melbourne", "VIC", "Melbourne City Council"),
-      ScraperWikiScraper.new("Melbourne City Council", "Melbourne (City)", "VIC", "city_of_melbourne_planning_applications"),
       WollongongScraper.new("Wollongong City Council", "Wollongong", "NSW"),
-      ScraperWikiScraper.new("Marrickville Council", "Marrickville", "NSW", "marrickville-council-development-applications"),
       CGIScraper.new("Department of Planning and Local Government", "EDALA", "SA", "php-cgi -d short_open_tag=0 -d cgi.force_redirect=0 -f", "edala.php"),
       KogarahScraper.new("Kogarah City Council", "Kogarah", "NSW"),
       LakeMacquarieScraper.new("Lake Macquarie City Council", "Lake Macquarie", "NSW"),
-      ScraperWikiScraper.new("Parramatta City Council", "Parramatta", "NSW", "parramatta-city-council-development-applications"),
       KuringgaiScraper.new("Ku-ring-gai Council", "Ku-ring-gai", "NSW"),
       AlburyScraper.new("Albury City Council", "Albury", "NSW"),
-      ScraperWikiScraper.new("City of Stonnington", "Stonnington", "VIC", "city_of_stonnington_development_applications"),
       WarringahScraper.new("Warringah Council", "Warringah", "NSW"),
-      ScraperWikiScraper.new("City of Yarra", "Yarra City", "VIC", "yarra_city_development_applications"),
-      ScraperWikiScraper.new("Leichhardt Municipal Council", "Leichhardt", "NSW", "leichhardt_municipal_council_development_applicati"),
       WaggaWaggaScraper.new("City of Wagga Wagga", "Wagga Wagga", "NSW"),
       GriffithScraper.new("Griffith City Council", "Griffith", "NSW"),
-      ScraperWikiScraper.new("Penrith City Council", "Penrith", "NSW", 'penrith_city_council_development_applications'),
-      ScraperWikiScraper.new("Pittwater Council", "Pittwater", "NSW", "pittwater_council_development_applications"),
       WyongScraper.new("Wyong Shire Council", "Wyong", "NSW"),
-      ScraperWikiScraper.new("North Sydney Council", "North Sydney", "NSW", "north_sydney_council_development_applications"),
       HawkesburyScraper.new("Hawkesbury City Council", "Hawkesbury", "NSW"),
       HornsbyScraper.new("Hornsby Shire Council", "Hornsby", "NSW"),
       FraserCoastScraper.new("Fraser Coast Regional Council", "Fraser Coast", "QLD"),
@@ -112,48 +97,9 @@ module Scrapers
       LockyerValleyScraper.new("Lockyer Valley Regional Council", "Lockyer Valley", "QLD"),
       ToowoombaScraper.new("Toowoomba Regional Council", "Toowoomba", "QLD"),
       RedlandScraper.new("Redland City Council", "Redland", "QLD"),
-      ScraperWikiScraper.new("City of Marion", "Marion", "SA", "city_of_marion_development_applications"),
-      ScraperWikiScraper.new("Bankstown City Council", "Bankstown", "NSW", "bankstown_development_applications"),
       CoffsHarbourScraper.new("Coffs Harbour City Council", "Coffs Harbour", "NSW"),
       TheHillsScraper.new("The Hills Shire Council", "The Hills", "NSW"),
-      ScraperWikiScraper.new("Waverley Council", "Waverley", "NSW", "waverley_council_development_applications"),
-      ScraperWikiScraper.new("Blue Mountains City Council", "Blue Mountains", "NSW", "blue-mountains-city-council-development-applicatio"),
-      ScraperWikiScraper.new("Bellingen Shire Council", "Bellingen", "NSW", "bellingen-shire-council-development-applications"),
-      ScraperWikiScraper.new("NSW Department of Planning Major Project Assessments", "NSW DoP", "NSW", "nsw_department_of_planning_major_project_assessmen"),
-      ScraperWikiScraper.new("City of Kingston", "Kingston", "VIC", "city_of_kingston_development_applications"),
       CGIScraper.new("Moreland City Council", "Moreland (City)", "VIC", "perl", "moreland.pl"),
-      ScraperWikiScraper.new("NSW Office of Liquor, Gaming and Racing", "NSW OLGR", "NSW", "nsw_office_of_liquor_gaming_and_racing_-_liquor_ap"),
-      ScraperWikiScraper.new("City of Ryde", "Ryde", "NSW", "city_of_ryde_development_applications"),
-      ScraperWikiScraper.new("Mornington Peninsula Shire", "Mornington Peninsula", "VIC", "mornington_peninsula_shire_-_development_applicati"),
-      ScraperWikiScraper.new("Lane Cove Council", "Lane Cove", "NSW", "lane_cove_da_scraper"),
-      ScraperWikiScraper.new("Northern Territory Lands Group", "Northern Territory", "NT", "northern_territory_development_applications"),
-      ScraperWikiScraper.new("City of Cockburn", "Cockburn", "WA", "city_of_cockburn_development_applications"),
-      ScraperWikiScraper.new("Hobart City Council", "Hobart", "TAS", "hobart_city_council_development_applications"),
-      ScraperWikiScraper.new("Mackay Regional Council", "Mackay", "QLD", "mackay_city_council_development_applications"),
-      ScraperWikiScraper.new("Knox City Council", "Knox", "VIC", "knox_regional_council_development_applications"),
-      ScraperWikiScraper.new("Port Stephens Council", "Port Stephens", "NSW", "port_stephens_development_applications"),
-      ScraperWikiScraper.new("Clarence City Council", "Clarence", "TAS", "clarence_city_council_development_applications"),
-      ScraperWikiScraper.new("Shoalhaven City Council", "Shoalhaven", "NSW", "shoalhaven_council_development_applications"),
-      ScraperWikiScraper.new("Rockdale City Council", "Rockdale", "NSW", "rockdale_applications"),
-      ScraperWikiScraper.new("Ballina Shire Council", "Ballina", "NSW", "ballina_shire_council_development_applications"),
-      ScraperWikiScraper.new("Campbelltown City Council", "Campbelltown", "NSW", "campbelltown_city_council_development_proposals"),
-      ScraperWikiScraper.new("City of Vincent", "Vincent", "WA", "city_of_vincent_wa_development_applications"),
-      ScraperWikiScraper.new("Gosford City Council", "Gosford", "NSW", "gosford_nsw_development_applications"),
-      ScraperWikiScraper.new("City of Onkaparinga", "Onkaparinga", "SA", "onkaparinga_sa_development_applications"),
-      ScraperWikiScraper.new("Fairfield City Council", "Fairfield", "NSW", "fairfield_city_development_applications"),
-      ScraperWikiScraper.new("Scenic Rim Regional Council", "Scenic Rim", "QLD", "scenic_rim_regional_council_development_applicatio"),
-      ScraperWikiScraper.new("Townsville City Council", "Townsville", "QLD", "townsville_city_council_development_applications"),
-      ScraperWikiScraper.new("Singleton Council", "Singleton", "NSW", "singleton_council_development_applications"),
-      ScraperWikiScraper.new("Bundaberg Regional Council", "Bundaberg", "QLD", "bundaberg_regional_council_development_application"),
-      ScraperWikiScraper.new("Willoughby City Council", "Willoughby", "NSW", "willoughby_da_scraper_1"),
-      ScraperWikiScraper.new("Muswellbrook Shire Council", "Muswellbrook", "NSW", "muswellbrook_shire_council_development_application"),
-      ScraperWikiScraper.new("City of Ballarat", "Ballarat (City)", "VIC", "city_of_ballarat_development_applications"),
-      ScraperWikiScraper.new("City of Greater Geelong", "Geelong (City)", "VIC", "city_of_greater_geelong_development_applications"),
-      ScraperWikiScraper.new("Nillumbik Shire Council", "Nillumbik", "VIC", "nillumbik_shire_council_development_applications"),
-      ScraperWikiScraper.new("Surf Coast Shire Council", "Surf Coast Shire", "VIC", "surf_coast_shire_council_development_applications"),
-      ScraperWikiScraper.new("Victorian Commission for Gambling and Liquor Regulation", "VCGLR", "VIC", "victorian_liquor_licence_applications_1"),
-      ScraperWikiScraper.new("City of Unley", "Unley", "SA", "city_of_unley_development_applications"),
-      ScraperWikiScraper.new("NSW Joint Regional Planning Panels", "NSW JRPP", "NSW", "nsw_joint_regional_planning_panels_development_reg")
     ]
   end
   
