@@ -74,7 +74,6 @@ module Scrapers
       SPEARScraper.new("Stonnington City Council (SPEAR)", "Stonnington (SPEAR)", "VIC", "Stonnington City Council"),
       SydneyScraper.new("City of Sydney", "Sydney", "NSW"),
       LoganScraper.new("Logan City Council", "Logan", "QLD"),
-      WoollahraScraper.new("Woollahra Municipal Council", "Woollahra", "NSW"),
       ACTScraper.new("ACT Planning & Land Authority", "ACT", "ACT"),
       MosmanScraper.new("Mosman Municipal Council", "Mosman", "NSW"),
       # There are two websites that we're getting data for Melbourne City Council from.
