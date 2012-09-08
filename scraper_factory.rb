@@ -39,7 +39,6 @@ module Scrapers
       FraserCoastScraper.new("Fraser Coast Regional Council", "Fraser Coast", "QLD"),
       IpswichScraper.new("City of Ipswich", "Ipswich", "QLD"),
       LockyerValleyScraper.new("Lockyer Valley Regional Council", "Lockyer Valley", "QLD"),
-      ToowoombaScraper.new("Toowoomba Regional Council", "Toowoomba", "QLD"),
       RedlandScraper.new("Redland City Council", "Redland", "QLD"),
       CoffsHarbourScraper.new("Coffs Harbour City Council", "Coffs Harbour", "NSW"),
       CGIScraper.new("Moreland City Council", "Moreland (City)", "VIC", "perl", "moreland.pl"),
