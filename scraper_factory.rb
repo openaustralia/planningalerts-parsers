@@ -33,7 +33,6 @@ module Scrapers
       WaggaWaggaScraper.new("City of Wagga Wagga", "Wagga Wagga", "NSW"),
       GriffithScraper.new("Griffith City Council", "Griffith", "NSW"),
       WyongScraper.new("Wyong Shire Council", "Wyong", "NSW"),
-      HawkesburyScraper.new("Hawkesbury City Council", "Hawkesbury", "NSW"),
       HornsbyScraper.new("Hornsby Shire Council", "Hornsby", "NSW"),
       FraserCoastScraper.new("Fraser Coast Regional Council", "Fraser Coast", "QLD"),
       IpswichScraper.new("City of Ipswich", "Ipswich", "QLD"),
