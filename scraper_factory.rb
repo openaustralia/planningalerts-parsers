@@ -37,7 +37,7 @@ module Scrapers
       IpswichScraper.new("City of Ipswich", "Ipswich", "QLD"),
       LockyerValleyScraper.new("Lockyer Valley Regional Council", "Lockyer Valley", "QLD"),
       RedlandScraper.new("Redland City Council", "Redland", "QLD"),
-      CGIScraper.new("Moreland City Council", "Moreland (City)", "VIC", "perl", "moreland.pl"),
+      CGIScraper.new("Moreland City Council", "Moreland (City)", "VIC", "perl", "moreland.pl")
     ]
   end
   
