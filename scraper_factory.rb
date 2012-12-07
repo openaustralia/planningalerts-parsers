@@ -20,7 +20,6 @@ module Scrapers
   def self.scrapers
     [BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
       BoroondaraScraper.new("Boroondara City Council", "Boroondara (City)", "VIC"),
-      SydneyScraper.new("City of Sydney", "Sydney", "NSW"),
       LoganScraper.new("Logan City Council", "Logan", "QLD"),
       ACTScraper.new("ACT Planning & Land Authority", "ACT", "ACT"),
       WollongongScraper.new("Wollongong City Council", "Wollongong", "NSW"),
