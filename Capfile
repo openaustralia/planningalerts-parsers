@@ -4,7 +4,7 @@ Dir['vendor/plugins/*/recipes/*.rb'].each { |plugin| load(plugin) }
 require 'bundler/capistrano'
 require 'rvm/capistrano'
 
-set :rvm_ruby_string, '1.8.7'
+set :rvm_ruby_string, :local
 
 set :application, "planningalerts.org.au/parsers"
 set :repository,  "git://github.com/openaustralia/planningalerts-parsers.git"
