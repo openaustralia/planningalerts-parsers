@@ -26,6 +26,8 @@ end
 namespace :deploy do
   task :restart, :except => { :no_release => true } do
     run "touch #{File.join(current_path,'tmp','restart.txt')}"
-    run "cd #{deploy_to}/../app/current && bundle exec rake planningalerts:authorities:load RAILS_ENV=production"
+
+    # Don't auto-reload authorities as they're managed in the web admin interface now
+    # run "cd #{deploy_to}/../app/current && bundle exec rake planningalerts:authorities:load RAILS_ENV=production"
   end
 end
