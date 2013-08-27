@@ -8,6 +8,7 @@ end
 # Require the generic scrapers.
 # TODO: Should really move these together with all the other scrapers
 require 'cgi_scraper'
+require 'scraperwiki_scraper'
 
 module Scrapers
   # Central registry of scrapers
