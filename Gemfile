@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'mechanize', '~> 1.0'
+gem 'mechanize'
 gem 'htmlentities'
 gem 'rake'
 gem 'builder'
