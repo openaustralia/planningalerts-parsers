@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<planning>
+  <authority_name>Wyong Shire Council, NSW</authority_name>
+  <authority_short_name>Wyong</authority_short_name>
+  <applications>
+    <application>
+      <council_reference>DA - 635 / 2013</council_reference>
+      <address>11 Leetes Lane TUMBI UMBI NSW 2261</address>
+      <description>Carport, garage &amp; inground pool</description>
+      <info_url>http://wsconline.wyong.nsw.gov.au/applicationtracking/modules/applicationmaster/default.aspx?page=wrapper&amp;key=471649</info_url>
+      <comment_url>http://wsconline.wyong.nsw.gov.au/applicationtracking/modules/applicationmaster/default.aspx?page=wrapper&amp;key=471649</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>DA - 636 / 2013</council_reference>
+      <address>46 Quinalup Street GWANDALAN NSW 2259</address>
+      <description>Additions</description>
+      <info_url>http://wsconline.wyong.nsw.gov.au/applicationtracking/modules/applicationmaster/default.aspx?page=wrapper&amp;key=471653</info_url>
+      <comment_url>http://wsconline.wyong.nsw.gov.au/applicationtracking/modules/applicationmaster/default.aspx?page=wrapper&amp;key=471653</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+  </applications>
+</planning>

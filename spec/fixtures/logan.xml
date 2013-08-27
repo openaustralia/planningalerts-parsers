@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<planning>
+  <authority_name>Logan City Council, QLD</authority_name>
+  <authority_short_name>Logan</authority_short_name>
+  <applications>
+    <application>
+      <council_reference>MCUC-2/1976 /A</council_reference>
+      <address>55-61 Brightwell Street GREENBANK QLD 4124</address>
+      <description>Consent - Garden Cemetery for Burial of Pets</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=2&amp;8=1976</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=2&amp;8=1976</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>MCUC-190/2013</council_reference>
+      <address>1012-1088 Waterford Tamborine Road LOGAN VILLAGE QLD 4207</address>
+      <description>House (Overlays)</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=190&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=190&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>MCUI-87/2007 /C</council_reference>
+      <address>6-10 Logandowns Drive MEADOWBROOK QLD 4131</address>
+      <description>Request to Change and Existing Approval (MCUI/87/2007)</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=87&amp;8=2007</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=87&amp;8=2007</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BWAP-164/2013</council_reference>
+      <address>1049-1063 Stockleigh Road STOCKLEIGH QLD 4280</address>
+      <description>Shed (Site Cover Relaxation)</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=164&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=164&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>PD-1479/2013</council_reference>
+      <address>31 Ridgecrest Drive JIMBOOMBA QLD 4280</address>
+      <description>Domestic Dwelling</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=1479&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=1479&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>PD-1481/2013</council_reference>
+      <address>9A Foliage Court SHAILER PARK QLD 4128</address>
+      <description>Residential</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=1481&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=1481&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>PD-1485/2013</council_reference>
+      <address>RUBY GARDENS 213-251 Logan Street EAGLEBY QLD 4207</address>
+      <description>Domestic Dwelling - Villa 177</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=1485&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=1485&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>PD-1491/2013</council_reference>
+      <address>35 Ravensbourne Circuit WATERFORD QLD 4133</address>
+      <description>Domestic Dwelling</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=1491&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=1491&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>PD-1492/2013</council_reference>
+      <address>6 Idalia Lane WATERFORD QLD 4133</address>
+      <description>Domestic Dwelling</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=1492&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=1492&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>PD-1494/2013</council_reference>
+      <address>25 Howard Street YARRABILBA QLD 4207</address>
+      <description>Domestic Dwelling</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=1494&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=1494&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>PD-1495/2013</council_reference>
+      <address>3 Emerson Road BANNOCKBURN QLD 4207</address>
+      <description>Domestic Dwellling</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=1495&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=1495&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>PD-1496/2013</council_reference>
+      <address>22 Stoneleigh Reserve Boulevard LOGAN RESERVE QLD 4133</address>
+      <description>Domestic Dwelling</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=1496&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=1496&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3205/2013</council_reference>
+      <address>17 Canterbury Lane BETHANIA QLD 4205</address>
+      <description>Domestic - Shed</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3205&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3205&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3206/2013</council_reference>
+      <address>SPRINGWOOD PLAZA 3-15 Dennis Road SPRINGWOOD QLD 4127</address>
+      <description>Commercial - Tenancy Fitout (Shop 15)</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3206&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3206&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3207/2013</council_reference>
+      <address>90 Lehmans Road BEENLEIGH QLD 4207</address>
+      <description>Domestic - Alterations and Additions</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3207&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3207&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3208/2013</council_reference>
+      <address>75-79 Silver Wattle Drive JIMBOOMBA QLD 4280</address>
+      <description>Domestic - Alterations and Additions to Dwelling and sheds</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3208&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3208&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3209/2013</council_reference>
+      <address>5 Winterpeak Close YARRABILBA QLD 4207</address>
+      <description>Domestic - Dwelling</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3209&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3209&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3210/2013</council_reference>
+      <address>2 Croydon Road LOGAN CENTRAL QLD 4114</address>
+      <description>Commercial - Shop Fitout (Shop 5)</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3210&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3210&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3211/2013</council_reference>
+      <address>777-789 Quinzeh Creek Road CEDAR CREEK QLD 4207</address>
+      <description>Domestic - Alterations and Additions to Dwelling</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3211&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3211&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3212/2013</council_reference>
+      <address>2 Croydon Road LOGAN CENTRAL QLD 4114</address>
+      <description>Commercial - Tenancy Fitout Doctors Clinic</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3212&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3212&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3213/2013</council_reference>
+      <address>10 Zachary Court HILLCREST QLD 4118</address>
+      <description>Domestic - Dwelling</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3213&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3213&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3214/2013</council_reference>
+      <address>15 Lyngrove Street KINGSTON QLD 4114</address>
+      <description>Domestic - Retrospective Approval for Deck and Garden Shed</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3214&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3214&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3215/2013</council_reference>
+      <address>2 Croydon Road LOGAN CENTRAL QLD 4114</address>
+      <description>Commercial - Shop Fitout (Shop 6)</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3215&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3215&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3216/2013</council_reference>
+      <address>173-187 Carbrook Road CORNUBIA QLD 4130</address>
+      <description>Domestic - Dwelling</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3216&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3216&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3217/2013</council_reference>
+      <address>31 Ridgecrest Drive JIMBOOMBA QLD 4280</address>
+      <description>Domestic - Dwelling</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3217&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3217&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3218/2013</council_reference>
+      <address>17-21 Sycamore Road PARK RIDGE SOUTH QLD 4125</address>
+      <description>Domestic - Shed</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3218&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3218&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3219/2013</council_reference>
+      <address>5 Stockade Crescent EAGLEBY QLD 4207</address>
+      <description>Domestic - Carport x 2</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3219&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3219&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3220/2013</council_reference>
+      <address>18 The Concourse UNDERWOOD QLD 4119</address>
+      <description>Domestic - Extension</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3220&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3220&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3221/2013</council_reference>
+      <address>29 Maggie Court CEDAR VALE QLD 4285</address>
+      <description>Domestic - Retaining Wall</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3221&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3221&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3222/2013</council_reference>
+      <address>12 Mewing Court WINDAROO QLD 4207</address>
+      <description>Domestic - Patio</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3222&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3222&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3223/2013</council_reference>
+      <address>SPRINGWOOD PLAZA 3-15 Dennis Road SPRINGWOOD QLD 4127</address>
+      <description>Commercial - Tenancy Fitout (PT Partners)</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3223&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3223&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3224/2013</council_reference>
+      <address>4 Clint Parade CRESTMEAD QLD 4132</address>
+      <description>Domestic - Carport</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3224&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3224&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3225/2013</council_reference>
+      <address>46 McGrath Street WATERFORD WEST QLD 4133</address>
+      <description>Domestic - Patio</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3225&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3225&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3226/2013</council_reference>
+      <address>25 Algia Crescent UNDERWOOD QLD 4119</address>
+      <description>Domestic - Dwelling</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3226&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3226&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3227/2013</council_reference>
+      <address>31 Carew Street YARRABILBA QLD 4207</address>
+      <description>Domestic - Triplex</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3227&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3227&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3228/2013</council_reference>
+      <address>22 Rudge Street WOODRIDGE QLD 4114</address>
+      <description>Domestic - Existing Additions</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3228&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3228&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3229/2013</council_reference>
+      <address>5-7 Rose Gum Court CEDAR VALE QLD 4285</address>
+      <description>Domestic - Patio</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3229&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3229&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3230/2013</council_reference>
+      <address>15 Lynette Way DAISY HILL QLD 4127</address>
+      <description>Domestic - Dwelling, Pool and Fence</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3230&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3230&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3231/2013</council_reference>
+      <address>RUBY GARDENS 213-251 Logan Street EAGLEBY QLD 4207</address>
+      <description>Domestic - Relocatable Home Villa 265</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3231&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3231&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3232/2013</council_reference>
+      <address>GRAND PLAZA SHOPPING CENTRE 27-49 Browns Plains Road BROWNS PLAINS QLD 4118</address>
+      <description>Commercial - Tenancy Fitout (Stacks Shop GF053)</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3232&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3232&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3233/2013</council_reference>
+      <address>15 Wildflower Street YARRABILBA QLD 4207</address>
+      <description>Domestic - Dwelling, Garage and Patio</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3233&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3233&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3234/2013</council_reference>
+      <address>20 Robyn Court LOGAN VILLAGE QLD 4207</address>
+      <description>Domestic - Dwelling, Alfresco, Porch, and Garage</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3234&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3234&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3235/2013</council_reference>
+      <address>16 Lake Borumba Street LOGAN RESERVE QLD 4133</address>
+      <description>Domestic - Patio Roof</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3235&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3235&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3236/2013</council_reference>
+      <address>9 Honeysuckle Court JIMBOOMBA QLD 4280</address>
+      <description>Domestic - Dwelling</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3236&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3236&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3237/2013</council_reference>
+      <address>RUBY GARDENS 213-251 Logan Street EAGLEBY QLD 4207</address>
+      <description>Domestic - Relocatable Dwelling (Site 177)</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3237&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3237&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3238/2013</council_reference>
+      <address>67 Lionheart Street FORESTDALE QLD 4118</address>
+      <description>Domestic - Shed</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3238&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3238&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3239/2013</council_reference>
+      <address>35 Ravensbourne Circuit WATERFORD QLD 4133</address>
+      <description>Domestic - Dwelling</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3239&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3239&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3240/2013</council_reference>
+      <address>21-25 Foxtail Court WOODHILL QLD 4285</address>
+      <description>Domestic - Dwelling</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3240&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3240&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3241/2013</council_reference>
+      <address>RUBY GARDENS 213-251 Logan Street EAGLEBY QLD 4207</address>
+      <description>Domestic - Relocatable Dwelling (Villa 271)</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3241&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3241&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3242/2013</council_reference>
+      <address>77 Rellam Road LOGANLEA QLD 4131</address>
+      <description>Domestic - Carport and Demolition of Existing Carport</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3242&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3242&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3243/2013</council_reference>
+      <address>3 Lindsay Court CORNUBIA QLD 4130</address>
+      <description>Domestic - Extension to Existing Dwelling and Pergola</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3243&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3243&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3244/2013</council_reference>
+      <address>RUBY GARDENS 213-251 Logan Street EAGLEBY QLD 4207</address>
+      <description>Domestic - Relocatable Dwelling (Villa 360)</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3244&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3244&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3245/2013</council_reference>
+      <address>25 Brigalow Street MARSDEN QLD 4132</address>
+      <description>Domestic - Dwelling</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3245&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3245&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3246/2013</council_reference>
+      <address>20-22 Overlander Court JIMBOOMBA QLD 4280</address>
+      <description>Domestic - Inground Pool</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3246&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3246&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3247/2013</council_reference>
+      <address>50-58 Bluff Road CEDAR VALE QLD 4285</address>
+      <description>Domestic - Garage</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3247&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3247&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3248/2013</council_reference>
+      <address>172-178 Magnesium Drive CRESTMEAD QLD 4132</address>
+      <description>Commercial - Warehouse Extension</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3248&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3248&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3249/2013</council_reference>
+      <address>5 Tallwoods Circuit YARRABILBA QLD 4207</address>
+      <description>Domestic - Dwelling, Alfresco, Porch and Garage</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3249&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3249&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3250/2013</council_reference>
+      <address>107 Brookvale Drive UNDERWOOD QLD 4119</address>
+      <description>Domestic - Dwelling</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3250&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3250&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>BW-3251/2013</council_reference>
+      <address>67 Boundary Street BEENLEIGH QLD 4207</address>
+      <description>Commercial - Alteration to Office, Workshop Extension &amp; Washbay</description>
+      <info_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3251&amp;8=2013</info_url>
+      <comment_url>http://pdonline.logan.qld.gov.au/modules/applicationmaster/default.aspx?page=found&amp;7=3251&amp;8=2013</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+  </applications>
+</planning>

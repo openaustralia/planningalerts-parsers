@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<planning>
+  <authority_name>Warringah Council, NSW</authority_name>
+  <authority_short_name>Warringah</authority_short_name>
+  <applications>
+    <application>
+      <council_reference>DA2013/1014</council_reference>
+      <address>22 Grace Avenue, FRENCHS FOREST NSW 2086</address>
+      <description>Alterations and Additions</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=603341</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=603341</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/1013</council_reference>
+      <address>13 Robert Street, FRESHWATER NSW 2096</address>
+      <description>Alterations and Additions</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=603321</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=603321</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/1012</council_reference>
+      <address>50 Lawrence Street, FRESHWATER NSW 2096</address>
+      <description>Alterations and Additions</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=603308</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=603308</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/1007</council_reference>
+      <address>8 Lisle Street, NARRABEEN NSW 2101</address>
+      <description>Alterations and Additions</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=603209</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=603209</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/1006</council_reference>
+      <address>14 Lindley Avenue, NARRABEEN NSW 2101</address>
+      <description>Alterations and Additions</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=603198</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=603198</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/1004</council_reference>
+      <address>13 Rose Avenue, WHEELER HEIGHTS NSW 2097</address>
+      <description>Alterations and Additions</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602981</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602981</comment_url>
+      <date_received>2013-08-26</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/1003</council_reference>
+      <address>22 Ozone Parade, DEE WHY NSW 2099</address>
+      <description>Alterations and Additions</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602930</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602930</comment_url>
+      <date_received>2013-08-26</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/1002</council_reference>
+      <address>27 Wetherill Street, NARRABEEN NSW 2101</address>
+      <description>Alterations and Additions</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602900</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602900</comment_url>
+      <date_received>2013-08-26</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0999</council_reference>
+      <address>1237 / 0 Forest Way, FRENCHS FOREST NSW 2086</address>
+      <description>Alterations and Additions</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602752</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602752</comment_url>
+      <date_received>2013-08-23</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0995</council_reference>
+      <address>194 Harbord Road, BROOKVALE NSW 2100</address>
+      <description>Alterations and Additions</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602630</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602630</comment_url>
+      <date_received>2013-08-22</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0993</council_reference>
+      <address>58 Towradgi Street, NARRAWEENA NSW 2099</address>
+      <description>Alterations and additions to a dwelling house</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602404</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602404</comment_url>
+      <date_received>2013-08-21</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0992</council_reference>
+      <address>7 Ballyshannon Road, KILLARNEY HEIGHTS NSW 2087</address>
+      <description>Alterations and additions to a dwelling house</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602369</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602369</comment_url>
+      <date_received>2013-08-21</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0986</council_reference>
+      <address>21 Dympna Street, COLLAROY NSW 2097</address>
+      <description>Alterations and additions to existing dwelling house</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602243</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602243</comment_url>
+      <date_received>2013-08-21</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0984</council_reference>
+      <address>5 Randall Court, COLLAROY PLATEAU NSW 2097</address>
+      <description>Alterations and additions to a dwelling house and construction of fencing</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602162</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602162</comment_url>
+      <date_received>2013-08-20</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0983</council_reference>
+      <address>3 Randall Court, COLLAROY PLATEAU NSW 2097</address>
+      <description>Alterations and additions to a dwelling house</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602159</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602159</comment_url>
+      <date_received>2013-08-20</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0981</council_reference>
+      <address>40 Cook Street, FORESTVILLE NSW 2087</address>
+      <description>Construction of an awning</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602064</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602064</comment_url>
+      <date_received>2013-08-20</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0980</council_reference>
+      <address>1 / 0 Veterans Parade, WHEELER HEIGHTS NSW 2097</address>
+      <description>Installation of Fire Sprinkler System at the existing aged care facilities.</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602045</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602045</comment_url>
+      <date_received>2013-08-20</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0980</council_reference>
+      <address>1 / 0 Veterans Parade, WHEELER HEIGHTS NSW 2097</address>
+      <description>Installation of Fire Sprinkler System at the existing aged care facilities.</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602045</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602045</comment_url>
+      <date_received>2013-08-20</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0980</council_reference>
+      <address>1 / 0 Veterans Parade, WHEELER HEIGHTS NSW 2097</address>
+      <description>Installation of Fire Sprinkler System at the existing aged care facilities.</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602045</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602045</comment_url>
+      <date_received>2013-08-20</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0980</council_reference>
+      <address>1 / 0 Veterans Parade, WHEELER HEIGHTS NSW 2097</address>
+      <description>Installation of Fire Sprinkler System at the existing aged care facilities.</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602045</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602045</comment_url>
+      <date_received>2013-08-20</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0980</council_reference>
+      <address>1 / 0 Veterans Parade, WHEELER HEIGHTS NSW 2097</address>
+      <description>Installation of Fire Sprinkler System at the existing aged care facilities.</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602045</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602045</comment_url>
+      <date_received>2013-08-20</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0980</council_reference>
+      <address>1 / 0 Veterans Parade, WHEELER HEIGHTS NSW 2097</address>
+      <description>Installation of Fire Sprinkler System at the existing aged care facilities.</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602045</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602045</comment_url>
+      <date_received>2013-08-20</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0975</council_reference>
+      <address>50 Veterans Parade, WHEELER HEIGHTS NSW 2097</address>
+      <description>Demolition works and construction of a garage</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601858</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601858</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0969</council_reference>
+      <address>25 William Street, NORTH MANLY NSW 2100</address>
+      <description>Alterations and additions to a dwelling house</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601767</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601767</comment_url>
+      <date_received>2013-08-16</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0966</council_reference>
+      <address>18 Kendal Crescent, WHEELER HEIGHTS NSW 2097</address>
+      <description>Alterations and additions to a dwelling house</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601705</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601705</comment_url>
+      <date_received>2013-08-16</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0965</council_reference>
+      <address>36 Lynwood Avenue, CROMER NSW 2099</address>
+      <description>Alterations and additions to a dwelling house</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601671</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601671</comment_url>
+      <date_received>2013-08-16</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0964</council_reference>
+      <address>53 May Road, NARRAWEENA NSW 2099</address>
+      <description>Alterations and additions to a dual occupancy development</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601662</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601662</comment_url>
+      <date_received>2013-08-16</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0963</council_reference>
+      <address>45 Tristram Road, BEACON HILL NSW 2100</address>
+      <description>Alterations and additions to a dwelling house</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601654</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601654</comment_url>
+      <date_received>2013-08-16</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0961</council_reference>
+      <address>37 Robert Street, FRESHWATER NSW 2096</address>
+      <description>Alterations and additions to a dwelling house and construction of a swimming pool</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601619</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601619</comment_url>
+      <date_received>2013-08-16</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0960</council_reference>
+      <address>6 Blackwood Road, NORTH CURL CURL NSW 2099</address>
+      <description>Construction of a carport</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601611</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601611</comment_url>
+      <date_received>2013-08-16</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0956</council_reference>
+      <address>20 Bangaroo Street, NORTH BALGOWLAH NSW 2093</address>
+      <description>Alterations and additions to a dwelling house</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601501</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601501</comment_url>
+      <date_received>2013-08-15</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0953</council_reference>
+      <address>147 Forest Way, BELROSE NSW 2085</address>
+      <description>Alterations and additions to a dwelling house</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601371</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601371</comment_url>
+      <date_received>2013-08-15</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0949</council_reference>
+      <address>5 Meredith Place, FRENCHS FOREST NSW 2086</address>
+      <description>Construction of a carport</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601256</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601256</comment_url>
+      <date_received>2013-08-14</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0994</council_reference>
+      <address>19 / 34 Campbell Avenue, CROMER NSW 2099</address>
+      <description>Use of premises as an industry (Microbrewery)</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602598</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602598</comment_url>
+      <date_received>2013-08-22</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0952</council_reference>
+      <address>823 Pittwater Road, DEE WHY NSW 2099</address>
+      <description>Use of premises as a Dog Grooming Salon</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601337</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601337</comment_url>
+      <date_received>2013-08-14</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0962</council_reference>
+      <address>40  - 42 Hendy Avenue, COLLAROY NSW 2097</address>
+      <description>Demolition works</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601632</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601632</comment_url>
+      <date_received>2013-08-16</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0962</council_reference>
+      <address>40  - 42 Hendy Avenue, COLLAROY NSW 2097</address>
+      <description>Demolition works</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601632</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601632</comment_url>
+      <date_received>2013-08-16</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0962</council_reference>
+      <address>40  - 42 Hendy Avenue, COLLAROY NSW 2097</address>
+      <description>Demolition works</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601632</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601632</comment_url>
+      <date_received>2013-08-16</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/1010</council_reference>
+      <address>12 Roger Street, BROOKVALE NSW 2100</address>
+      <description>New</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=603272</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=603272</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0982</council_reference>
+      <address>44 Wyadra Avenue, FRESHWATER NSW 2096</address>
+      <description>Construction of a dwelling house</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602127</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602127</comment_url>
+      <date_received>2013-08-20</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0974</council_reference>
+      <address>31 Foam Street, FRESHWATER NSW 2096</address>
+      <description>Demolition works and construction of a new dwelling house and swimming pool</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601829</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601829</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0974</council_reference>
+      <address>31 Foam Street, FRESHWATER NSW 2096</address>
+      <description>Demolition works and construction of a new dwelling house and swimming pool</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601829</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601829</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0973</council_reference>
+      <address>27 Foam Street, FRESHWATER NSW 2096</address>
+      <description>Demolition works and construction of a new dwelling house and swimming pool</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601825</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601825</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0973</council_reference>
+      <address>27 Foam Street, FRESHWATER NSW 2096</address>
+      <description>Demolition works and construction of a new dwelling house and swimming pool</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601825</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601825</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0972</council_reference>
+      <address>27 Foam Street, FRESHWATER NSW 2096</address>
+      <description>Demolition works and construction of a new dwelling house and swimming pool</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601821</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601821</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0972</council_reference>
+      <address>27 Foam Street, FRESHWATER NSW 2096</address>
+      <description>Demolition works and construction of a new dwelling house and swimming pool</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601821</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601821</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/1011</council_reference>
+      <address>9 James Street, ALLAMBIE HEIGHTS NSW 2100</address>
+      <description>Subdivision</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=603306</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=603306</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0988</council_reference>
+      <address>6 Narrabeen Street, NARRABEEN NSW 2101</address>
+      <description>Alterations and additions to a building, construction of fencing, use of premises as a dual occupancy and strata subdivision</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602283</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602283</comment_url>
+      <date_received>2013-08-21</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0959</council_reference>
+      <address>40 Carnarvon Drive, FRENCHS FOREST NSW 2086</address>
+      <description>Subdivision of land</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601585</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601585</comment_url>
+      <date_received>2013-08-16</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/1009</council_reference>
+      <address>104 Delmar Parade, DEE WHY NSW 2099</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=603270</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=603270</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/1008</council_reference>
+      <address>22 Norfolk Avenue, COLLAROY NSW 2097</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=603230</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=603230</comment_url>
+      <date_received>2013-08-27</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/1005</council_reference>
+      <address>11 Loretta Place, BELROSE NSW 2085</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602987</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602987</comment_url>
+      <date_received>2013-08-26</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/1001</council_reference>
+      <address>337 Mona Vale Road, TERREY HILLS NSW 2084</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602762</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602762</comment_url>
+      <date_received>2013-08-23</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/1000</council_reference>
+      <address>83 A Prince Charles Road, FRENCHS FOREST NSW 2086</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602754</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602754</comment_url>
+      <date_received>2013-08-23</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0998</council_reference>
+      <address>3 Hilmer Street, FRENCHS FOREST NSW 2086</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602742</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602742</comment_url>
+      <date_received>2013-08-23</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0997</council_reference>
+      <address>31 Angophora Crescent, FORESTVILLE NSW 2087</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602735</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602735</comment_url>
+      <date_received>2013-08-23</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0996</council_reference>
+      <address>17 Bentley Avenue, FORESTVILLE NSW 2087</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602697</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602697</comment_url>
+      <date_received>2013-08-23</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0991</council_reference>
+      <address>14 Tamworth Place, ALLAMBIE HEIGHTS NSW 2100</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602354</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602354</comment_url>
+      <date_received>2013-08-21</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0990</council_reference>
+      <address>3 Olga Place, BELROSE NSW 2085</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602311</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602311</comment_url>
+      <date_received>2013-08-21</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0989</council_reference>
+      <address>13 Patanga Road, FRENCHS FOREST NSW 2086</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602295</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602295</comment_url>
+      <date_received>2013-08-21</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0987</council_reference>
+      <address>10 Akora Street, FRENCHS FOREST NSW 2086</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602253</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602253</comment_url>
+      <date_received>2013-08-21</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0985</council_reference>
+      <address>558 Warringah Road, FORESTVILLE NSW 2087</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=602189</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=602189</comment_url>
+      <date_received>2013-08-20</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0979</council_reference>
+      <address>13 Randall Court, COLLAROY PLATEAU NSW 2097</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601971</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601971</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0978</council_reference>
+      <address>54 Playfair Road, NORTH CURL CURL NSW 2099</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601955</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601955</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0977</council_reference>
+      <address>18 Normandy Road, ALLAMBIE HEIGHTS NSW 2100</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601911</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601911</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0976</council_reference>
+      <address>556  - 562 Pittwater Road, NORTH MANLY NSW 2100</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601887</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601887</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0971</council_reference>
+      <address>24 Prescott Avenue, DEE WHY NSW 2099</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601806</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601806</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0970</council_reference>
+      <address>33 Towradgi Street, NARRAWEENA NSW 2099</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601803</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601803</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0968</council_reference>
+      <address>20 Lockwood Avenue, FRENCHS FOREST NSW 2086</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601753</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601753</comment_url>
+      <date_received>2013-08-16</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0967</council_reference>
+      <address>6 Nalya Road, NARRAWEENA NSW 2099</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601728</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601728</comment_url>
+      <date_received>2013-08-16</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0958</council_reference>
+      <address>8 Ilikai Place, DEE WHY NSW 2099</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601517</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601517</comment_url>
+      <date_received>2013-08-15</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0957</council_reference>
+      <address>92 Myoora Road, TERREY HILLS NSW 2084</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601509</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601509</comment_url>
+      <date_received>2013-08-15</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0955</council_reference>
+      <address>1 / 0 Veterans Parade, WHEELER HEIGHTS NSW 2097</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601456</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601456</comment_url>
+      <date_received>2013-08-15</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0955</council_reference>
+      <address>1 / 0 Veterans Parade, WHEELER HEIGHTS NSW 2097</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601456</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601456</comment_url>
+      <date_received>2013-08-15</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0955</council_reference>
+      <address>1 / 0 Veterans Parade, WHEELER HEIGHTS NSW 2097</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601456</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601456</comment_url>
+      <date_received>2013-08-15</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0955</council_reference>
+      <address>1 / 0 Veterans Parade, WHEELER HEIGHTS NSW 2097</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601456</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601456</comment_url>
+      <date_received>2013-08-15</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0955</council_reference>
+      <address>1 / 0 Veterans Parade, WHEELER HEIGHTS NSW 2097</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601456</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601456</comment_url>
+      <date_received>2013-08-15</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0955</council_reference>
+      <address>1 / 0 Veterans Parade, WHEELER HEIGHTS NSW 2097</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601456</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601456</comment_url>
+      <date_received>2013-08-15</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0954</council_reference>
+      <address>1 Pusan Place, BELROSE NSW 2085</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601430</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601430</comment_url>
+      <date_received>2013-08-15</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0951</council_reference>
+      <address>10 Avon Road, DEE WHY NSW 2099</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601303</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601303</comment_url>
+      <date_received>2013-08-14</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0950</council_reference>
+      <address>5 Riverview Parade, NORTH MANLY NSW 2100</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601280</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601280</comment_url>
+      <date_received>2013-08-14</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0948</council_reference>
+      <address>16 Allenby Park Parade, ALLAMBIE HEIGHTS NSW 2100</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601242</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601242</comment_url>
+      <date_received>2013-08-14</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0947</council_reference>
+      <address>19 Townsend Avenue, FRENCHS FOREST NSW 2086</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601204</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601204</comment_url>
+      <date_received>2013-08-14</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0946</council_reference>
+      <address>11 / 132  - 138 Pacific Parade, DEE WHY NSW 2099</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601168</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601168</comment_url>
+      <date_received>2013-08-14</date_received>
+    </application>
+    <application>
+      <council_reference>DA2013/0945</council_reference>
+      <address>3 Burringbar Street, NORTH BALGOWLAH NSW 2093</address>
+      <description>Tree Application</description>
+      <info_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=601160</info_url>
+      <comment_url>http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=601160</comment_url>
+      <date_received>2013-08-14</date_received>
+    </application>
+  </applications>
+</planning>
