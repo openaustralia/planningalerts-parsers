@@ -1,5 +1,4 @@
-$:.unshift "#{File.dirname(__FILE__)}/../../lib"
-require 'planning_authority_results'
+require 'spec_helper'
 
 describe PlanningAuthorityResults do
   it "should hold multiple development applications" do

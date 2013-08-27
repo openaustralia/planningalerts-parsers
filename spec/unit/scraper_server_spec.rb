@@ -1,6 +1,4 @@
-$:.unshift "#{File.dirname(__FILE__)}/../.."
 require 'spec_helper'
-require 'scraper_server'
 
 describe "Server for scraper XML" do
   include Rack::Test::Methods

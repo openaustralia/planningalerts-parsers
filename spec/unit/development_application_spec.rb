@@ -1,5 +1,4 @@
-$:.unshift "#{File.dirname(__FILE__)}/../../lib"
-require 'development_application'
+require 'spec_helper'
 
 describe DevelopmentApplication do
   before(:each) do
