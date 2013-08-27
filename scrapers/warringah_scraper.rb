@@ -3,12 +3,12 @@ require 'scraper'
 class WarringahScraper < Scraper
   def applications(date)
     # XML feed of the applications submitted in the last 14 days
-    url = "http://www.warringah.nsw.gov.au/ePlanning/pages/xc.track/SearchApplication.aspx?o=xml&d=last14days&t=DevApp"
+    url = "http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?o=xml&d=last14days&t=DevApp"
     page = Nokogiri::XML(agent.get(url).body)
     page.search('Application').map do |app|
       data = {
-        :info_url => "http://www.warringah.nsw.gov.au/ePlanning/pages/XC.Track/SearchApplication.aspx?id=" + app.at('ApplicationId').inner_text,
-        :comment_url => "http://www.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=#{app.at('ApplicationId').inner_text}",
+        :info_url => "http://eservices2.warringah.nsw.gov.au/ePlanning/Public/XC.Track/SearchApplication.aspx?id=" + app.at('ApplicationId').inner_text,
+        :comment_url => "http://eservices2.warringah.nsw.gov.au/ePlanning/Pages/XC.Track/Submission.aspx?id=#{app.at('ApplicationId').inner_text}",
         :application_id => app.at('ReferenceNumber').inner_text,
         :date_received => Date.parse(app.at('LodgementDate').inner_text)
       }
