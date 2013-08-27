@@ -18,8 +18,8 @@ describe PlanningAuthorityResults do
   
   it "should be serialisable to xml" do
     r = PlanningAuthorityResults.new(:name => "Blue Mountains City Council", :short_name => "Blue Mountains")
-    da1 = mock("DevelopmentApplication")
-    da2 = mock("DevelopmentApplication")
+    da1 = double("DevelopmentApplication")
+    da2 = double("DevelopmentApplication")
     da1.should_receive(:to_xml).and_return("    Some XML\n")
     da2.should_receive(:to_xml).and_return("    Some more XML\n")    
     r << da1

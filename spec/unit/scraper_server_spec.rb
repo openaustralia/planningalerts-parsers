@@ -11,7 +11,7 @@ describe "Server for scraper XML" do
     @brisbane = BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD")
     # Restrict parsers to just two
     Scrapers.stub!(:scrapers).and_return([@brisbane])
-    @results = mock("PlanningAuthorityResults")
+    @results = double("PlanningAuthorityResults")
   end
   
   it "should append the name of the state to the end of the long name" do
