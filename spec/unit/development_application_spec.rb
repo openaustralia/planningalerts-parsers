@@ -78,17 +78,17 @@ describe DevelopmentApplication, "multiple addresses" do
   <council_reference>27B/6</council_reference>
   <address>First</address>
   <description>foo</description>
-  <info_url></info_url>
-  <comment_url></comment_url>
-  <date_received></date_received>
+  <info_url/>
+  <comment_url/>
+  <date_received/>
 </application>
 <application>
   <council_reference>27B/6</council_reference>
   <address>Second</address>
   <description>foo</description>
-  <info_url></info_url>
-  <comment_url></comment_url>
-  <date_received></date_received>
+  <info_url/>
+  <comment_url/>
+  <date_received/>
 </application>
     EOF
   end
