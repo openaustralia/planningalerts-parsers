@@ -15,7 +15,7 @@ class WarringahScraper < Scraper
       # Some DAs have good descriptions whilst others just have
       # "<insert here>" so we search for "<insert" and if it's there we
       # use another more basic description
-      if app.at('ApplicationDetails').nil? || app.at('ApplicationDetails').inner_text.downcase.index(/<insert/)
+      if app.at('ApplicationDetails').nil? || app.at('ApplicationDetails').inner_text.downcase.index(/(<|\()insert/)
         data[:description] = app.at('NatureOfApplication').inner_text
       else
         data[:description] = app.at('ApplicationDetails').inner_text
