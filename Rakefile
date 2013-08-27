@@ -6,7 +6,7 @@ Bundler.require
 task :default => :spec
 
 RSpec::Core::RakeTask.new do |t|
-  t.pattern = FileList['spec/unit/*.rb']
+  t.pattern = FileList['spec/**/*_spec.rb']
 end
 
 desc 'Outputs the result of scraping a particular planning authority to stdout, useful during development'
