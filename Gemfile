@@ -12,6 +12,7 @@ gem 'sinatra', '~> 1.3.5'
 gem 'json'
 gem 'capistrano'
 gem 'rvm-capistrano'
+gem 'scraperwiki'
 
 group :test do
   gem 'rspec'
