@@ -10,7 +10,7 @@ describe "Server for scraper XML" do
   before(:each) do
     @brisbane = BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD")
     # Restrict parsers to just two
-    Scrapers.stub!(:scrapers).and_return([@brisbane])
+    Scrapers.stub(:scrapers).and_return([@brisbane])
     @results = double("PlanningAuthorityResults")
   end
   
