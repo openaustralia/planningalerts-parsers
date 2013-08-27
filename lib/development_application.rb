@@ -1,5 +1,3 @@
-require 'simple_struct'
-
 class DevelopmentApplication < SimpleStruct
   add_attributes :application_id, :description, :address, :addresses, :on_notice_from, :on_notice_to, :info_url, :comment_url, :date_received
   

@@ -35,7 +35,6 @@ describe "Server for scraper XML" do
     <authority_name>Brisbane City Council</authority_name>
     <authority_short_name>Brisbane</authority_short_name>
     <state>QLD</state>
-    <scraperwiki_name></scraperwiki_name>
     <url>http://example.org/brisbane?year={year}&amp;month={month}&amp;day={day}</url>
   </scraper>
 </scrapers>
