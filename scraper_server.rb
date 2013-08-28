@@ -11,7 +11,8 @@ class ScraperServer < Sinatra::Base
     :email => {
       :sender_address => 'contact@planningalerts.org.au',
       :exception_recipients => %w{web-administrators@openaustralia.org},
-      :smtp_settings => { :address => "localhost",
+      :smtp_settings => { :email_prefix => "[planningalerts-parsers exception] ",
+                          :address => "localhost",
                           :openssl_verify_mode => OpenSSL::SSL::VERIFY_NONE,
                           :port => (settings.environment == :production ? 25 : 1025) }
     }
