@@ -1,5 +1,4 @@
-$:.unshift "#{File.dirname(__FILE__)}/../../lib"
-require 'date_with_non_american_bias'
+require 'spec_helper'
 
 describe Date do
   it "should parse regular dates in the normal way you would expect" do

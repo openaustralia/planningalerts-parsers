@@ -1,5 +1,4 @@
-$:.unshift "#{File.dirname(__FILE__)}/../../lib"
-require 'development_application'
+require 'spec_helper'
 
 describe DevelopmentApplication do
   before(:each) do
@@ -79,17 +78,17 @@ describe DevelopmentApplication, "multiple addresses" do
   <council_reference>27B/6</council_reference>
   <address>First</address>
   <description>foo</description>
-  <info_url></info_url>
-  <comment_url></comment_url>
-  <date_received></date_received>
+  <info_url/>
+  <comment_url/>
+  <date_received/>
 </application>
 <application>
   <council_reference>27B/6</council_reference>
   <address>Second</address>
   <description>foo</description>
-  <info_url></info_url>
-  <comment_url></comment_url>
-  <date_received></date_received>
+  <info_url/>
+  <comment_url/>
+  <date_received/>
 </application>
     EOF
   end

@@ -16,11 +16,11 @@ class WollongongScraper < Scraper
 
   # The main url for the planning system which can be reached directly without getting a stupid session timed out error
   def enquiry_url
-    "https://epathway.wollongong.nsw.gov.au/ePathway/Production/Web/GeneralEnquiry/EnquiryLists.aspx"
+    "http://epathway.wollongong.nsw.gov.au/ePathway/Production/Web/GeneralEnquiry/EnquiryLists.aspx"
   end
 
-  # Returns a list of URLs for all the applications submitted on the given date
-  def urls(date)
+  # Returns a list of URLs for all the applications on exhibition
+  def urls
     # Get the main page and ask for the list of DAs on exhibition
     page = agent.get(enquiry_url)
     form = page.forms.first
@@ -40,7 +40,7 @@ class WollongongScraper < Scraper
     (1..number_of_pages).each do |page_no|
       # Don't refetch the first page
       if page_no > 1
-        page = agent.get("https://epathway.wollongong.nsw.gov.au/ePathway/Production/Web/GeneralEnquiry/EnquirySummaryView.aspx?PageNumber=#{page_no}")
+        page = agent.get("http://epathway.wollongong.nsw.gov.au/ePathway/Production/Web/GeneralEnquiry/EnquirySummaryView.aspx?PageNumber=#{page_no}")
       end
       # Get a list of urls on this page
       urls += extract_urls_from_page(page)
@@ -54,10 +54,9 @@ class WollongongScraper < Scraper
   end
 
   def applications(date)
-    urls = urls(date)
     urls.map do |url|
       # Get application page with a referrer or we get an error page
-      page = agent.get(url, URI.parse(enquiry_url))
+      page = agent.get(url, [], URI.parse(enquiry_url))
 
       table = page.search('table#ctl00_MainBodyContent_DynamicTable > tr')[0].search('td')[0].search('table')[2]
 

@@ -1,5 +1,4 @@
-$:.unshift "#{File.dirname(__FILE__)}/../../lib"
-require 'simple_struct'
+require 'spec_helper'
 
 describe SimpleStruct do
   before(:each) do

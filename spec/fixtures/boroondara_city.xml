@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<planning>
+  <authority_name>Boroondara City Council, VIC</authority_name>
+  <authority_short_name>Boroondara (City)</authority_short_name>
+  <applications>
+    <application>
+      <council_reference>PP13/00799</council_reference>
+      <address>33 May Street KEW VIC 3101</address>
+      <description>Extension of a dwelling on a lot less than 500 square metres.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475946</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-23</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00800</council_reference>
+      <address>250 Camberwell Road CAMBERWELL VIC 3124</address>
+      <description>Installation and display advertising signage including business identification and above verandah and internally illuminated.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475958</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-22</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00798</council_reference>
+      <address>12 Morang Road HAWTHORN VIC 3122</address>
+      <description>Part demolition and construction of an extension to an existing dwelling on a lot less than 500 square metres and in a Heritage Overlay.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475941</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-22</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00791</council_reference>
+      <address>1 / 89 Auburn Road HAWTHORN VIC 3122</address>
+      <description>Use of an existing building as a food and drink premises.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475846</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-22</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00789</council_reference>
+      <address>8 The Boulevard HAWTHORN VIC 3122</address>
+      <description>Partial demolition and construction of buildings and works to an existing dwellings on a Heritage Overlay.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475828</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-22</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00788</council_reference>
+      <address>165 Burwood Road HAWTHORN VIC 3122</address>
+      <description></description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475719</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-22</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00795</council_reference>
+      <address>92 High Street GLEN IRIS VIC 3146</address>
+      <description>Subdivision of the land into two (2) lots.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475883</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-21</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00794</council_reference>
+      <address>34 Linda Crescent HAWTHORN VIC 3122</address>
+      <description>Installation of CCTV equipment in a Heritage Overlay.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475868</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-21</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00793</council_reference>
+      <address>39 Doncaster Road BALWYN NORTH VIC 3104</address>
+      <description>Part demolition and construction of fence and driveway extension associated with existing dwelling in a Heritage Overlay.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475859</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-21</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00790</council_reference>
+      <address>25 Harcourt Street HAWTHORN EAST VIC 3123</address>
+      <description>Part demolition and construct alterations and additions to an existing dwelling in a Heritage Overlay.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475830</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-21</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00792</council_reference>
+      <address>1 / 49 Wandsworth Road SURREY HILLS VIC 3127</address>
+      <description>Extend an existing dwelling on a lot less than 500 square metres.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475851</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-20</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00787</council_reference>
+      <address>145 Cotham Road KEW VIC 3101</address>
+      <description>Erection and display of signage exceeding 10 square metres publicising the sale of more than 20 lots.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475585</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-20</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00786</council_reference>
+      <address>676  - 678 Burke Road CAMBERWELL VIC 3124</address>
+      <description>Externally paint a building in a Heritage Overlay.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475570</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-20</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00785</council_reference>
+      <address>2 Nolan Avenue KEW VIC 3101</address>
+      <description>Construction of buildings and works associated with an existing education centre in a Heritage Overlay and Development Plan Overlay.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475566</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-20</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00779</council_reference>
+      <address>601 Whitehorse Road SURREY HILLS VIC 3127</address>
+      <description>Subdivision of the land into four (4) lots.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475545</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-20</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00797</council_reference>
+      <address>85 Camberwell Road HAWTHORN EAST VIC 3123</address>
+      <description>Construction of buildings and works (including a canopy over the road reserve) in a Commercial 1 Zone, alter access to a Road Zone Category 1 and consent for car parking associated with accommodation (serviced apartments).</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475900</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00796</council_reference>
+      <address>51 Lansell Crescent CAMBERWELL VIC 3124</address>
+      <description>Part demolition and extend an existing dwelling in a Heritage Overlay.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475893</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00784</council_reference>
+      <address>15 Sutton Street BALWYN NORTH VIC 3104</address>
+      <description>Construction of two dwellings on a lot and subdivision into two lots.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475563</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00783</council_reference>
+      <address>24 Aberdeen Street HAWTHORN EAST VIC 3123</address>
+      <description>Construction of a front fence greater than 1.5 metres in height within 3 metres of the street associated with an existing dwelling on a lot less than 500 square metres.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475557</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00782</council_reference>
+      <address>14 Oxley Road HAWTHORN VIC 3122</address>
+      <description>Construction of a swimming pool and associated fencing and a deck associated with an existing dwelling in a Heritage Overlay and Special Building Overlay.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475554</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00778</council_reference>
+      <address>41 White Avenue KEW EAST VIC 3102</address>
+      <description>Construct a single dwelling in a Land Subject to Inundation Overlay.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475529</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00776</council_reference>
+      <address>71 Winfield Road BALWYN NORTH VIC 3104</address>
+      <description>Subdivide the land into three (3) lots.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475515</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00775</council_reference>
+      <address>525 Whitehorse Road SURREY HILLS VIC 3127</address>
+      <description>Subdivide the land into sixteen (16) lots.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475511</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00774</council_reference>
+      <address>807 Glenferrie Road HAWTHORN VIC 3122</address>
+      <description>Erection and display of business identification signage (including internally illuminated signage).</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475503</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00772</council_reference>
+      <address>796 Glenferrie Road HAWTHORN VIC 3122</address>
+      <description>Part demolition and construction of buildings and works (window alterations) in a Commercial 1 Zone and Heritage Overlay, and reduction in the car parking requirement associated with new dwelling use.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475356</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00770</council_reference>
+      <address>6 Lilydale Grove HAWTHORN EAST VIC 3123</address>
+      <description>Construction of buildings and works to an existing dwelling in a Commercial 1 Zone, a Design and Development Overlay and an Environmental Audit Overlay.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475337</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+    <application>
+      <council_reference>PP13/00769</council_reference>
+      <address>580  - 580 Glenferrie Road HAWTHORN VIC 3122</address>
+      <description>Erection and display of business identification signage.</description>
+      <info_url>http://eservices.boroondara.vic.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=475329</info_url>
+      <comment_url>http://boroondara.vic.gov.au/your_council/building-planning/stat-planning/resources/objections</comment_url>
+      <date_received>2013-08-19</date_received>
+    </application>
+  </applications>
+</planning>

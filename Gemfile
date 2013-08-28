@@ -1,19 +1,23 @@
 source 'https://rubygems.org'
 
-gem 'mechanize', '~> 1.0'
+gem 'mechanize'
 gem 'htmlentities'
 gem 'rake'
 gem 'builder'
-gem 'sinatra'
+
+gem 'exception_notification'
+gem 'thin', '~> 1.5.1'
+gem 'sinatra', '~> 1.3.5'
+
 gem 'json'
-gem 'rack-contrib'
-gem 'tmail'
 gem 'capistrano'
 gem 'rvm-capistrano'
 
 group :test do
   gem 'rspec'
   gem 'rack-test'
+  gem 'webmock', '~> 1.11.0' # For VCR
+  gem 'vcr'
 end
 
 group :development do
