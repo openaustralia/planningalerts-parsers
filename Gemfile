@@ -16,7 +16,7 @@ gem 'rvm-capistrano'
 group :test do
   gem 'rspec'
   gem 'rack-test'
-  gem 'webmock' # For VCR
+  gem 'webmock', '~> 1.11.0' # For VCR
   gem 'vcr'
 end
 
