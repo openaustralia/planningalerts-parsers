@@ -57,7 +57,7 @@ class WollongongScraper < Scraper
     urls = urls(date)
     urls.map do |url|
       # Get application page with a referrer or we get an error page
-      page = agent.get(url, URI.parse(enquiry_url))
+      page = agent.get(url, [], URI.parse(enquiry_url))
 
       table = page.search('table#ctl00_MainBodyContent_DynamicTable > tr')[0].search('td')[0].search('table')[2]
 
