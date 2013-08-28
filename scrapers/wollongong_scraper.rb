@@ -19,8 +19,8 @@ class WollongongScraper < Scraper
     "http://epathway.wollongong.nsw.gov.au/ePathway/Production/Web/GeneralEnquiry/EnquiryLists.aspx"
   end
 
-  # Returns a list of URLs for all the applications submitted on the given date
-  def urls(date)
+  # Returns a list of URLs for all the applications on exhibition
+  def urls
     # Get the main page and ask for the list of DAs on exhibition
     page = agent.get(enquiry_url)
     form = page.forms.first
@@ -54,7 +54,6 @@ class WollongongScraper < Scraper
   end
 
   def applications(date)
-    urls = urls(date)
     urls.map do |url|
       # Get application page with a referrer or we get an error page
       page = agent.get(url, [], URI.parse(enquiry_url))
