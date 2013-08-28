@@ -6,7 +6,7 @@ require 'rvm/capistrano'
 
 set :rvm_ruby_string, :local
 
-set :application, "planningalerts.org.au/parsers"
+set :application, "scrapers.planningalerts.org.au"
 set :repository,  "git://github.com/openaustralia/planningalerts-parsers.git"
 
 role :web, "kedumba.openaustraliafoundation.org.au"
@@ -17,7 +17,7 @@ set :scm, :git
 set :stage, "test" unless exists? :stage
 
 if stage == "production"
-  set :deploy_to, "/srv/www/www.#{application}"
+  set :deploy_to, "/srv/www/#{application}"
 elsif stage == "test"
   set :deploy_to, "/srv/www/test.#{application}"
   #set :branch, "test"
