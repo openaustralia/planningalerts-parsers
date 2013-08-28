@@ -18,9 +18,10 @@ set :stage, "test" unless exists? :stage
 
 if stage == "production"
   set :deploy_to, "/srv/www/#{application}"
+  set :branch, "master" unless exists? :branch
 elsif stage == "test"
   set :deploy_to, "/srv/www/test.#{application}"
-  #set :branch, "test"
+  set :branch, "test" unless exists? :branch
 end
 
 namespace :deploy do
