@@ -4,10 +4,12 @@ gem 'mechanize'
 gem 'htmlentities'
 gem 'rake'
 gem 'builder'
-gem 'sinatra'
+
+gem 'exception_notification'
+gem 'thin', '~> 1.5.1'
+gem 'sinatra', '~> 1.3.5'
+
 gem 'json'
-gem 'rack-contrib'
-gem 'tmail'
 gem 'capistrano'
 gem 'rvm-capistrano'
 

@@ -4,7 +4,7 @@ describe "Server for scraper XML" do
   include Rack::Test::Methods
 
   def app
-    Sinatra::Application
+    ScraperServer
   end
   
   before(:each) do
