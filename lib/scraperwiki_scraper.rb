@@ -3,7 +3,7 @@ require 'scraperwiki'
 class ScraperWikiScraper < Scraper
   def initialize(name, short_name, state)
     # Save the ScraperWiki DBs in /tmp for the moment
-    ScraperWiki.config = {:db => File.join(Dir.tmpdir, short_name + '.sqlite')}
+    ScraperWiki.config = {:db => File.join(Dir.tmpdir, short_name.downcase + '.sqlite')}
 
     super(name, short_name, state)
   end
