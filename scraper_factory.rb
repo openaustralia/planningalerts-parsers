@@ -34,7 +34,6 @@ module Scrapers
       LockyerValleyScraper.new("Lockyer Valley Regional Council", "Lockyer Valley", "QLD"),
       RedlandScraper.new("Redland City Council", "Redland", "QLD"),
       CGIScraper.new("Moreland City Council", "Moreland (City)", "VIC", "perl", "moreland.pl"),
-      ScraperWikiScraper.new("Marrickville Council", "Marrickville", "NSW"),
       ScraperWikiScraper.new("Bankstown City Council", "Bankstown", "NSW"),
       ScraperWikiScraper.new("Bellingen Shire Council", "Bellingen", "NSW"),
       ScraperWikiScraper.new("Blacktown City Council", "Blacktown", "NSW"),
