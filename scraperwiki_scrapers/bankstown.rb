@@ -36,7 +36,7 @@ def applications_search(date_range)
     if a.at('Determination/Date')
       record["on_notice_to"] = Date.parse(a.at('Determination/Date').inner_text).to_s
     end
-    if ScraperWiki.select("* from swdata where `council_reference`='#{record['council_reference']}'").empty? 
+    if (ScraperWiki.select("* from swdata where `council_reference`='#{record['council_reference']}'").empty? rescue true)
       ScraperWiki.save_sqlite(['council_reference'], record)
     else
       puts "Skipping already saved record " + record['council_reference']

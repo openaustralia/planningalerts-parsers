@@ -33,7 +33,7 @@ if not fullcontent.nil? and not fullcontent.search('div')[5].nil?
       }
         
       #p record
-      if ScraperWiki.select("* from swdata where `council_reference`='#{record['council_reference']}'").empty? 
+      if (ScraperWiki.select("* from swdata where `council_reference`='#{record['council_reference']}'").empty? rescue true)
         puts "Saving new record " + record['council_reference']
         ScraperWiki.save_sqlite(['council_reference'], record)
       else

@@ -27,7 +27,7 @@ das = doc.xpath('//channel/item').collect do |item|
 end
 
 das.each do |record|
-   if (ScraperWiki.select("* from swdata where `council_reference`='#{record['council_reference']}'").empty? rescue true) 
+   if (ScraperWiki.select("* from swdata where `council_reference`='#{record['council_reference']}'").empty? rescue true)
      ScraperWiki.save_sqlite(['council_reference'], record)
    else
      puts "Skipping already saved record " + record['council_reference']

@@ -31,7 +31,7 @@ def scrape_table(doc, comment_url)
       'description' => CGI::unescapeHTML(info_page.at('div#lblDetails').inner_html.split('<br>')[0].split('Description: ')[1].strip),
       'date_scraped' => Date.today.to_s
     }
-    if ScraperWiki.select("* from swdata where `council_reference`='#{record['council_reference']}'").empty? 
+    if (ScraperWiki.select("* from swdata where `council_reference`='#{record['council_reference']}'").empty? rescue true)
       ScraperWiki.save_sqlite(['council_reference'], record)
     else
       puts "Skipping already saved record " + record['council_reference']

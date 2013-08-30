@@ -84,7 +84,7 @@ a.get("http://www.ccc.tas.gov.au/page.aspx?u=1581") do |page|
           'info_url' => ("http://www.ccc.tas.gov.au/" + url).gsub(" ", "%20"),
           'comment_url' => 'mailto:clarence@ccc.tas.gov.au'
         }
-        if ScraperWiki.select("* from swdata where `council_reference`='#{record['council_reference']}'").empty? 
+        if (ScraperWiki.select("* from swdata where `council_reference`='#{record['council_reference']}'").empty? rescue true)
           ScraperWiki.save_sqlite(['council_reference'], record)
         else
           puts "Skipping already saved record " + record['council_reference']
