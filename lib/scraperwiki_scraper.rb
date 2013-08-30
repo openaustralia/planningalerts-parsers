@@ -9,11 +9,12 @@ class ScraperWikiScraper < Scraper
   end
 
   def applications(date)
+    require File.join(File.dirname(__FILE__), "..", "scraperwiki_scrapers", planning_authority_short_name_encoded + '.rb')
+
     begin
       results = ScraperWiki.select "* from swdata where `date_scraped`='#{date}'"
     rescue SqliteMagic::NoSuchTable
-      scrape
-      results = ScraperWiki.select "* from swdata where `date_scraped`='#{date}'"
+      results = []
     end
 
     results.map do |a|
@@ -27,9 +28,5 @@ class ScraperWikiScraper < Scraper
         :info_url => a["info_url"],
         :comment_url => a["comment_url"])
     end
-  end
-
-  def scrape
-    require File.join(File.dirname(__FILE__), "..", "scraperwiki_scrapers", @planning_authority_short_name.downcase + '.rb')
   end
 end
