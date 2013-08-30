@@ -55,10 +55,6 @@ def scrape_and_follow_next_link(doc, comment_url)
   end
 end
 
-ScraperWiki.save_metadata('authority_name', 'Blue Mountains City Council')
-ScraperWiki.save_metadata('authority_short', 'Blue Mountains')
-ScraperWiki.save_metadata('state', 'NSW')
-
 # Using Mechanize to grab the page because ScraperWiki.scrape bombed out on me
 agent = Mechanize.new do |a|
   a.verify_mode = OpenSSL::SSL::VERIFY_NONE
