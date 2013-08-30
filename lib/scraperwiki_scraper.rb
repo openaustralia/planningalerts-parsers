@@ -12,8 +12,8 @@ class ScraperWikiScraper < Scraper
     begin
       results = ScraperWiki.select "* from swdata where `date_scraped`='#{date}'"
     rescue SqliteMagic::NoSuchTable
-      # TODO: Populate the table by running the scraper
-      {}
+      scrape
+      results = ScraperWiki.select "* from swdata where `date_scraped`='#{date}'"
     end
 
     results.map do |a|
@@ -27,5 +27,9 @@ class ScraperWikiScraper < Scraper
         :info_url => a["info_url"],
         :comment_url => a["comment_url"])
     end
+  end
+
+  def scrape
+    require File.join(File.dirname(__FILE__), "..", "scraperwiki_scrapers", @planning_authority_short_name.downcase + '.rb')
   end
 end
