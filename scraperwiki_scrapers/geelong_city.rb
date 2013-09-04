@@ -10,12 +10,8 @@ table = page.at 'table#ctl00_MainContentPlaceHolder_GridView1'
 table.search('tr.table_body').each do |r|
   application_url = base_url + r.at('a').attr('href')
 
-  # Cargo culting: http://po-ru.com/diary/fixing-invalid-utf-8-in-ruby-revisited/
-  ic = Iconv.new('UTF-8//IGNORE', 'UTF-8')
-  valid_string = ic.iconv(ScraperWiki.scrape(application_url))
-
   # TODO: We don't need to scrape the detail page if we've already saved this DA
-  description = Nokogiri.parse(valid_string).at('#ctl00_MainContentPlaceHolder_FormView2_Label2').inner_text
+  description = Nokogiri.parse(ScraperWiki.scrape(application_url)).at('#ctl00_MainContentPlaceHolder_FormView2_Label2').inner_text
 
   # Some dates are empty
   on_notice_from_text = r.search('td')[3].inner_text
