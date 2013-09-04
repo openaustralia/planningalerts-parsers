@@ -1,5 +1,5 @@
 require "mechanize"
-require "scrapers/ruby_pdf_helper"
+require 'pdf_helper'
 
 info_url = "http://www.cityofperth.wa.gov.au/web/Business/Building-and-Development-Applications-Received/"
 

@@ -1,6 +1,6 @@
 require "open-uri"
 require 'nokogiri'
-require "scrapers/ruby_pdf_helper"
+require 'pdf_helper'
 
 info_url = "http://daps.planning.wa.gov.au/8.asp"
 url = "http://daps.planning.wa.gov.au/data/current%20dap%20applications/Current%20DAP%20Application.pdf"
