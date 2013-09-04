@@ -2,7 +2,7 @@ require 'mechanize'
 
 # date_range can be either :this_week or :last_week
 def applications_search(date_range)
-  search_url = "http://www.blacktown.nsw.gov.au/planning-and-development/development-online/development-applications/development-applications_home.cfm"
+  search_url = "http://apps.blacktown.nsw.gov.au/devonline/pDA.cfm"
   # For all the comment url's linking to this page because it has some info about how to comment on an application, etc..
   comment_url = "http://www.blacktown.nsw.gov.au/planning-and-development/development-online/development-online_home.cfm"
 
