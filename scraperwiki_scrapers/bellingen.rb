@@ -21,10 +21,13 @@ page = agent.get(url)
     details = (info_page/'//*[@id="lblDetails"]')
 
     council_reference = (info_page/'//*[@id="ctl03_lblHead"]').inner_text.split(' ')[0]
+    # Sometimes there are two addresses, just use the first until we support multiple addresses
+    address = (info_page/'//*[@id="lblLand"]').inner_text.strip.split("\r\n")[0]
+
     record = {
       'council_reference' => council_reference,
       'description'       => details.at("td").inner_text.split("\r")[1].strip[13..-1],
-      'address'           => (info_page/'//*[@id="lblLand"]').inner_text.strip[0..-4],
+      'address'           => address,
       'date_received'     => details.at("td").inner_html.split("<br>")[1].strip[11..-1],
       'info_url'          => info_page.uri.to_s,
       'comment_url'       => URI.escape("mailto:council@bellingen.nsw.gov.au?subject=Development Application Enquiry: #{council_reference}"),
