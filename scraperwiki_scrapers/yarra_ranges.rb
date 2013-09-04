@@ -39,8 +39,6 @@ idx_description       = nil
 idx_date_received     = nil
 idx_address           = nil
 
-table_exists = ScraperWiki.show_tables().length > 0
-
 while continue and summary_page
   p "Processing: Page #{page_num}..."
   
@@ -75,7 +73,7 @@ while continue and summary_page
     
     # p info
 
-    if !table_exists || ScraperWiki.select( "* from swdata where `council_reference` = '#{info['council_reference']}'" ).empty? 
+    if (ScraperWiki.select( "* from swdata where `council_reference` = '#{info['council_reference']}'" ).empty? rescue true)
       ScraperWiki.save_sqlite( ['council_reference'], info )
     else
       to_ignore = to_ignore + [ info['council_reference'] ]
