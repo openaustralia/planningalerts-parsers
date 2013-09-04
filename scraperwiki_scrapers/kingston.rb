@@ -8,7 +8,7 @@ agent = Mechanize.new
 
 start_date = (Date.today-14).strftime('%d/%m/%Y')
 end_date = Date.today.strftime('%d/%m/%Y')
-url = "http://www.kingston.vic.gov.au/web/planning/?l=planning_register2&l1=#{start_date}&l2=#{end_date}&l3=lodged&i=&x=&c=&w="
+url = "http://web.kingston.vic.gov.au/web/planning/?l=planning_register2&l1=#{start_date}&l2=#{end_date}&l3=lodged&i=&x=&c=&w="
 
 page = agent.get(url)
 
