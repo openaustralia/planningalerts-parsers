@@ -30,7 +30,7 @@ continue = true
 page_num = 1
 
 now             = Date.today.to_s
-comment_address = 'mail@yarraranges.vic.gov.au&subject=Application ' # will be suffixed with the application number
+comment_address = 'mail@yarraranges.vic.gov.au'
 
 # Only figure out the header stuff the first time...
 headers               = nil
@@ -69,7 +69,7 @@ while continue and summary_page
     info['info_url']          = splash_url # There is a direct link but you need a session to access it :(
     info['date_received']     = Date.strptime( application[ idx_date_received ], '%d/%m/%Y' ).to_s
     info['date_scraped']      = now
-    info['comment_url']       = comment_address + application[ idx_council_reference ]
+    info['comment_url']       = comment_address
     
     # p info
 
