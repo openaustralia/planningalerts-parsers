@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/henare/scraperwiki-ruby.git
+  revision: b0e69d41d6551f1cc842b35cda14d1b120e6eccc
+  branch: bug/changing-dbs
+  specs:
+    scraperwiki (3.0.1)
+      httpclient
+      sqlite_magic
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -95,9 +104,6 @@ GEM
     rvm-capistrano (1.4.4)
       capistrano (>= 2.15.4)
     safe_yaml (0.9.5)
-    scraperwiki (3.0.1)
-      httpclient
-      sqlite_magic
     shotgun (0.9)
       rack (>= 1.0)
     sinatra (1.3.6)
@@ -143,7 +149,7 @@ DEPENDENCIES
   rake
   rspec
   rvm-capistrano
-  scraperwiki
+  scraperwiki!
   shotgun
   sinatra (~> 1.3.5)
   thin (~> 1.5.1)

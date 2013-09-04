@@ -12,7 +12,7 @@ gem 'sinatra', '~> 1.3.5'
 gem 'json'
 gem 'capistrano'
 gem 'rvm-capistrano'
-gem 'scraperwiki'
+gem 'scraperwiki', git: 'https://github.com/henare/scraperwiki-ruby.git', branch: 'bug/changing-dbs'
 
 group :test do
   gem 'rspec'
