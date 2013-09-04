@@ -88,6 +88,11 @@ while continue and summary_page
     continue = false
   end
 
+  if page_num <= 10
+    puts "Stopping as we've already been through 10 pages"
+    continue = false
+  end
+
   if continue
     page_num = page_num + 1
     summary_page = agent.get( "#{main_url}/EnquirySummaryView.aspx", { :PageNumber => page_num } )
