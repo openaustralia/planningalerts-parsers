@@ -22,6 +22,12 @@ items.search("div").each do |i|
     end
   end
 
+  # Check if we've already got this and skip it if we do
+  if (ScraperWiki.select("* from swdata where `council_reference`='#{@council_reference}'") rescue false)
+    puts "Skipping already saved record #{@council_reference}"
+    next
+  end
+
   #address
  
   addr = i.previous.at("a.plain_header")
@@ -51,11 +57,5 @@ items.search("div").each do |i|
     'date_scraped' => Date.today.to_s
   }  
 
-
-  if (ScraperWiki.select("* from swdata where `council_reference`='#{record['council_reference']}'").empty? rescue true)
    ScraperWiki.save_sqlite(['council_reference'], record)
-  else
-    puts "Skipping already saved record " + record['council_reference']
-  end
-
 end
