@@ -3,6 +3,9 @@ require 'spec_helper'
 describe ScraperWikiScraper do
   describe '#applications' do
     before :each do
+      # Stops databases being created during tests
+      ScraperWiki.stub(:select).and_return([])
+
       sw = ScraperWikiScraper.new('name', 'short_name', 'state')
       sw.stub(:scrape)
 
