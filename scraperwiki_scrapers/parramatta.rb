@@ -20,7 +20,7 @@ feed = RSS::Parser.parse(t, false)
 
 feed.channel.items.each do |item|
   # Seeing a record without an address (which is obviously useless). So, skipping
-  t = item.description.split(/[\.-]/)
+  t = item.description.split(/\. /)
   if t.count >= 2
     record = {
       'council_reference' => item.title.split(' ')[0],
