@@ -19,7 +19,6 @@ begin
   page += 1
 end until urls.count == 0
 
-all_urls = ["http://www.melbourne.vic.gov.au/BuildingandPlanning/Planning/Pages/Planningregisteronlinesearchresults.aspx?appid=182372"]
 all_urls.each do |url|
   p = agent.get(url)
   record = {"info_url" => url, "date_scraped" => Date.today.to_s, "comment_url" => comment_url}
