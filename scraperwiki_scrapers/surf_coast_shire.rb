@@ -22,8 +22,8 @@ page.at(:table).search(:tr).each_with_index do |r,i|
     record = {
       council_reference: council_reference,
       address: detail_page.at(:h1).inner_text.strip + ", VIC",
-      on_notice_from: Date.parse(r.search(:td)[3].inner_text.split('-')[0]),
-      on_notice_to: Date.parse(r.search(:td)[3].inner_text.split('-')[1]),
+      on_notice_from: Date.parse(r.search(:td)[3].inner_text.split(' to ')[0]),
+      on_notice_to: Date.parse(r.search(:td)[3].inner_text.split(' to ')[1]),
       description: detail_page.at('.general_content').at(:p).at(:strong).next.inner_text.strip,
       info_url: detail_page_url,
       comment_url: detail_page_url,
