@@ -85,5 +85,5 @@ def do_search(range)
 end
 
 
-do_search("thismonth")
-do_search("lastmonth")
+do_search("thisweek")
+do_search("lastweek")
