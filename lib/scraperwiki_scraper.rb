@@ -6,7 +6,7 @@ class ScraperWikiScraper < Scraper
   end
 
   def applications(date)
-    ScraperWiki.config = {:db => File.join(Dir.tmpdir, planning_authority_short_name_encoded + '.sqlite')}
+    ScraperWiki.config = {:db => File.join(File.dirname(__FILE__), "..", "scraperwiki_databases", planning_authority_short_name_encoded + '.sqlite')}
 
     scrape
 

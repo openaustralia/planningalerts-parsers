@@ -24,8 +24,18 @@ elsif stage == "test"
   set :branch, "test" unless exists? :branch
 end
 
+after 'deploy:update_code', 'deploy:symlink_configuration'
+
 namespace :deploy do
   task :restart, :except => { :no_release => true } do
     run "touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
+
+  desc "Link shared data or configuration"
+  task :symlink_configuration do
+    links = {"#{release_path}/scraperwiki_databases" => "#{shared_path}/scraperwiki_databases"}
+
+    # "ln -sf <a> <b>" creates a symbolic link but deletes <b> if it already exists
+    run links.map {|a| "ln -sf #{a.last} #{a.first}"}.join(";")
   end
 end
