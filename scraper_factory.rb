@@ -19,7 +19,7 @@ module Scrapers
       LoganScraper.new("Logan City Council", "Logan", "QLD"),
       ACTScraper.new("ACT Planning & Land Authority", "ACT", "ACT"),
       WollongongScraper.new("Wollongong City Council", "Wollongong", "NSW"),
-      CGIScraper.new("Department of Planning and Local Government", "EDALA", "SA", "php-cgi -d short_open_tag=0 -d cgi.force_redirect=0 -f", "edala.php"),
+      EdalaScraper.new("Department of Planning and Local Government", "EDALA", "SA"),
       KogarahScraper.new("Kogarah City Council", "Kogarah", "NSW"),
       KuringgaiScraper.new("Ku-ring-gai Council", "Ku-ring-gai", "NSW"),
       AlburyScraper.new("Albury City Council", "Albury", "NSW"),
