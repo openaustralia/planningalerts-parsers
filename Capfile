@@ -24,8 +24,17 @@ elsif stage == "test"
   set :branch, "test" unless exists? :branch
 end
 
+after 'deploy:update_code', 'deploy:symlink_databases'
+
 namespace :deploy do
   task :restart, :except => { :no_release => true } do
     run "touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
+
+  desc "Link ScraperWiki databases"
+  task :symlink_databases do
+    # Remove the repo's directory (ln can't do this automatically)
+    run "rm -rf #{release_path}/scraperwiki_databases"
+    run "ln -s #{shared_path}/scraperwiki_databases/ #{release_path}/"
   end
 end
