@@ -6,6 +6,8 @@ Scrapers for [PlanningAlerts](http://www.planningalerts.org.au/).
 Contributing
 ------------
 
+**Issue tracking**: Scraper issues imported from Jira may also be found on the [planningalerts-app](https://github.com/openaustralia/planningalerts-app/issues?labels=Scraper) repository.
+
 If you'd like to [contribute a scraper](http://www.planningalerts.org.au/getinvolved) it's not essential to understand this repository. For example it might be easier to create a scraper on [ScraperWiki](http://scraperwiki.com/).
 
 Get in touch on our [development mailing list](http://groups.google.com/group/openaustralia-dev) and hassle us to make these instructions better :)
