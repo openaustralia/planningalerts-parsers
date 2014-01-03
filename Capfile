@@ -3,8 +3,11 @@ Dir['vendor/plugins/*/recipes/*.rb'].each { |plugin| load(plugin) }
 
 require 'bundler/capistrano'
 require 'rvm/capistrano'
+require 'rvm/capistrano/alias_and_wrapp'
 
 set :rvm_ruby_string, :local
+before 'deploy', 'rvm:create_alias'
+before 'deploy', 'rvm:create_wrappers'
 
 set :application, "scrapers.planningalerts.org.au"
 set :repository,  "git://github.com/openaustralia/planningalerts-parsers.git"
