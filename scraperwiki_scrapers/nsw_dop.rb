@@ -1,11 +1,17 @@
 require 'rss/2.0'
 require 'mechanize'
 require 'date'
+require 'iconv'
+require 'net/http'
 
 # Just get rid of the status_id param if you want it all, baby
 applications_on_exhibition_url = 'http://majorprojects.planning.nsw.gov.au/index.pl?action=search&status_id=6&rss=1'
 
-feed = RSS::Parser.parse applications_on_exhibition_url
+
+data = Net::HTTP.get_response(URI.parse(applications_on_exhibition_url)).body
+data = data.encode("UTF-8", :invalid => :replace, :undef => :replace, :replace => "")
+
+feed = RSS::Parser.parse data
 agent = Mechanize.new
 
 def get_value_from_td_label(label, label_tds)
