@@ -30,10 +30,15 @@ feed.channel.items.each do |item|
 
   on_notice_from_text = get_value_from_td_label('Exhibition Start', label_tds)
   on_notice_to_text = get_value_from_td_label('Exhibition End', label_tds)
+  address = []
+  address << get_value_from_td_label('Street', label_tds)
+  address << get_value_from_td_label('City', label_tds)
+  address << get_value_from_td_label('State', label_tds)
+
 
   record = {
     :description       => description,
-    :address           => get_value_from_td_label('Location', label_tds),
+    :address           => address.compact.join(", "),
     :council_reference => get_value_from_td_label('Application Number', label_tds),
     :on_notice_from    => (Date.strptime(on_notice_from_text, '%d/%m/%Y') if on_notice_from_text),
     :on_notice_to      => (Date.strptime(on_notice_to_text, '%d/%m/%Y') if on_notice_to_text),
