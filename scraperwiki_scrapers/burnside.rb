@@ -2,13 +2,16 @@
 
 require 'mechanize'
 
-url = "http://www.burnside.sa.gov.au/Develop/Planning_Development/Development_Applications/Development_Applications_on_Public_Notification"
-
 def application_detail(info_url)
   agent = Mechanize.new
   page = agent.get(info_url)
 
-  m = page.at('p.defaultAbstract').inner_text.match(/Closing Date: (\d+\/\d+\/\d+)/)
+  abstract = page.at('p.defaultAbstract')
+  unless abstract
+    return
+  end
+
+  m = abstract.inner_text.match(/Closing Date: (\d+\/\d+\/\d+)/)
   on_notice_to = Date.strptime(m[1], "%d/%m/%Y").to_s
 
   s = page.at('table').search('td strong')
@@ -29,10 +32,22 @@ def application_detail(info_url)
   end
 end
 
-agent = Mechanize.new
-page = agent.get(url)
 
-page.search('.content a').each do |a|
-  info_url = a["href"]
-  application_detail(info_url)
+urls = [
+  "http://www.burnside.sa.gov.au/Develop/Planning_Development/Development_Applications_on_Public_Notification/Category_2_Development_Applications",
+  "http://www.burnside.sa.gov.au/Develop/Planning_Development/Development_Applications_on_Public_Notification/Category_3_Development_Applications",
+  "http://www.burnside.sa.gov.au/Develop/Planning_Development/Development_Applications_on_Public_Notification/Section_49_Public_Consultations"
+
+]
+
+urls.each do |url|
+
+  agent = Mechanize.new
+  page = agent.get(url)
+
+  page.search('.content a').each do |a|
+    info_url = a["href"]
+    application_detail(info_url)
+  end
+
 end
