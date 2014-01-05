@@ -3,7 +3,7 @@ require 'nokogiri'
 require 'pdf_helper'
 
 info_url = "http://daps.planning.wa.gov.au/8.asp"
-url = "http://daps.planning.wa.gov.au/data/current%20dap%20applications/Current%20DAP%20Application.pdf"
+url = "http://daps.planning.wa.gov.au/data/Current%20DAP%20Applications/Current%20DAP%20Applications.pdf"
 
 doc = Nokogiri::XML(PdfHelper.pdftoxml(open(url) {|f| f.read}))
 
