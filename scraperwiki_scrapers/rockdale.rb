@@ -3,24 +3,30 @@
 
 require 'mechanize'
 
-url = "http://rccweb.rockdale.nsw.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?d=last14days&k=LodgementDate&t=217&o=xml"
+url = "http://rccweb.rockdale.nsw.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?d=last14days&k=LodgementDate&t=217"
 
 agent = Mechanize.new
 page = agent.get(url)
-# Explicitly interpret as XML
-page = Nokogiri::XML(page.content)
 
-page.search('Application').each do |application|
-  application_id = application.at("ApplicationId").inner_text
+
+page.search('.result').each do |application|
+  # Skip multiple addresses
+  next unless application.search("strong").select{|x|x.inner_text != "Approved"}.length == 1
+
+  address = application.search("strong").first
+
+
+  more_data = application.children[10].inner_text.split("\r\n")
+  more_data[2].strip!
+  
+  application_id = application.search('a').first['href'].split('?').last
   info_url = "http://rccweb.rockdale.nsw.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?id=#{application_id}"
   record = {
-    "council_reference" => application.at("ReferenceNumber").inner_text,
-    "description" => application.at("ApplicationDetails").inner_text,
-    "date_received" => Date.parse(application.at("LodgementDate").inner_text).to_s,
+    "council_reference" => application.search('a').first.inner_text,
+    "description" => application.children[4].inner_text,
+    "date_received" => Date.parse(more_data[2][0..9], 'd/m/Y').to_s,
     # TODO: There can be multiple addresses per application
-    "address" =>
-      application.at("Address Line1").inner_text + ", " +
-      application.at("Address Line2").inner_text,
+    "address" => application.search("strong").first.inner_text,
     "date_scraped" => Date.today.to_s,
     "info_url" => info_url,
     # Can't find a specific url for commenting on applications.
