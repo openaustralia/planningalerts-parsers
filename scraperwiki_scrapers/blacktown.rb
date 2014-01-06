@@ -2,23 +2,24 @@ require 'mechanize'
 
 # date_range can be either :this_week or :last_week
 def applications_search(date_range)
-  search_url = "http://apps.blacktown.nsw.gov.au/devonline/pDA.cfm"
+  search_url = "http://apps.blacktown.nsw.gov.au/devonline/"
   # For all the comment url's linking to this page because it has some info about how to comment on an application, etc..
-  comment_url = "http://www.blacktown.nsw.gov.au/planning-and-development/development-online/development-online_home.cfm"
+  comment_url = "http://apps.blacktown.nsw.gov.au/devonline/"
 
   agent = Mechanize.new
 
-  page = agent.get(search_url)
+  page = agent.get("http://apps.blacktown.nsw.gov.au/devonline/onNotification.cfm?format=list")
     
   # Click the agree button on the form (if necessary)
   form = page.form_with(:name => "Loginform")
-  page = form.submit(form.button_with(:name => "Agree")) if form
+  if form
+    form.submit(form.button_with(:name => "Agree"))
+    page = agent.get("http://apps.blacktown.nsw.gov.au/devonline/onNotification.cfm?format=list")
+  end
     
   # Search for applications submitted this week that have not yet been determined
-  form = page.form_with(:name => "DALodgeDate")
-  form["DateRange"] = {:this_week => 1, :last_week => 2}[date_range]
-  form.radiobutton_with(:value => "undetermined").click
-  page = form.submit
+
+
   
   records = []
   page.search("table.DAResults").map do |app|
@@ -56,7 +57,7 @@ def applications_search(date_range)
         record["date_received"] = Date.parse(date_received).to_s
       end
 
-      if (ScraperWiki.select("* from swdata where `council_reference`='#{record['council_reference']}'").empty? rescue true)
+      if ScraperWiki.select("* from swdata where `council_reference`='#{record['council_reference']}'").empty? 
         ScraperWiki.save_sqlite(['council_reference'], record)
       else
         puts "Skipping already saved record " + record['council_reference']
