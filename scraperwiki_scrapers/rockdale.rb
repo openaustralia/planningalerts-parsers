@@ -1,6 +1,3 @@
-# This scraper is a replacement for https://scraperwiki.com/scrapers/rockdale_applications/
-# The council da tracker doesn't output rss correctly anymore. So, instead scraping the xml output
-
 require 'mechanize'
 
 url = "http://rccweb.rockdale.nsw.gov.au/EPlanning/Pages/XC.Track/SearchApplication.aspx?d=last14days&k=LodgementDate&t=217"
