@@ -22,12 +22,6 @@ items.search("div").each do |i|
     end
   end
 
-  # Check if we've already got this and skip it if we do
-  if (ScraperWiki.select("* from swdata where `council_reference`='#{@council_reference}'") rescue false)
-    puts "Skipping already saved record #{@council_reference}"
-    next
-  end
-
   #address
  
   addr = i.previous.at("a.plain_header")
@@ -35,15 +29,28 @@ items.search("div").each do |i|
   next if addr.nil? 
   @address = addr.inner_text
   @info_url = 'http://eservices.portstephens.nsw.gov.au' + addr['href'].strip
-    
-  sleep(1)
-  
-  da_info = agent.get(@info_url) #get description page
-    
-  da_items = da_info.at("div#fullcontent").search("div")[5]
-  da_items.search("span.key").each do |dai|
-    if dai.inner_text == "Type of Work"
-       @description = dai.next.inner_text
+
+
+
+  @description = nil
+  i.search("span.key").each .each do |dai|
+  if dai.inner_text == "Type of Work"
+     @description = dai.next.inner_text
+  end
+
+  if @description.nil? 
+    begin  
+      sleep(1)
+      da_info = agent.get(@info_url) #get description page
+      
+      da_items = da_info.at("div#fullcontent").search("div")[5]
+      da_items.search("span.key").each do |dai|
+        if dai.inner_text == "Type of Work"
+           @description = dai.next.inner_text
+        end
+      end
+    rescue
+      # Sadly the info pages appear to be HTTP 500 Server Error
     end
   end
 
@@ -57,5 +64,11 @@ items.search("div").each do |i|
     'date_scraped' => Date.today.to_s
   }  
 
+
+  if ScraperWiki.select("* from swdata where `council_reference`='#{record['council_reference']}'").empty? 
    ScraperWiki.save_sqlite(['council_reference'], record)
+  else
+    puts "Skipping already saved record " + record['council_reference']
+  end
+
 end
