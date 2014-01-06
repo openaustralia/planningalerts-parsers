@@ -2,18 +2,20 @@ require 'mechanize'
 require 'date'
 
 agent = Mechanize.new
-url = "http://www.muswellbrook.nsw.gov.au/Council-services/Planning-development/Index-DA.php"
+url = "http://www.muswellbrook.nsw.gov.au/index.php/planning-building-development/search-development-applications"
 
 page = agent.get(url)
 
 form = page.forms[1]
 
-form["status"] = 1
+form['form[status][]'] = 'exhibiting'
 page = form.submit
 
 page.search('table.mcs').each do |t|
+
   t.search('tr').each do |r|
-    next if r.at('th') || r.at('td').nil? 
+    next if r.at('th')
+    next if r.at('td').nil? 
 
     record = {
       :council_reference => r.search('td')[0].inner_text.strip,
