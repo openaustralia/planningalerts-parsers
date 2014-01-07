@@ -13,9 +13,12 @@ table.search(:tr).each_with_index do |row,number|
 
   columns = row.search(:td)
 
+
+   date_received = Date.strptime(columns[1].inner_text.strip, '%d/%m/%Y')
+  
   record = {
     council_reference: columns[0].inner_text,
-    date_received:     Date.strptime(columns[1].inner_text, '%d/%m/%Y'),
+    date_received:     date_received,
     description:       columns[3].inner_text,
     address:           "#{columns[4].inner_text}, QLD",
     info_url:          url,
