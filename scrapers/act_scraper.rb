@@ -11,37 +11,35 @@ class ACTScraper < Scraper
     
     # Walking through the lines. Every 7 lines is a new application
     applications = []
-    page.search('table')[1].search('tr').each_slice(7) do |lines|
-      # First double check that each line has the correct form
-      labels = lines.map do |line|
-        if line.at('strong')
-          line.at('strong').inner_text
-        elsif line.at('b')
-          line.at('b').inner_text
+    application = {}
+    current_suburb = ''
+    page.search('.listing > *').each do |line|
+      if line.text.strip! == "Click here to view the plans"
+        application[:info_url] = line.children.first["href"]
+        applications <<  DevelopmentApplication.new(application)
+        application = {}
+      else
+        if line.text.strip! == ""
+          next
         end
-      end
-      
-      raise "Unexpected form for suburb line" unless lines[0].at('a').has_attribute?('name')
-      raise "Unexpected form application_id line" unless labels[1] == "Development Application:"
-      raise "Unexpected form address line" unless labels[2] == "Address:"
-      raise "Unexpected form block line" unless labels[3] == "Block: "
-      raise "Unexpected form description line" unless labels[4] == "Proposal:"
-      raise "Unexpected form on notice to line" unless labels[5] == "Period for representations closes:"
-      raise "Unexpected form info url line" unless lines[6].at('a').inner_text == "Click here to view the plans"
-      
-      lines[1].at('strong').remove
-      lines[2].at('strong').remove
-      lines[4].at('strong').remove
-      lines[5].at('strong').remove
-      stripped = lines.map{|l| l.inner_text.strip}
+        parts = line.text.split(":") 
+        if parts.length == 1
+          current_suburb = line.text.strip!
+        else
+          case parts[0]
+          when 'Development Application'
+            application[:application_id] = parts[1].strip!
+          when 'Address'
+            application[:address] = "#{parts[1..-1].join(":")}, #{current_suburb}, ACT" unless parts[1].strip! == 'NO ADDRESS'
+          when 'Block'
+          when 'Proposal'
+            application[:description] = parts[1..-1].join(":").strip!
+          when 'Period for representations closes'
+            application[:on_notice_to] = parts[1].strip
+          end
+        end
 
-      applications << DevelopmentApplication.new(
-        :application_id => stripped[1],
-        :address => stripped[2] + ", " + stripped[0] + ", " + state,
-        :description => stripped[4],
-        :on_notice_to => (stripped[5] if stripped[5] != ""),
-        :info_url => extract_relative_url(lines[6]),
-        :comment_url => url)
+      end
     end
     applications
   end
