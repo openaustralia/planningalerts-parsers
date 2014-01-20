@@ -8,7 +8,8 @@ agent = Mechanize.new
 
 start_date = (Date.today-14).strftime('%d/%m/%Y')
 end_date = Date.today.strftime('%d/%m/%Y')
-url = "http://www.kingston.vic.gov.au/planning/?l=planning_register2&l1=#{start_date}&l2=#{end_date}&l3=lodged&i=&x=&c=&w="
+
+url = "http://web.kingston.vic.gov.au/web/planning/?l=planning_register2&l1=#{start_date}&l2=#{end_date}&l3=lodged&i=&x=&c=&w="
 page = agent.get(url)
 
 page.search('tr.item_row').each do |row|
@@ -28,7 +29,7 @@ page.search('tr.item_row').each do |row|
     record["on_notice_from"] = Date.parse(values[4], "%d-%M-&y").to_s
   end
 
-  if (ScraperWiki.select("* from swdata where `council_reference`='#{record['council_reference']}'").empty? rescue true)
+  if ScraperWiki.select("* from swdata where `council_reference`='#{record['council_reference']}'").empty? 
     ScraperWiki.save_sqlite(['council_reference'], record)
   else
     puts "Skipping already saved record " + record['council_reference']
