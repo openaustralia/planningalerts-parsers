@@ -1,3 +1,4 @@
+
 require 'openssl'
 #disable encryption validation, we're fetching public data anyway
 OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
@@ -11,7 +12,7 @@ agent = Mechanize.new
 # All applications submitted in the last month
 baseurl = 'https://pdonline.toowoombarc.qld.gov.au/Masterview/Modules/ApplicationMaster/'
 comment_url = 'mailto:info@toowoombaRC.qld.gov.au'
-url = "https://pdonline.toowoombarc.qld.gov.au/Masterview/Modules/ApplicationMaster/default.aspx?page=found&1=lastmonth&4a=\'488\',\'487\',\'486\',\'495\',\'521\',\'540\',\'496\',\'562\'&6=F"
+url = "https://pdonline.toowoombarc.qld.gov.au/Masterview/Modules/ApplicationMaster/default.aspx?page=found&1=thisweek&4a=\'488\',\'487\',\'486\',\'495\',\'521\',\'540\',\'496\',\'562\'&6=F"
 page = agent.get(url)
 
 # Click the Agree button on the form
@@ -65,7 +66,7 @@ def get_da_urls (doc,comment_url)
       'date_scraped' => Date.today.to_s
     }
 
-    if (ScraperWiki.select("* from swdata where `council_reference`='#{record['council_reference']}'").empty? rescue true)
+    if ScraperWiki.select("* from swdata where `council_reference`='#{record['council_reference']}'").empty? 
       ScraperWiki.save_sqlite(['council_reference'], record)
     else
       puts "Skipping already saved record " + record['council_reference']
@@ -106,5 +107,3 @@ end
 
 
 scrape_and_follow_next_link(doc,comment_url)
-
-
