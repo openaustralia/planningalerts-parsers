@@ -15,7 +15,8 @@ module Scrapers
   # Note that this is not an exhaustive list as some councils provide XML feeds
   # and ScraperWiki hosts many scrapers
   def self.scrapers
-    [BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
+    [BallinaScraper.new("Ballina Shire Council", "Ballina", "NSW"),
+      BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
       BoroondaraScraper.new("Boroondara City Council", "Boroondara (City)", "VIC"),
       LoganScraper.new("Logan City Council", "Logan", "QLD"),
       ACTScraper.new("ACT Planning & Land Authority", "ACT", "ACT"),
