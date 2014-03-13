@@ -1,4 +1,4 @@
-# We're phasing out scrapers here in favour of using our new scraper platform [Morph](https://morph.io).
+# We're [phasing out](https://github.com/openaustralia/planningalerts-parsers/issues/56) scrapers here in favour of using our new scraper platform [Morph](https://morph.io).
 
 planningalerts-parsers [![Build Status](https://secure.travis-ci.org/openaustralia/planningalerts-parsers.png?branch=master)](http://travis-ci.org/openaustralia/planningalerts-parsers) [![Dependency Status](https://gemnasium.com/openaustralia/planningalerts-parsers.png)](https://gemnasium.com/openaustralia/planningalerts-parsers)
 ======================
