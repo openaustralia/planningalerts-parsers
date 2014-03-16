@@ -17,7 +17,6 @@ module Scrapers
     [BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
       BoroondaraScraper.new("Boroondara City Council", "Boroondara (City)", "VIC"),
       LoganScraper.new("Logan City Council", "Logan", "QLD"),
-      ACTScraper.new("ACT Planning & Land Authority", "ACT", "ACT"),
       WollongongScraper.new("Wollongong City Council", "Wollongong", "NSW"),
       CGIScraper.new("Department of Planning and Local Government", "EDALA", "SA", "php-cgi -d short_open_tag=0 -d cgi.force_redirect=0 -f", "edala.php"),
       KogarahScraper.new("Kogarah City Council", "Kogarah", "NSW"),
