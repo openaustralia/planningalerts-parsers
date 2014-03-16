@@ -14,23 +14,24 @@ module Scrapers
   # Note that this is not an exhaustive list as some councils provide XML feeds
   # and ScraperWiki hosts many scrapers
   def self.scrapers
-    [BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
+    [
       BoroondaraScraper.new("Boroondara City Council", "Boroondara (City)", "VIC"),
-      LoganScraper.new("Logan City Council", "Logan", "QLD"),
-      WollongongScraper.new("Wollongong City Council", "Wollongong", "NSW"),
+      BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
       CGIScraper.new("Department of Planning and Local Government", "EDALA", "SA", "php-cgi -d short_open_tag=0 -d cgi.force_redirect=0 -f", "edala.php"),
+      CGIScraper.new("Moreland City Council", "Moreland (City)", "VIC", "perl", "moreland.pl"),
+      FraserCoastScraper.new("Fraser Coast Regional Council", "Fraser Coast", "QLD"),
+      GriffithScraper.new("Griffith City Council", "Griffith", "NSW"),
+      HornsbyScraper.new("Hornsby Shire Council", "Hornsby", "NSW"),
+      IpswichScraper.new("City of Ipswich", "Ipswich", "QLD"),
       KogarahScraper.new("Kogarah City Council", "Kogarah", "NSW"),
       KuringgaiScraper.new("Ku-ring-gai Council", "Ku-ring-gai", "NSW"),
-      WarringahScraper.new("Warringah Council", "Warringah", "NSW"),
-      WaggaWaggaScraper.new("City of Wagga Wagga", "Wagga Wagga", "NSW"),
-      GriffithScraper.new("Griffith City Council", "Griffith", "NSW"),
-      WyongScraper.new("Wyong Shire Council", "Wyong", "NSW"),
-      HornsbyScraper.new("Hornsby Shire Council", "Hornsby", "NSW"),
-      FraserCoastScraper.new("Fraser Coast Regional Council", "Fraser Coast", "QLD"),
-      IpswichScraper.new("City of Ipswich", "Ipswich", "QLD"),
       LockyerValleyScraper.new("Lockyer Valley Regional Council", "Lockyer Valley", "QLD"),
+      LoganScraper.new("Logan City Council", "Logan", "QLD"),
       RedlandScraper.new("Redland City Council", "Redland", "QLD"),
-      CGIScraper.new("Moreland City Council", "Moreland (City)", "VIC", "perl", "moreland.pl")
+      WaggaWaggaScraper.new("City of Wagga Wagga", "Wagga Wagga", "NSW"),
+      WarringahScraper.new("Warringah Council", "Warringah", "NSW"),
+      WollongongScraper.new("Wollongong City Council", "Wollongong", "NSW"),
+      WyongScraper.new("Wyong Shire Council", "Wyong", "NSW")
     ]
   end
   
