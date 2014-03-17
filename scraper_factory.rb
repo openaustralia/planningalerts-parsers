@@ -15,7 +15,6 @@ module Scrapers
   # and ScraperWiki hosts many scrapers
   def self.scrapers
     [
-      BoroondaraScraper.new("Boroondara City Council", "Boroondara (City)", "VIC"),
       BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
       CGIScraper.new("Department of Planning and Local Government", "EDALA", "SA", "php-cgi -d short_open_tag=0 -d cgi.force_redirect=0 -f", "edala.php"),
       CGIScraper.new("Moreland City Council", "Moreland (City)", "VIC", "perl", "moreland.pl"),
