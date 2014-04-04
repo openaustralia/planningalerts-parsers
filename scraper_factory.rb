@@ -16,7 +16,6 @@ module Scrapers
   def self.scrapers
     [
       BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
-      CGIScraper.new("Moreland City Council", "Moreland (City)", "VIC", "perl", "moreland.pl"),
       FraserCoastScraper.new("Fraser Coast Regional Council", "Fraser Coast", "QLD"),
       GriffithScraper.new("Griffith City Council", "Griffith", "NSW"),
       HornsbyScraper.new("Hornsby Shire Council", "Hornsby", "NSW"),
