@@ -16,7 +16,6 @@ module Scrapers
   def self.scrapers
     [
       BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
-      CGIScraper.new("Department of Planning and Local Government", "EDALA", "SA", "php-cgi -d short_open_tag=0 -d cgi.force_redirect=0 -f", "edala.php"),
       CGIScraper.new("Moreland City Council", "Moreland (City)", "VIC", "perl", "moreland.pl"),
       FraserCoastScraper.new("Fraser Coast Regional Council", "Fraser Coast", "QLD"),
       GriffithScraper.new("Griffith City Council", "Griffith", "NSW"),
