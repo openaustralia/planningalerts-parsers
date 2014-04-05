@@ -24,7 +24,6 @@ module Scrapers
       KuringgaiScraper.new("Ku-ring-gai Council", "Ku-ring-gai", "NSW"),
       LoganScraper.new("Logan City Council", "Logan", "QLD"),
       RedlandScraper.new("Redland City Council", "Redland", "QLD"),
-      WaggaWaggaScraper.new("City of Wagga Wagga", "Wagga Wagga", "NSW"),
       WarringahScraper.new("Warringah Council", "Warringah", "NSW"),
       WollongongScraper.new("Wollongong City Council", "Wollongong", "NSW"),
       WyongScraper.new("Wyong Shire Council", "Wyong", "NSW")
