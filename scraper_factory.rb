@@ -20,7 +20,6 @@ module Scrapers
       GriffithScraper.new("Griffith City Council", "Griffith", "NSW"),
       HornsbyScraper.new("Hornsby Shire Council", "Hornsby", "NSW"),
       IpswichScraper.new("City of Ipswich", "Ipswich", "QLD"),
-      KogarahScraper.new("Kogarah City Council", "Kogarah", "NSW"),
       KuringgaiScraper.new("Ku-ring-gai Council", "Ku-ring-gai", "NSW"),
       LoganScraper.new("Logan City Council", "Logan", "QLD"),
       RedlandScraper.new("Redland City Council", "Redland", "QLD"),
