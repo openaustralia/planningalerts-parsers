@@ -17,7 +17,6 @@ module Scrapers
     [
       BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
       FraserCoastScraper.new("Fraser Coast Regional Council", "Fraser Coast", "QLD"),
-      GriffithScraper.new("Griffith City Council", "Griffith", "NSW"),
       HornsbyScraper.new("Hornsby Shire Council", "Hornsby", "NSW"),
       IpswichScraper.new("City of Ipswich", "Ipswich", "QLD"),
       KuringgaiScraper.new("Ku-ring-gai Council", "Ku-ring-gai", "NSW"),
