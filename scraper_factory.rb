@@ -17,7 +17,6 @@ module Scrapers
     [
       BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
       FraserCoastScraper.new("Fraser Coast Regional Council", "Fraser Coast", "QLD"),
-      HornsbyScraper.new("Hornsby Shire Council", "Hornsby", "NSW"),
       IpswichScraper.new("City of Ipswich", "Ipswich", "QLD"),
       KuringgaiScraper.new("Ku-ring-gai Council", "Ku-ring-gai", "NSW"),
       LoganScraper.new("Logan City Council", "Logan", "QLD"),
@@ -27,7 +26,7 @@ module Scrapers
       WyongScraper.new("Wyong Shire Council", "Wyong", "NSW")
     ]
   end
-  
+
   def self.scraper_factory(name)
     scrapers.find{|p| p.planning_authority_short_name_encoded == name}
   end
