@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'Scraping pages to XML' do
   it 'should return known good XML for all currently working Ruby scrapers' do
-    existing_ruby_scrapers = %w(brisbane logan warringah wollongong wyong)
+    existing_ruby_scrapers = %w(brisbane warringah wollongong wyong)
 
     existing_ruby_scrapers.each do |short_name|
       VCR.use_cassette(short_name) do
