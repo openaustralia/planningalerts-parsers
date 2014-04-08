@@ -16,7 +16,6 @@ module Scrapers
   def self.scrapers
     [
       BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
-      FraserCoastScraper.new("Fraser Coast Regional Council", "Fraser Coast", "QLD"),
       LoganScraper.new("Logan City Council", "Logan", "QLD"),
       RedlandScraper.new("Redland City Council", "Redland", "QLD"),
       WarringahScraper.new("Warringah Council", "Warringah", "NSW"),
