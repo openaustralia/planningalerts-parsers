@@ -17,8 +17,6 @@ module Scrapers
     [
       BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
       RedlandScraper.new("Redland City Council", "Redland", "QLD"),
-      WollongongScraper.new("Wollongong City Council", "Wollongong", "NSW"),
-      WyongScraper.new("Wyong Shire Council", "Wyong", "NSW")
     ]
   end
 
