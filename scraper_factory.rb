@@ -15,8 +15,7 @@ module Scrapers
   # and ScraperWiki hosts many scrapers
   def self.scrapers
     [
-      BrisbaneScraper.new("Brisbane City Council", "Brisbane", "QLD"),
-      RedlandScraper.new("Redland City Council", "Redland", "QLD"),
+      RedlandScraper.new("Redland City Council", "Redland", "QLD")
     ]
   end
 
